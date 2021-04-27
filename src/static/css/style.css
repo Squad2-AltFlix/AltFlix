@@ -5,7 +5,15 @@
     box-sizing: border-box;
 }
 
-/* Celulares */
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: #632565;
+}
+
+/* Mobile */
 @media only screen and (min-width: 320px) {
     /* Header Container */
     header {
@@ -17,7 +25,7 @@
     }
     
     .header-container {
-        width: 100%;
+        width: 90%;
         height: 100px;
         display: flex;
         align-items: center;
@@ -37,7 +45,7 @@
 
     /*Navbar*/
     .links {
-        color: #823385;
+        color: #fdfdfd;
         text-decoration: none;
         font-family: 'Poppins', sans-serif;
         transition: 0.3s;
@@ -45,6 +53,11 @@
 
     li {
         transition: 1s;
+    }
+
+    /* Menu Burger */
+    .icon {
+        cursor: pointer;
     }
 
     /* Campo de busca */
@@ -57,7 +70,7 @@
 @media only screen and (min-width: 630px) {
     /* Header Container */
     .header-container {
-        width: 95%;
+        width: 90%;
         height: 90px;
     }
 
@@ -68,8 +81,12 @@
         justify-content: space-between;
     }
 
-    #navbar-links li {
-        margin-right: 25px;
+    .navbar-links li {
+        margin-left: 35px;
+    }
+
+    .icon {
+        display: none;
     }
 
     /* Campo de busca */
@@ -92,13 +109,24 @@
     }
 
     /*Navbar*/
-    #navbar-links li {
-        margin-right: 50px;
+    .navbar-links li {
+        margin-left: 50px;
     }
 
     /* Campo de busca */
     #search-field {
         width: 20%;
+    }
+
+    /* Main Catálogo */
+    .main-container {
+        width: 80%;
+        height: calc(100vh - 90px);
+        background-color: white;
+        margin: auto;
+        border-left: 5px solid #1b1b1b;
+        border-right: 5px solid #1b1b1b;
+        box-shadow: 0px 0px 20px 10px #1b1b1b;
     }
 }
 
@@ -107,5 +135,5 @@ li:hover {
 }
 
 .links:hover {
-    color: #ffffff;
+    color: #94348d;
 }
