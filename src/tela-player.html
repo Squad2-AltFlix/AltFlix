@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AltFlix</title>
     <link rel="stylesheet" href="static/css/reset.css">
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/tela-player.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
@@ -27,12 +27,32 @@
             </nav>
             <input type="search" name="search" placeholder="Procure um filme" id="search-field">
         </div>
-        <!-- Seção do Player -->
-        <section class="player">
-            <div class="embed-responsive">
-                <iframe src="" class="embed-responsive-item"></iframe>
-            </div>
-        </section>
     </header>
+    <!-- Seção do Player -->
+    <section class="player">
+        <div class="embed-responsive embed-responsive-21by9">
+            <iframe src="https://www.youtube.com/embed/GRkXfdqzFdc" class="embed-responsive-item" title="Filme" allowfullscreen="true"></iframe>
+        </div>
+    </section>
+    <!-- Seção de Info da Produção -->
+    <section class="info-producao">
+        <div class="capa">
+            <img src="https://videocamp-prod-us.s3.amazonaws.com/uploads/poster_image/image/000/001/681/1681/thumb_cartaz_rei_medida_video_camp__1_.png" alt="">
+        </div>
+        <div class="sinopse">
+            <h2>Sinopse: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium odio voluptates, repellendus eaque quam, magni blanditiis minima officia delectus accusamus aliquam, itaque sit sint eos deleniti cumque dolor ipsum impedit?</h2>
+        </div>
+        <div class="producao">
+            <h2>Autor: Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure cum adipisci iste labore nesciunt quas! Totam voluptates voluptatem inventore numquam temporibus sequi? Commodi quisquam assumenda ullam vero eaque architecto ipsum!</h2>
+            <h2>Elenco: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, odit veniam. Dolores, quasi praesentium. Laudantium dignissimos et illum ipsam quas exercitationem ullam, odit iure expedita doloremque inventore itaque eveniet! At.</h2>
+        </div>
+        <div class="creditos">
+            <h2>Créditos: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni deserunt voluptatem illum ex sed ea fuga, eligendi modi, voluptatum odio corporis nesciunt. Ipsam porro rem ex doloribus perspiciatis expedita voluptatum.</h2>  
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
