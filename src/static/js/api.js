@@ -1,5 +1,6 @@
 const apiKey = 'AIzaSyBcjhgbZUYfZ7vOgwuYZMJVrVLaCKniNd4'
-const apiIdChannel = 'fhJhcy7L2FwCGiXfXLuq2w'
+const apiIdChannel = 'UCfhJhcy7L2FwCGiXfXLuq2w'
+
 
 //access channel data
 async function channel() {
@@ -11,4 +12,27 @@ async function channel() {
     .catch((err) => {console.log(err);})
 }
 
-channel();
+
+//access video data
+async function videos() {
+    await axios.get('https://www.googleapis.com/youtube/v3/videos?key=' + apiKey + '&channelId=' + apiIdChannel + '&part=snippet,id')
+    .then((response) => {
+        console.log(response);
+    })
+    .catch((err) => {console.log(err);})
+}
+
+
+//access search data
+async function search() {
+    await axios.get('https://www.googleapis.com/youtube/v3/search?key=' + apiKey + '&part=snippet,id&channelId=' + apiIdChannel)
+    .then((response) => {
+        console.log(response);
+    })
+    .catch((err) => {console.log(err);})
+}
+
+
+channel()
+//videos()
+// search()
