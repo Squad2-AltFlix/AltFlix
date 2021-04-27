@@ -1,0 +1,59 @@
+.container {
+    width: 50%;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.titulo {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    margin: 50px 0;
+}
+
+.input50 {
+    display: block;
+    width: 50%;
+    height: 40px;
+    font-size: 18px;
+    color: #a5a1a1;
+    line-height: 1.2;
+    padding-right: 15px;
+    border-radius: 9px;
+    margin-bottom: 15px;
+    display: block;
+    background: rgba(221, 213, 213, 0.616);
+    border: none;
+    text-align: center;
+   
+
+}
+.span-sobrefilme {
+    font-weight: bold;
+    display: block;
+    margin: 30px 0px 10px;
+
+}
+.filme-data{
+    display: block;
+}
+
+.selecao {
+    width: 40%;
+    height: 30px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+}
+.input40-filme {
+    margin-bottom: 10px;
+    height: 30px;
+    width: 40%;
+}
+
+textarea{
+    margin-top: 20px;
+}
