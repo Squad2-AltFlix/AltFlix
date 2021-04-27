@@ -1,36 +1,38 @@
 body{
-    background:url(/src/static/movie.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+  background:url(/src/static/imagem/movie.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.caixabg{
-    background:rgba(0, 0, 0, 0.808);
+.caixabg {
+  background: rgba(0, 0, 0, 0.699);
+  
 }
 
-.caixa-form {
-    width: 30%;
-    justify-content: center;
-    background:rgba(255, 255, 255, 0.705);
-    margin: 50px auto;
-    border-radius: 10px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.63);
+/*caixa do form*/
+.container {
+  width: 30%;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+  padding: 40px;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.493);
 }
 .titulo {
-    text-align: center;
-    font-weight: bold;
-    font-size: 2em;
-    margin: 50px auto;
-    
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+  margin: 50px 0;
+  
 }
 
 /*///////////////////// inputs ///////////////////////*/
 
 .wrapper{
   width: 450px;
-  background:none;
+  background: #fff;
   padding: 30px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+/*  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);*/
 }
 .wrapper .input-data{
   height: 40px;
@@ -43,7 +45,7 @@ body{
   border: none;
   font-size: 17px;
   border-bottom: 2px solid silver;
-  background:none;
+  outline: none;
 }
 .input-data input:focus ~ label,
 .input-data input:valid ~ label{
@@ -80,10 +82,9 @@ body{
   transform: scaleX(1);
 }
 
-
 /*fieldset {
-    box-sizing: border-box;
-    border-top: black;
+  box-sizing: border-box;
+  border-top: black;
 }*/
 
 
@@ -92,29 +93,29 @@ body{
 
 
 .span-sobrefilme {
-    font-weight: bold;
-    display: block;
-    margin: 30px 0px 10px 30px;
+  font-weight: bold;
+  display: block;
+  margin: 30px 0px 10px 30px;
 
 }
 .filme-data{
-    display: block;
+  display: block;
 }
 
 .selecaofilme {
-    width: 40%;
-    height: 30px;
-    font-size: 16px;
-    display: block;
-    margin-bottom: 10px;
-    margin-left: 30px;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid silver;
+  width: 40%;
+  height: 30px;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid silver;
 }
 
 textarea{
-    margin-top: 20px;
-    border-radius: 5px;
+  margin-top: 20px;
+  border-radius: 5px;
 
 }
