@@ -42,33 +42,39 @@ iframe {
     height: 563px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 10% 60% 10% 20%;
-    gap: 5px;
     margin: 1.5%;
     margin-left: 5%;
 }
 .info-producao div {
     border: 2px outset whitesmoke;
-    border-radius: 5px;
     display: flex;
+    box-shadow: 10px 10px 28px 6px rgba(0,0,0,0.85);
+    background-color: rgb(36, 35, 35);
 }
 h2{
     font-size: 1.2rem !important;
     margin: 10px;
+    padding-top: 10px;
 }
 .titulo{
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     grid-column: 1/3;
 }
 .sinopse{
+    padding: 5px 5px;
     grid-column: 1/3;
     grid-row: 2/3;
+}
+.sinopse h2{
+    font-size: 1.2rem !important;
+    margin: 0;
 }
 .dyg{
     grid-column: 1/3;
     grid-row: 3/4;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: center;
 }
 .producao{
     grid-column: 1/2;
