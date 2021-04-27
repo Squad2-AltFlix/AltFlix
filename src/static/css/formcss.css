@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Noto+Sans|Open+Sans:400,700&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body{
   background:url(/src/static/imagem/movie.jpg);
   background-repeat: no-repeat;
@@ -12,8 +19,8 @@ body{
 .container {
   width: 30%;
   justify-content: center;
-  background: rgb(255, 255, 255);
-  padding: 40px;
+  background: rgba(255, 255, 255, 0.767);
+  
   margin: 50px auto;
   border-radius: 10px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.493);
@@ -22,30 +29,33 @@ body{
   text-align: center;
   font-weight: bold;
   font-size: 2em;
-  margin: 50px 0;
+  padding: 30px 65px;
+  font-family: 'Montserrat', sans-serif;
   
 }
 
 /*///////////////////// inputs ///////////////////////*/
 
 .wrapper{
-  width: 450px;
-  background: #fff;
-  padding: 30px;
+  width: 80%;
+  background: none;
+  padding: 15px 30px;
 /*  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);*/
 }
 .wrapper .input-data{
   height: 40px;
   width: 100%;
   position: relative;
+
 }
 .wrapper .input-data input{
   height: 100%;
   width: 100%;
   border: none;
   font-size: 17px;
-  border-bottom: 2px solid silver;
+  border-bottom: 2px solid rgba(68, 66, 66, 0.459);
   outline: none;
+  background: none;
 }
 .input-data input:focus ~ label,
 .input-data input:valid ~ label{
@@ -57,8 +67,8 @@ body{
   position: absolute;
   bottom: 10px;
   left: 0;
-  color: grey;
-  pointer-events: none;
+  color: rgb(56, 52, 52);
+  pointer-events: none; 
   transition: all 0.3s ease;
 }
 .input-data .underline{
@@ -100,6 +110,7 @@ body{
 }
 .filme-data{
   display: block;
+
 }
 
 .selecaofilme {
@@ -113,9 +124,58 @@ body{
   border: none;
   border-bottom: 2px solid silver;
 }
+.caixa-filmedata{
+  margin-left: 30px;
+  display: inline-block;
+}
+#filmedata-label{
+  margin-bottom: 10px;
+}
 
 textarea{
-  margin-top: 20px;
   border-radius: 5px;
+  width: 80%;
+  height: 6em;
+  margin: 10px 25px;
+  background:rgba(255, 255, 255, 0.616)
 
+}
+
+#classificacao-indicativa, .caixa-classificacao{
+  width: 40%;
+  display: inline-block;
+  
+}
+
+.caixa-temporadas{
+    width: 50%;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 960px) {
+  .container {
+    width: 60%;
+  }
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+  .container {
+    width: 55%;
+  } 
+
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
+  .container {
+    width: 85%;
+  } 
+}
+
+@media only screen and (max-device-width: 481px) { 
+  .container {
+    width: 85%;
+  } 
 }

@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
     <link rel="stylesheet" href="static/css/reset.css">
-    <link rel="stylesheet" href="static/css/header.css">
     <link rel="stylesheet" href="static/css/formcss.css">
 
 </head>
+<div class="caixabg">>
 <body>
-<div class="caixabg">  
-    <header>
+  
+   <!---- <header>
         <header>
             <div class="header-container">
-                <!-- Criação da NAVBAR -->
+               
                 <div id="logo-img-container">
                     <img src="./static/images/logo.png" alt="Logo AltFlix" id="logo-img">
                 </div>
@@ -30,7 +30,7 @@
             </div>
         </header>
     </header>
-
+-->
     <main>
         
         <section class="container">
@@ -55,38 +55,83 @@
                         </div>
                     </div>
 
-                <fieldset>
-                        <div class="container-filme">
-
-                            <span class="span-sobrefilme">Sobre o filme</span>
-                            <select class="selecaofilme" >
-                                <option>Selecione</option>
-                                <option>Curta Metragem</option>
-                                <option>Longa Metragem</option>
-                                <option>Documentário</option>
-                        
-                            </select> 
-                            <div class="wrapper">
-                                <div class="input-data">
-                                    <input type="text" required>
-                                    <div class="underline"></div>
-                                    <label>Título do filme</label>
-                                </div>
-                            </div> 
-
-                            <label for="filme-data">Data da lançamento:</label>
-                            <input class="filme-data" type="date" id="filme-data" name="filme-data" >    
-
-
-                            <textarea name="sinopse" id="sinopse" cols="60" rows="10" placeholder="Escreva a sinopse do filme"></textarea>
+                    <div class="wrapper" >
+                        <div class="input-data">
+                            <input type="tel" required>
+                            <div class="underline"></div>
+                            <label>Seu telefone</label>
                         </div>
+                    </div>
 
-                </fieldset>   
+                    <div class="wrapper" >
+                        <div class="input-data">
+                            <input type="email" required>
+                            <div class="underline"></div>
+                            <label>Nome da empresa produtora (se houver)</label>
+                        </div>
+                    </div>
+                <fieldset>         
+                    <span class="span-sobrefilme">Sobre o filme/série</span>
+                    <select class="selecaofilme" >
+                        <option>Selecione</option>
+                        <option>Curta Metragem</option>
+                        <option>Longa Metragem</option>
+                        <option>Documentário</option>
+                
+                    </select> 
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label>Título do filme</label>
+                        </div>
+                    </div> 
+
+                    <div class="caixa-filmedata">
+                    <label id="filmedata-label" for="filme-data">Data da lançamento:</label>
+                    <input class="filme-data" type="date" id="filme-data" name="filme-data" >    
+                    </div>   
+
+                    <div class="wrapper caixa-classificacao">
+                        <div class="input-data">
+                            <input type="text" id="classificacao-indicativa" required>
+                            <div class="underline"></div>
+                            <label>Classificação indicativa</label>
+                        </div>
+                    </div> 
+
+                    <div class="caixa-temporadas">
+                        <div class="wrapper">
+                            <div class="input-data">
+                                <input type="text" name="temporada-episodios" required>
+                                <div class="underline"></div>
+                                <label>Temporadas/Episódios</label>
+                            </div>
+                        </div> 
+                        <div class="wrapper">
+                            <div class="input-data">
+                                <input type="text" nome="distribuidora" required>
+                                <div class="underline"></div>
+                                <label>Distribuidora</label>
+                            </div>
+                        </div>
+                    </div> 
+
+                        <div class="wrapper">
+                            <div class="input-data">
+                                <input type="text" name="festivais" required>
+                                <div class="underline"></div>
+                                <label>Festivais(se houver)</label>
+                            </div>
+                        </div>
+                    <textarea name="sinopse" id="sinopse"  placeholder="Escreva a sinopse do filme"></textarea>
+                    
+                </fieldset>     
                 </form>
-            </div>
+        </div>
             
     </section>
     </main>
-</div>      
 </body>
+</div>
 </html>
