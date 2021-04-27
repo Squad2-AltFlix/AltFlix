@@ -104,14 +104,15 @@
 .links:hover {
     color: #a569a5;
 }
-
-/* Player */
+body{
+    background-color: rgb(36, 35, 35) !important;
+}
+@media only screen and (max-width: 1920px){
+    /* Player */
 .player{
     width: 100%;
     height: 100vh;
-    background-color: bisque;
     padding-bottom: 1.5%;
-    
 }
 .embed-responsive{
     width: 100% !important;
@@ -125,34 +126,63 @@ iframe {
 }
 /* Informações Produção */
 .info-producao{
+    color: rgb(160, 158, 158);
     display: grid;
-    width: 100%;
-    height: 600px;
-    background-color: darkblue;
+    width: 97%;
     grid-template-areas: "img s s"
                          "a a a"
                          "c c c";
+    gap: 5px;
+    margin: 1.5%;
+}
+.info-producao div {
+    border: 2px outset whitesmoke;
+    border-radius: 5px;
 }
 h2{
-    font-size: 30px;
+    font-size: 25px !important;
+    margin: 10px;
 }
-.img{
+.capa{
     grid-area: img;
-    background-color: black;
+    max-width: 220px;
 }
-.img img{
-    width: 100px;
+.capa img{
+    width: 100%;
+    border-radius: 5px;
 }
 .sinopse{
     grid-area: s;
-    background-color: darkgreen;
 }
 .producao{
     grid-area: a;
-    background-color: green;
 }
 
 .creditos{
     grid-area: c;
-    background-color: yellow;
+}
+}
+@media only screen and (max-width: 768px) {   
+
+}
+
+@media only screen and (max-width: 425px){
+h2{
+    font-size: 15px !important;
+    margin: 10px;
+}
+}
+
+@media only screen and (max-width: 375px){
+    h2{
+        font-size: 14px !important;
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    h2{
+        font-size: 12px !important;
+        margin: 10px;
+    }
 }
