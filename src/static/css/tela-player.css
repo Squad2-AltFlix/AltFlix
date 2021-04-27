@@ -4,111 +4,87 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* Header */
-/* Celulares */
-@media only screen and (min-width: 320px) {
-    /* Header Container */
-    header {
-        background-color: #8e8fca;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .header-container {
-        width: 100%;
-        height: 15vh;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-    }
-    
-    /* Logo */
-    #logo-img-container {
-        flex: 1;
-    }
-
-    #logo-img {
-        display: inline-block;
-        cursor: pointer;
-    }
-
-    /*Navbar*/
-    .links {
-        color: #632565;
-        text-decoration: none;
-        font-family: 'Poppins', sans-serif;
-        transition: 0.3s;
-    }
-    nav li {
-        font-size: 0.7rem;
-    }
-    #search-field{
-        width: 60px;
-    }
-}
-
-/* Tablet */
-@media only screen and (min-width: 630px) {
-    /* Header Container */
-    .header-container {
-        width: 95%;
-        height: 10vh;
-    }
-
-    /* Navbar */
-    nav ul {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    #navbar-links li {
-        margin-right: 25px;
-        font-size: 1rem;
-    }
-
-    /* Campo de busca */
-    #search-field {
-        width: 30%;
-        height: 35px;
-        border: 1px solid black;
-        border-radius: 5px;
-        outline: none;
-        text-align: center;
-        font-size: 1rem;
-    }
-}
-
-/* Desktop */
-@media only screen and (min-width: 1025px) {
-    /* Header Container */
-    .header-container {
-        width: 80%;
-    }
-
-    /*Navbar*/
-    #navbar-links li {
-        margin-right: 50px;
-        font-size: 1rem;
-    }
-
-    /* Campo de busca */
-    #search-field {
-        width: 20%;
-    }
-}
-
-.links:hover {
-    color: #a569a5;
-}
 body{
     background-color: rgb(36, 35, 35) !important;
 }
-@media only screen and (max-width: 2560px){
+@media only screen and (min-width: 768px){
+.filme{
+    display: inline-flex;
+    width: 100%;
+    height: 70vh;
+    justify-content: space-around;
+    margin-top: 50px;
+}   
     /* Player */
+.player{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 1.5%;
+    margin-left: 10%;
+    order: +1;
+}
+.embed-responsive{
+    width: 100% !important;
+    height: 100% !important;
+}
+iframe {
+    width: 1000.89px !important;
+    height: 563px !important;
+    margin: 1.5% !important;
+      
+}
+
+/* Informações Produção */
+.info-producao{
+    color: rgb(160, 158, 158);
+    display: grid;
+    width: 40%;
+    height: 563px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10% 60% 10% 20%;
+    gap: 5px;
+    margin: 1.5%;
+    margin-left: 5%;
+}
+.info-producao div {
+    border: 2px outset whitesmoke;
+    border-radius: 5px;
+    display: flex;
+}
+h2{
+    font-size: 1.2rem !important;
+    margin: 10px;
+}
+.titulo{
+    justify-content: center;
+    align-items: flex-end;
+    grid-column: 1/3;
+}
+.sinopse{
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+.dyg{
+    grid-column: 1/3;
+    grid-row: 3/4;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.producao{
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+.e-tecnica{
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+.e-tecnica h2{
+    font-size: 1rem !important;
+    margin: 10px;
+}
+}
+@media only screen and (max-width: 768px) {   
+        /* Player */
 .player{
     width: 100%;
     height: 100vh;
@@ -124,6 +100,8 @@ iframe {
     margin: 1.5% !important;
       
 }
+/* Informação Filme */
+
 /* Informações Produção */
 .info-producao{
     color: rgb(160, 158, 158);
@@ -143,28 +121,8 @@ h2{
     font-size: 25px !important;
     margin: 10px;
 }
-.capa{
-    grid-area: img;
-    max-width: 220px;
-}
-.capa img{
-    width: 100%;
-    border-radius: 5px;
-}
-.sinopse{
-    grid-area: s;
-}
-.producao{
-    grid-area: a;
 }
 
-.creditos{
-    grid-area: c;
-}
-}
-@media only screen and (max-width: 768px) {   
-
-}
 
 @media only screen and (max-width: 425px){
 h2{
