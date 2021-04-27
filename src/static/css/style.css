@@ -5,14 +5,82 @@
     box-sizing: border-box;
 }
 
+/* Celulares */
 @media only screen and (min-width: 320px) {
+    /* Header Container */
+    header {
+        background-color: #8e8fca;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     
+    .header-container {
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    
+    /* Logo */
+    #logo-img-container {
+        flex: 1;
+    }
+
+    #logo-img {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    /*Navbar*/
+    .links {
+        color: #632565;
+        text-decoration: none;
+        transition: 0.3s;
+    }
 }
 
+/* Tablet */
 @media only screen and (min-width: 600px) {
     
 }
 
+/* Desktop */
 @media only screen and (min-width: 1025px) {
-    
+    /* Header Container */
+    .header-container {
+        width: 80%;
+        height: 10vh;
+    }
+
+    /*Navbar*/
+    nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #navbar-links li {
+        margin-right: 40px;
+        font-family: 'Poppins', sans-serif;
+        text-decoration: none;
+    }
+
+    /* Campo de busca */
+    #search-field {
+        width: 15%;
+        height: 35px;
+        border: 1px solid black;
+        border-radius: 5px;
+        outline: none;
+        text-align: center;
+        font-size: 1rem;
+    }
+}
+
+.links:hover {
+    color: #a569a5;
 }
