@@ -34,48 +34,56 @@
         
         <section class="container">
             <div class="caixa-form">
-                <fieldset>
+        
                 <form class="formulario">
                         
                     <h1 class="titulo">Queremos seu filme conosco!</h1>
-                
-                        <label for="nome">Seu nome:</label>
-                        <input class="input50" type="text" id="nome" name="name" placeholder="Digite seu nome">
-                    
-                        <label for="nome">Email:</label>
-                        <input class="input50" type="email" id="email" name="email" placeholder="Digite seu email">
+            
+                    <div class="wrapper" >
+                        <div class="input-data">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label>Seu Nome</label>
+                    </div>
+                    </div>
+                    <div class="wrapper" >
+                        <div class="input-data">
+                            <input type="email" required>
+                            <div class="underline"></div>
+                            <label>Seu email</label>
+                        </div>
+                    </div>
 
-                       
-                </fieldset>
+                <fieldset>
                         <div class="container-filme">
 
                             <span class="span-sobrefilme">Sobre o filme</span>
-                            <select class="selecao" >
+                            <select class="selecaofilme" >
                                 <option>Selecione</option>
                                 <option>Curta Metragem</option>
                                 <option>Longa Metragem</option>
                                 <option>Documentário</option>
+                        
                             </select> 
-
-                            <label for="filme-nome">Título do filme:</label>
-                            <input class="input40-filme" type="text" id="filme-nome" name="filme-nome" placeholder="Digite nome do filme"> 
+                            <div class="wrapper">
+                                <div class="input-data">
+                                    <input type="text" required>
+                                    <div class="underline"></div>
+                                    <label>Título do filme</label>
+                                </div>
+                            </div> 
 
                             <label for="filme-data">Data da lançamento:</label>
                             <input class="filme-data" type="date" id="filme-data" name="filme-data" >    
 
 
-                            <textarea name="sinopse" id="sinopse" cols="80" rows="10" placeholder="Escreva a sinopse do filme"></textarea>
-
-
-
+                            <textarea name="sinopse" id="sinopse" cols="60" rows="10" placeholder="Escreva a sinopse do filme"></textarea>
                         </div>
 
-
-
-                    </form>
+                </fieldset>   
+                </form>
             </div>
-       
-
+            
     </section>
     </main>
 </body>

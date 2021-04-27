@@ -1,59 +1,118 @@
-.container {
-    width: 50%;
-    justify-content: center;
-    margin: 0 auto;
+body{
+    background:url(/src/static/movie.jpg);
+    back
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+/*caixa do form*/
+.container {
+    width: 30%;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    padding: 40px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.493);
+}
 .titulo {
     text-align: center;
     font-weight: bold;
     font-size: 2em;
     margin: 50px 0;
+    
 }
 
-.input50 {
-    display: block;
-    width: 50%;
+/*///////////////////// inputs ///////////////////////*/
+
+.wrapper{
+    width: 450px;
+    background: #fff;
+    padding: 30px;
+  /*  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);*/
+  }
+  .wrapper .input-data{
     height: 40px;
-    font-size: 18px;
-    color: #a5a1a1;
-    line-height: 1.2;
-    padding-right: 15px;
-    border-radius: 9px;
-    margin-bottom: 15px;
-    display: block;
-    background: rgba(221, 213, 213, 0.616);
+    width: 100%;
+    position: relative;
+  }
+  .wrapper .input-data input{
+    height: 100%;
+    width: 100%;
     border: none;
-    text-align: center;
-   
+    font-size: 17px;
+    border-bottom: 2px solid silver;
+    outline: none;
+  }
+  .input-data input:focus ~ label,
+  .input-data input:valid ~ label{
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: #4158d0;
+  }
+  .wrapper .input-data label{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: grey;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  .input-data .underline{
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+  }
+  .input-data .underline:before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #4158d0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+  .input-data input:focus ~ .underline:before,
+  .input-data input:valid ~ .underline:before{
+    transform: scaleX(1);
+  }
 
-}
+/*fieldset {
+    box-sizing: border-box;
+    border-top: black;
+}*/
+
+
+
+/*/////////////sobre filmes///////////////*/
+
+
 .span-sobrefilme {
     font-weight: bold;
     display: block;
-    margin: 30px 0px 10px;
+    margin: 30px 0px 10px 30px;
 
 }
 .filme-data{
     display: block;
 }
 
-.selecao {
+.selecaofilme {
     width: 40%;
     height: 30px;
+    font-size: 16px;
     display: block;
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-}
-.input40-filme {
     margin-bottom: 10px;
-    height: 30px;
-    width: 40%;
+    margin-left: 30px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid silver;
 }
 
 textarea{
     margin-top: 20px;
+    border-radius: 5px;
+
 }
