@@ -11,6 +11,7 @@ body{
   background:url(/src/static/imagem/bgform.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  font-size: 10px;
 }
 .caixabg {
   background: rgba(0, 0, 0, 0.699);
@@ -18,12 +19,14 @@ body{
 }
 
 /*caixa do form*/
+
 .container {
-  width: 30%;
+  width: 37%;
   background: rgba(255, 255, 255, 0.767);
   margin: 50px auto;
   border-radius: 10px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.493); 
+  font-size: 1.7em;
 }
 .wrapper-semtitulo {
   padding-left: 30px;
@@ -46,14 +49,15 @@ body{
   width: 93%;
   background: none;
   padding: 15px 30px;
-/*  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);*/
 }
+
+
 .wrapper .input-data{
   height: 40px;
   width: 100%;
   position: relative;
-
 }
+
 .wrapper .input-data input{
   height: 100%;
   width: 100%;
@@ -63,7 +67,8 @@ body{
   outline: none;
   background: none;
 }
-.input-data input:focus ~ label ,z
+
+.input-data input:focus ~ label,
 .input-data input:valid ~ label {
   transform: translateY(-20px);
   font-size: 15px;
@@ -78,12 +83,14 @@ body{
   pointer-events: none; 
   transition: all 0.3s ease;
 }
+
 .input-data .underline{
   position: absolute;
   height: 2px;
   width: 100%;
   bottom: 0;
 }
+
 .input-data .underline:before{
   position: absolute;
   content: "";
@@ -94,6 +101,7 @@ body{
   transform-origin: center;
   transition: transform 0.3s ease;
 }
+
 .input-data input:focus ~ .underline:before{
   transform: scaleX(1);
 }
@@ -122,7 +130,9 @@ body{
   background: rgba(255, 255, 255, 0.616);;
   border-bottom: 2px solid silver;
 }
+
 /*input data*/
+
 .filme-data{
   display: block;
   border: none;
@@ -199,6 +209,14 @@ input[type="file"] {
 }
 
  /*********************** MEDIA QUERY ************************/
+ 
+ 
+@media only screen and (max-width: 1280px) {
+  .container {
+    width: 50%;
+  }
+}
+
 
 @media only screen and (max-width: 960px) {
   .container {
@@ -206,8 +224,7 @@ input[type="file"] {
   }
 }
 
-@media 
-only screen and (max-width: 760px),
+@media only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
 
   .container {
@@ -217,20 +234,33 @@ only screen and (max-width: 760px),
 
 @media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
   .container {
-    width: 85%;
+    width: 70%;
+    font-size: 16px
   } 
+  .titulo{
+    font-size: 28px
+  }
+  .caixa-classificacao .wrapper{
+    display: inline-block;
+    width: 70%;
+  }
 }
 
 @media only screen and (max-device-width: 481px) { 
   .container {
     width: 85%;
+    font-size: 15px
   } 
+
+.titulo{
+  font-size: 24px
+}
   .wrapper-semtitulo{
     padding-left: 10px;
   }
 
   .caixa-classificacao .wrapper{
     display: inline-block;
-    width: 60%;
-
+    width: 70%;
+  }
 }
