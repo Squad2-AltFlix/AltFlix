@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Poppins:wght@300;400;700&display=swap');
+
+
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -30,9 +32,10 @@ body{
 .titulo {
   text-align: center;
   font-weight: bold;
-  font-size: 2em;
   padding: 30px 65px;
-  font-family: 'Abel', sans-serif;
+  font-size: 35px;
+  line-height: 1.2;
+  color: #333;
    
   
 }
@@ -152,6 +155,50 @@ textarea{
   background:rgba(255, 255, 255, 0.616);
 }
 
+/* botão enviar e botão upload */
+
+#enviar {
+    height: 50px;
+    width: 160px;
+    background: #333;
+    color: white;
+    border: none;
+    display: block;
+    margin: 0px auto;
+    transition: 0.4s;
+  
+}
+#enviar:hover {
+    transform: scale(1.1);
+    border-radius: 10px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#label-file{
+  padding: 20px 10px;
+  width: 170px;
+  background-color: #333;
+  color: #FFF;
+  text-align: center;
+  display: inline-block;
+  margin-top: 10px;
+  cursor: pointer;
+  margin: 10px 0px 10px 25px;
+  transition: 0.4s;
+}
+#label-file:hover {
+  transform:scale(1.05);
+  border-radius: 10px;
+
+}
+.formulario {
+  padding-bottom:30px
+}
+
+ /*********************** MEDIA QUERY ************************/
 
 @media only screen and (max-width: 960px) {
   .container {
@@ -185,5 +232,5 @@ only screen and (max-width: 760px),
   .caixa-classificacao .wrapper{
     display: inline-block;
     width: 60%;
-}
+
 }

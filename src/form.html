@@ -37,7 +37,7 @@
         
         <form class="formulario">
         
-            <h1 class="titulo">Queremos seu filme também!</h1>
+            <h1 class="titulo">Queremos seu filme no nosso site!</h1>
 
         <div class=wrapper-semtitulo>   
             <div class="wrapper" >
@@ -125,18 +125,20 @@
                     <label>Festivais(se houver)</label>
                 </div>
             </div>
-            
+
+            <label id="label-file" for="arquivo">Upload do Filme</label>
+            <input type="file" name="arquivo" id="arquivo">
+
             <textarea name="sinopse" id="sinopse"  placeholder="Escreva a sinópse do filme" required></textarea>
             
-        </fieldset> 
-        
-        <input type="file" name="upload" id="upload">
-
-        <input type="button" value="Enviar formúlario">
+        </fieldset>
+            
     </div>   
+        <input type="button" id="enviar" value="Enviar formúlario">
+        
     </form>
         
-</section>
+    </section>
 </main>
 </body>
 </div>
