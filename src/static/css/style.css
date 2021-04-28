@@ -147,6 +147,8 @@ body {
     .movie-pic {
         display: block;
         margin: auto;
+        height: 300px;
+        box-shadow: 0px 0px 20px 10px #1b1b1b;
     }
 
     /* Campo de busca */
