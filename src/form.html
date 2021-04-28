@@ -31,107 +31,113 @@
         </header>
     </header>
 -->
-    <main>
+<main>
+    
+    <section class="container">
         
-        <section class="container">
-            <div class="caixa-form">
+        <form class="formulario">
         
-                <form class="formulario">
-                        
-                    <h1 class="titulo">Queremos seu filme conosco!</h1>
+            <h1 class="titulo">Queremos seu filme também!</h1>
+
+        <div class=wrapper-semtitulo>   
+            <div class="wrapper" >
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label>Seu Nome</label>
+            </div>
+            </div>
+            <div class="wrapper" >
+                <div class="input-data">
+                    <input type="email" required>
+                    <div class="underline"></div>
+                    <label>Seu email</label>
+                </div>
+            </div>
+
+            <div class="wrapper" >
+                <div class="input-data">
+                    <input type="tel" required>
+                    <div class="underline"></div>
+                    <label>Seu telefone</label>
+                </div>
+            </div>
+
+            <div class="wrapper" >
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label>Nome da empresa produtora (se houver)</label>
+                </div>
+            </div>
+        <fieldset>         
+            <span class="span-sobrefilme">Sobre o filme/série</span>
+            <select class="selecaofilme" >
+                <option>Selecione</option>
+                <option>Curta Metragem</option>
+                <option>Longa Metragem</option>
+                <option>Documentário</option>
+        
+            </select> 
+            <div class="wrapper">
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label>Título do filme</label>
+                </div>
+            </div> 
+
+            <div class="caixa-filmedata">
+                <label id="filmedata-label" for="filme-data">Data da lançamento:</label>
+                <input class="filme-data" type="date" id="filme-data" name="filme-data" >    
+            </div>   
+
+            <div class="wrapper caixa-classificacao">
+                <div class="wrapper">
+                    <div class="input-data">
+                        <input type="text" id="classificacao-indicativa" required>
+                        <div class="underline"></div>
+                        <label>Classificação indicativa</label>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="input-data">
+                        <input type="text" name="temporada-episodios" required>
+                        <div class="underline"></div>
+                        <label>Temporadas/Episódios</label>
+                    </div>
+                </div> 
+            </div> 
+
+            <div class="wrapper">
+                <div class="input-data">
+                    <input type="text" nome="distribuidora" required>
+                    <div class="underline"></div>
+                    <label>Distribuidora</label>
+                </div>
+            </div>
             
-                    <div class="wrapper" >
-                        <div class="input-data">
-                            <input type="text" required>
-                            <div class="underline"></div>
-                            <label>Seu Nome</label>
-                    </div>
-                    </div>
-                    <div class="wrapper" >
-                        <div class="input-data">
-                            <input type="email" required>
-                            <div class="underline"></div>
-                            <label>Seu email</label>
-                        </div>
-                    </div>
 
-                    <div class="wrapper" >
-                        <div class="input-data">
-                            <input type="tel" required>
-                            <div class="underline"></div>
-                            <label>Seu telefone</label>
-                        </div>
-                    </div>
-
-                    <div class="wrapper" >
-                        <div class="input-data">
-                            <input type="email" required>
-                            <div class="underline"></div>
-                            <label>Nome da empresa produtora (se houver)</label>
-                        </div>
-                    </div>
-                <fieldset>         
-                    <span class="span-sobrefilme">Sobre o filme/série</span>
-                    <select class="selecaofilme" >
-                        <option>Selecione</option>
-                        <option>Curta Metragem</option>
-                        <option>Longa Metragem</option>
-                        <option>Documentário</option>
-                
-                    </select> 
-                    <div class="wrapper">
-                        <div class="input-data">
-                            <input type="text" required>
-                            <div class="underline"></div>
-                            <label>Título do filme</label>
-                        </div>
-                    </div> 
-
-                    <div class="caixa-filmedata">
-                    <label id="filmedata-label" for="filme-data">Data da lançamento:</label>
-                    <input class="filme-data" type="date" id="filme-data" name="filme-data" >    
-                    </div>   
-
-                    <div class="wrapper caixa-classificacao">
-                        <div class="input-data">
-                            <input type="text" id="classificacao-indicativa" required>
-                            <div class="underline"></div>
-                            <label>Classificação indicativa</label>
-                        </div>
-                    </div> 
-
-                    <div class="caixa-temporadas">
-                        <div class="wrapper">
-                            <div class="input-data">
-                                <input type="text" name="temporada-episodios" required>
-                                <div class="underline"></div>
-                                <label>Temporadas/Episódios</label>
-                            </div>
-                        </div> 
-                        <div class="wrapper">
-                            <div class="input-data">
-                                <input type="text" nome="distribuidora" required>
-                                <div class="underline"></div>
-                                <label>Distribuidora</label>
-                            </div>
-                        </div>
-                    </div> 
-
-                        <div class="wrapper">
-                            <div class="input-data">
-                                <input type="text" name="festivais" required>
-                                <div class="underline"></div>
-                                <label>Festivais(se houver)</label>
-                            </div>
-                        </div>
-                    <textarea name="sinopse" id="sinopse"  placeholder="Escreva a sinopse do filme"></textarea>
-                    
-                </fieldset>     
-                </form>
-        </div>
+            <div class="wrapper">
+                <div class="input-data">
+                    <input type="text" name="festivais" required >
+                    <div class="underline"></div>
+                    <label>Festivais(se houver)</label>
+                </div>
+            </div>
             
-    </section>
-    </main>
+            <textarea name="sinopse" id="sinopse"  placeholder="Escreva a sinópse do filme" required></textarea>
+            
+        </fieldset> 
+        
+        <input type="file" name="upload" id="upload">
+
+        <input type="button" value="Enviar formúlario">
+    </div>   
+    </form>
+        
+</section>
+</main>
 </body>
 </div>
 </html>

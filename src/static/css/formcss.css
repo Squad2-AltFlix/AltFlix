@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Noto+Sans|Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body{
-  background:url(/src/static/imagem/movie.jpg);
+  background:url(/src/static/imagem/bgform.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -18,26 +18,29 @@ body{
 /*caixa do form*/
 .container {
   width: 30%;
-  justify-content: center;
   background: rgba(255, 255, 255, 0.767);
-  
   margin: 50px auto;
   border-radius: 10px;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.493);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.493); 
 }
+.wrapper-semtitulo {
+  padding-left: 30px;
+}
+
 .titulo {
   text-align: center;
   font-weight: bold;
   font-size: 2em;
   padding: 30px 65px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Abel', sans-serif;
+   
   
 }
 
 /*///////////////////// inputs ///////////////////////*/
 
 .wrapper{
-  width: 80%;
+  width: 93%;
   background: none;
   padding: 15px 30px;
 /*  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);*/
@@ -57,12 +60,13 @@ body{
   outline: none;
   background: none;
 }
-.input-data input:focus ~ label,
-.input-data input:valid ~ label{
+.input-data input:focus ~ label ,z
+.input-data input:valid ~ label {
   transform: translateY(-20px);
   font-size: 15px;
   color: #4158d0;
 }
+
 .wrapper .input-data label{
   position: absolute;
   bottom: 10px;
@@ -87,16 +91,9 @@ body{
   transform-origin: center;
   transition: transform 0.3s ease;
 }
-.input-data input:focus ~ .underline:before,
-.input-data input:valid ~ .underline:before{
+.input-data input:focus ~ .underline:before{
   transform: scaleX(1);
 }
-
-/*fieldset {
-  box-sizing: border-box;
-  border-top: black;
-}*/
-
 
 
 /*/////////////sobre filmes///////////////*/
@@ -108,10 +105,7 @@ body{
   margin: 30px 0px 10px 30px;
 
 }
-.filme-data{
-  display: block;
-
-}
+/*select*/
 
 .selecaofilme {
   width: 40%;
@@ -122,14 +116,32 @@ body{
   margin-left: 30px;
   outline: none;
   border: none;
+  background: rgba(255, 255, 255, 0.616);;
   border-bottom: 2px solid silver;
+}
+/*input data*/
+.filme-data{
+  display: block;
+  border: none;
+  height: 30px;
+  width: 50%;
+  background:rgba(255, 255, 255, 0.616);
+  border-radius: 4px;
+  margin-bottom: 10px;
+
 }
 .caixa-filmedata{
   margin-left: 30px;
-  display: inline-block;
+  margin-top: 10px;
 }
+
 #filmedata-label{
   margin-bottom: 10px;
+}
+
+.caixa-classificacao .wrapper{
+    display: inline-block;
+    width: 40%;
 }
 
 textarea{
@@ -137,20 +149,9 @@ textarea{
   width: 80%;
   height: 6em;
   margin: 10px 25px;
-  background:rgba(255, 255, 255, 0.616)
-
+  background:rgba(255, 255, 255, 0.616);
 }
 
-#classificacao-indicativa, .caixa-classificacao{
-  width: 40%;
-  display: inline-block;
-  
-}
-
-.caixa-temporadas{
-    width: 50%;
-    display: inline-block;
-}
 
 @media only screen and (max-width: 960px) {
   .container {
@@ -165,7 +166,6 @@ only screen and (max-width: 760px),
   .container {
     width: 55%;
   } 
-
 }
 
 @media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
@@ -178,4 +178,12 @@ only screen and (max-width: 760px),
   .container {
     width: 85%;
   } 
+  .wrapper-semtitulo{
+    padding-left: 10px;
+  }
+
+  .caixa-classificacao .wrapper{
+    display: inline-block;
+    width: 60%;
+}
 }
