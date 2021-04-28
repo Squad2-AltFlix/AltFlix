@@ -72,7 +72,8 @@
             </div>
         <fieldset>         
             <span class="span-sobrefilme">Sobre o filme/série</span>
-            <select class="selecaofilme" >
+            
+            <select class="selecaofilme" onchange="if (this.selectedIndex == 22) doSomething();">
                 <option>Selecione</option>
                 <option value="Ação">Ação</option>
                 <option value="Aventura">Aventura</option>
@@ -97,6 +98,7 @@
                 <option value="Thriller">Thriller</option>
                 <option id="outro">Outro</option>
             </select> 
+
             <div class="wrapper div-oculta" >
                 <div class="input-data">
                     <input type="text" class="input-info" required>

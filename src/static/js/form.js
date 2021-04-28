@@ -1,16 +1,17 @@
 let btnEnviar = document.querySelector('#enviar')
 
+function doSomething() {
+    let divOculta = document.querySelector(".div-oculta")
+    divOculta.classList.remove('div-oculta')
+    divOculta.classList.add('div-no-oculta')
+    
+}
+
+
+/* Pegando as infos do form*/
+
 let informacoes = []
 let informacoesForm = document.querySelectorAll(".input-info")
-
-let outro = document.querySelector("#outro")
-outro.addEventListener("click", function(){
-  // let divOculta = document.getElementsByClassName("div-oculta")
-   console.log('divOculta')
-   alert("ok")
-   // divOculta.classList.remove("div-oculta")
-})
-
 btnEnviar.addEventListener("click", function(){
 
      for (let i=0; i < informacoesForm.length; i++) {

@@ -129,12 +129,17 @@ body{
   border: none;
   background: rgba(255, 255, 255, 0.616);;
   border-bottom: 2px solid silver;
+  display: inline-block;
 }
+
 /* input oculto*/
 .div-oculta {
   display: none;
 }
-
+.div-no-oculta {
+  width: 46%;
+  display: inline-block;
+}
 
 /*input data*/
 
