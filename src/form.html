@@ -42,14 +42,14 @@
         <div class=wrapper-semtitulo>   
             <div class="wrapper" >
                 <div class="input-data">
-                    <input type="text" id="nome" required>
+                    <input type="text" class="input-info" required>
                     <div class="underline"></div>
                     <label>Seu Nome</label>
             </div>
             </div>
             <div class="wrapper" >
                 <div class="input-data">
-                    <input type="email" required>
+                    <input type="email" class="input-info" required>
                     <div class="underline"></div>
                     <label>Seu email</label>
                 </div>
@@ -57,7 +57,7 @@
 
             <div class="wrapper" >
                 <div class="input-data">
-                    <input type="tel" required>
+                    <input type="tel" class="input-info" required>
                     <div class="underline"></div>
                     <label>Seu telefone</label>
                 </div>
@@ -65,7 +65,7 @@
 
             <div class="wrapper" >
                 <div class="input-data">
-                    <input type="text" required>
+                    <input type="text" class="input-info" required>
                     <div class="underline"></div>
                     <label>Nome da empresa produtora (se houver)</label>
                 </div>
@@ -74,34 +74,39 @@
             <span class="span-sobrefilme">Sobre o filme/série</span>
             <select class="selecaofilme" >
                 <option>Selecione</option>
-                <option value="">Ação</option>
-                <option value="">Aventura</option>
-                <option value="">Cinema de arte</option>
-                <option value="">Comédia</option>
-                <option value="">Comédia romântica</option>
-                <option value=""> Dança</option>
-                <option value=""> Documentário</option>
-                <option value="">Docuficção</option>
-                <option value="">Drama</option>
-                <option value=""> Espionagem</option>
-                <option value="">Faroeste</option>
-                <option value=""> Fantasia</option>
-                <option value=""> Ficção científica</option>
-                <option value=""> Filmes de guerra</option>
-                <option value=""> Musical</option>
-                <option value=""> Policial</option>
-                <option value=""> Romance</option>
-                <option value="">Seriado</option>
-                <option value=""> Suspense</option>
-                <option value=""> Terror</option>
-                <option value=""> Thriller</option>
-                <option value=""> Outro</option>
-                
-        
+                <option value="Ação">Ação</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Cinema de arte">Cinema de arte</option>
+                <option value="Comédia">Comédia</option>
+                <option value="Comédia romântica">Comédia romântica</option>
+                <option value="Dança">Dança</option>
+                <option value="Documentário">Documentário</option>
+                <option value="Docuficção">Docuficção</option>
+                <option value="Drama">Drama</option>
+                <option value="Espionagem">Espionagem</option>
+                <option value="Faroeste">Faroeste</option>
+                <option value="Fantasia">Fantasia</option>
+                <option value="Ficção científica">Ficção científica</option>
+                <option value="Filmes de guerra">Filmes de guerra</option>
+                <option value="Musical">Musical</option>
+                <option value="Policial">Policial</option>
+                <option value="Romance">Romance</option>
+                <option value="Seriado">Seriado</option>
+                <option value="Suspense">Suspense</option>
+                <option value="Terror">Terror</option>
+                <option value="Thriller">Thriller</option>
+                <option id="outro">Outro</option>
             </select> 
+            <div class="wrapper div-oculta" >
+                <div class="input-data">
+                    <input type="text" class="input-info" required>
+                    <div class="underline"></div>
+                    <label>Digite o gênero</label>
+                </div>
+            </div>
             <div class="wrapper">
                 <div class="input-data">
-                    <input type="text" required>
+                    <input type="text" class="input-info" required>
                     <div class="underline"></div>
                     <label>Título do filme</label>
                 </div>
@@ -115,14 +120,14 @@
             <div class="wrapper caixa-classificacao">
                 <div class="wrapper">
                     <div class="input-data">
-                        <input type="text" id="classificacao-indicativa" required>
+                        <input type="text" id="classificacao-indicativa" class="input-info" required>
                         <div class="underline"></div>
                         <label>Classificação indicativa</label>
                     </div>
                 </div>
                 <div class="wrapper">
                     <div class="input-data">
-                        <input type="text" name="temporada-episodios" required>
+                        <input type="text" name="temporada-episodios" class="input-info" required>
                         <div class="underline"></div>
                         <label>Temporadas/Episódios</label>
                     </div>
@@ -131,7 +136,7 @@
 
             <div class="wrapper">
                 <div class="input-data">
-                    <input type="text" nome="distribuidora" required>
+                    <input type="text" nome="distribuidora" class="input-info" required>
                     <div class="underline"></div>
                     <label>Distribuidora</label>
                 </div>
@@ -140,7 +145,7 @@
 
             <div class="wrapper">
                 <div class="input-data">
-                    <input type="text" name="festivais" required >
+                    <input type="text" name="festivais" class="input-info" required >
                     <div class="underline"></div>
                     <label>Festivais(se houver)</label>
                 </div>
@@ -149,7 +154,7 @@
             <label id="label-file" for="arquivo">Upload do Filme</label>
             <input type="file" name="arquivo" id="arquivo">
 
-            <textarea name="sinopse" id="sinopse"  placeholder="Escreva a sinópse do filme" required></textarea>
+            <textarea name="sinopse" id="sinopse" class="input-info" placeholder="Escreva a sinópse do filme" required></textarea>
             
         </fieldset>
             
