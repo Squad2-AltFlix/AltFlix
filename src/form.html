@@ -74,7 +74,7 @@
                     <input type="tel" class="input-info" required>
                     <div class="underline"></div>
                     <label>Seu telefone</label>
-                    <small hidden id="tel">*O telefone precisa ser preenchido(com DDD)</small>
+                    <small hidden id="tel">*Preencha o Telefone com DDD</small>
                 </div>
             </div>
 
@@ -82,39 +82,39 @@
                 <div class="input-data">
                     <input type="text" class="input-info" required>
                     <div class="underline"></div>
-                    <label>Nome da empresa produtora (se houver)</label>
+                    <label>Nome da produtora (se houver)</label>
                 </div>
             </div>
         <fieldset>         
             <span class="span-sobrefilme">Sobre o filme/série</span>
             
-            <select class="selecaofilme" onchange="if (this.selectedIndex == 22) doSomething();">
-                <option>Selecione</option>
-                <option value="Ação">Ação</option>
-                <option value="Aventura">Aventura</option>
-                <option value="Cinema de arte">Cinema de arte</option>
-                <option value="Comédia">Comédia</option>
-                <option value="Comédia romântica">Comédia romântica</option>
-                <option value="Dança">Dança</option>
-                <option value="Documentário">Documentário</option>
-                <option value="Docuficção">Docuficção</option>
-                <option value="Drama">Drama</option>
-                <option value="Espionagem">Espionagem</option>
-                <option value="Faroeste">Faroeste</option>
-                <option value="Fantasia">Fantasia</option>
-                <option value="Ficção científica">Ficção científica</option>
-                <option value="Filmes de guerra">Filmes de guerra</option>
-                <option value="Musical">Musical</option>
-                <option value="Policial">Policial</option>
-                <option value="Romance">Romance</option>
-                <option value="Seriado">Seriado</option>
-                <option value="Suspense">Suspense</option>
-                <option value="Terror">Terror</option>
-                <option value="Thriller">Thriller</option>
-                <option id="outro">Outro</option>
-            </select> 
-            <small hidden id="selectOculto">*Selecione o genêro</small>
-
+                <select class="selecaofilme" onchange="if (this.selectedIndex == 22) doSomething();">
+                    <option>Selecione</option>
+                    <option value="Ação">Ação</option>
+                    <option value="Aventura">Aventura</option>
+                    <option value="Cinema de arte">Cinema de arte</option>
+                    <option value="Comédia">Comédia</option>
+                    <option value="Comédia romântica">Comédia romântica</option>
+                    <option value="Dança">Dança</option>
+                    <option value="Documentário">Documentário</option>
+                    <option value="Docuficção">Docuficção</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Espionagem">Espionagem</option>
+                    <option value="Faroeste">Faroeste</option>
+                    <option value="Fantasia">Fantasia</option>
+                    <option value="Ficção científica">Ficção científica</option>
+                    <option value="Filmes de guerra">Filmes de guerra</option>
+                    <option value="Musical">Musical</option>
+                    <option value="Policial">Policial</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Seriado">Seriado</option>
+                    <option value="Suspense">Suspense</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Thriller">Thriller</option>
+                    <option id="outro">Outro</option>
+                </select>
+                <small hidden id="selectOculto">*Selecione o genêro</small>
+            
             <div class="wrapper div-oculta" >
                 <div class="input-data">
                     <input type="text" id="genero" required>
@@ -171,26 +171,29 @@
                 </div>
             </div>
 
-            <div class="wrapper url-filme">
+            <div class="wrapper">
                 <div class="input-data">
-                    <input type="url" name="festivais" class="input-url" required >
+                    <input type="text" name="festivais" class="input-info" required >
                     <div class="underline"></div>
                     <label>Cole a url do vídeo</label>
                     <small hidden id="url-oculto">*Precisamos da url do seu filme</small>  
                 </div>
             </div>
 
-            <textarea name="sinopse" id="sinopse" class="input-info" placeholder="Escreva a sinópse do filme" required></textarea>
-            
+            <div class="wrapper sinopse" >
+                <textarea name="sinopse" id="sinopse" class="input-info" placeholder="Escreva a sinópse do filme (mínimo 500 caracteres)" required></textarea>
+                <small hidden id="sinopse-oculto">*Escreva sinopse do filme</small>
+            </div> 
         </fieldset>
             
     </div>   
     <div id="checkbox-termos">
         <label for="termo-de-solitacao">Li e aceito os</label>
         <a href="http://termos.com">termos e condições</a>
-        <input type="checkbox" name="termo-de-solitacao" id="termo-de-solitacao">
+        <input type="checkbox" value="true" name="termo-de-solitacao" id="termo-de-solitacao">
+        <small hidden id="checkbox-oculto">*Confirme o termo</small> 
     </div>   
-     
+
     <input type="button" id="enviar" value="Enviar formúlario">
     </form>
         

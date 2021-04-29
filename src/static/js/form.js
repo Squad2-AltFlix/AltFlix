@@ -35,14 +35,15 @@ btnEnviar.addEventListener("click", function enviar() {
       festivais: informacoes[8],
       genero: select,
       dataLancamento: lancamento,
-      sinopse: informacoes[9]
+      url:informacoes[9],
+      sinopse: informacoes[10]
    }
 
    let escolhaGenero = document.querySelector("#genero").value
    if (escolhaGenero.length > 0) {
       informacoesForm.genero = escolhaGenero
    }
-
+   console.log(informacaoFilme)
    /***************** VALIDAÇÂO ************************/
 
    let error = []
@@ -99,16 +100,30 @@ btnEnviar.addEventListener("click", function enviar() {
       else document.querySelector("#data-oculto").classList.remove("div-small")
 
 
-      /* Validação URL */ {
+      /* Validação URL */
          if (form.dataLancamento.length == 0) {
             document.querySelector("#url-oculto").classList.add("div-small")
             error.push('erro')
          }
          else document.querySelector("#url-oculto").classList.remove("div-small")
+      
+      /*validação sinopse*/
+      if (form.sinopse.length < 500) {
+         document.querySelector("#sinopse-oculto").classList.add("div-small")
+         error.push('erro')
+      }
+      else c
+      
 
+      /* validação checkbox*/
+      let checkbox = document.querySelector("#termo-de-solitacao")
+      if (!checkbox.checked) {
+         document.querySelector("#checkbox-oculto").classList.add("div-small")
+         error.push('erro')
+         return
       }
    }
-
+   console.log(error)
    if (error.length != 0) {
       return
    }

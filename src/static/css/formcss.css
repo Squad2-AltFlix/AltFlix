@@ -7,19 +7,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body{
   background:url(/src/static/images/bgteste2.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  /* font-size: 10px; */
 }
+
 .caixabg {
   background: rgba(0, 0, 0, 0.699);
   font-size: 10px;
 }
 
 /*caixa do form*/
-
+form{
+  padding: 30px 0px;
+}
 .container {
   width: 30%;
   background: rgba(255, 255, 255, 0.767);
@@ -145,26 +148,30 @@ body{
   width: 46%;
   display: inline-block;
 }
-
+#selectOculto{
+  margin-left: 30px;
+}
 /*input data*/
 
 .filme-data{
   display: block;
   border: none;
   height: 30px;
-  width: 50%;
+  width: 42%;
   background:rgba(255, 255, 255, 0.616);
   border-radius: 4px;
-  margin-bottom: 10px;
+  margin-bottom: 10px; 
 
 }
 .caixa-filmedata{
   margin-left: 30px;
   margin-top: 10px;
 }
-
+.caixa-filmedata input {
+  text-align: center;
+}
 #filmedata-label{
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .caixa-classificacao .wrapper{
@@ -174,13 +181,12 @@ body{
 
 textarea{
   border-radius: 5px;
-  width: 80%;
+  width: 100%;
   height: 6em;
-  margin: 10px 25px;
   background:rgba(255, 255, 255, 0.616);
 }
 
-/* botão enviar e botão upload */
+/* botão enviar e botão url */
 
 #enviar {
     height: 50px;
@@ -191,15 +197,10 @@ textarea{
     display: block;
     margin: 0px auto;
     transition: 0.4s;
-  
 }
 #enviar:hover {
     transform: scale(1.1);
     border-radius: 10px;
-}
-
-.formulario {
-  padding-bottom:30px
 }
 
 #checkbox-termos{
@@ -221,12 +222,10 @@ textarea{
   }
 }
 
-
-@media only screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px)  {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)  {
 
   .container {
-    width: 55%;
+    width: 60%;
   } 
 }
 
@@ -238,27 +237,51 @@ textarea{
   .titulo{
     font-size: 28px
   }
+  .selecaofilme {
+    width: 58%;
+  }
+  
+  .wrapper-semtitulo{
+    padding-left: 10px;
+  }
   .caixa-classificacao .wrapper{
     display: inline-block;
     width: 70%;
+  }
+  .filme-data{
+    width: 65%;
   }
 }
 
 @media only screen and (max-device-width: 481px) { 
   .container {
-    width: 85%;
-    font-size: 15px
+    width: 80%;
+    font-size: 15px;
+    padding: 0px;
   } 
-
-.titulo{
-  font-size: 24px
-}
+  .wrapper{
+    width: 93%;
+    background: none;
+    padding: 15px 10px;
+  }
+  .titulo{
+    font-size: 22px;
+    padding: 5px 20px;
+  }
+  .selecaofilme {
+    width: 58%;
+  }
   .wrapper-semtitulo{
-    padding-left: 10px;
+      padding-left: 10px;
+    }
+ 
+  .caixa-classificacao .wrapper{
+      display: inline-block;
+      width: 50%;
+    }
+
+  .filme-data{
+    width: 65%;
   }
 
-  .caixa-classificacao .wrapper{
-    display: inline-block;
-    width: 70%;
-  }
 }
