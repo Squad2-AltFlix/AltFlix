@@ -13,7 +13,7 @@ body {
     background-color: #632565;
 }
 
-/* Mobile */
+/* Mobile S */
 @media only screen and (min-width: 320px) {
     /* Header Container */
     header {
@@ -54,6 +54,104 @@ body {
     li {
         transition: 1s;
     }
+
+    /* Main Catálogo */
+    .main-container {
+        width: 100%;
+        height: calc(100vh - 90px);
+        background-color: white;
+        margin: auto;
+        border-left: 5px solid #1b1b1b;
+        border-right: 5px solid #1b1b1b;
+        box-shadow: 0px 0px 20px 10px #1b1b1b;
+    }
+
+    /* Intro */
+    .intro {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .intro .span {
+        display: block;
+        color: #632565;
+        padding: 20px 0;
+    }
+
+    .intro h1 {
+        font-size: 1.5rem;
+        color: #1b1b1b;
+        text-align: center;
+    }
+
+     /* Campo de busca */
+    #search-field {
+        display: block;
+        width: 230px;
+        height: 30px;
+        margin: 15px auto;
+        text-align: center;
+        border: 1px solid #632565;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    /* Movies */
+
+    .movies {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .movie-pic {
+        display: block;
+        margin: auto;
+        height: 300px;
+        box-shadow: 0px 0px 20px 10px #1b1b1b;
+    }
+
+    .swiper-container {
+        width: 100%;
+        height: 300px;
+        border-top: 1px solid #632565;
+        border-bottom: 1px solid #632565;
+        background-color: #838383;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        color: white !important;
+    }
+}
+
+/* Mobile M */
+@media only screen and (min-width: 360px) {
+    /* Intro */
+    .intro .span {
+        padding: 30px 0;
+    }
+
+     /* Campo de busca */
+    #search-field {
+        margin: 25px auto;
+        width: 250px;
+    }
+}
+
+/* Mobile L */
+@media only screen and (min-width: 375px) {
+    /* Intro */
+    .intro .span {
+        padding: 30px 0;
+    }
+
+     /* Campo de busca */
+    #search-field {
+        margin: 35px auto;
+        width: 280px;
+    }
 }
 
 /* Tablet */
@@ -88,12 +186,7 @@ body {
         margin-left: 50px;
     }
 
-    /* Campo de busca */
-    #search-field {
-        width: 20%;
-    }
-
-    /* Main Catálogo */
+    /* Main Catálogo
     .main-container {
         width: 80%;
         height: calc(100vh - 90px);
@@ -105,7 +198,7 @@ body {
     }
 
     /* Intro */
-    .intro {
+    /* .intro {
         width: 100%;
         height: 300px;
         display: flex;
@@ -121,38 +214,10 @@ body {
 
     .intro .span {
         color: #632565;
-    }
-
-    /* Movies */
-    .movies {
-        width: 100%;
-        height: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .swiper-container {
-        width: 100%;
-        height: 300px;
-        border-top: 1px solid #632565;
-        border-bottom: 1px solid #632565;
-        background-color: #838383;
-    }
-
-    .swiper-button-prev, .swiper-button-next {
-        color: white !important;
-    }
-
-    .movie-pic {
-        display: block;
-        margin: auto;
-        height: 300px;
-        box-shadow: 0px 0px 20px 10px #1b1b1b;
-    }
+    } */
 
     /* Campo de busca */
-    #search-field {
+    /* #search-field {
         width: 40%;
         height: 55px;
         border: 1px solid #632565;
@@ -160,7 +225,7 @@ body {
         outline: none;
         text-align: center;
         font-size: 1rem;
-    }
+    } */
 }
 
 li:hover {
