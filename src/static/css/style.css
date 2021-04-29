@@ -87,7 +87,7 @@ body {
      /* Campo de busca */
     #search-field {
         display: block;
-        width: 230px;
+        width: 241px;
         height: 30px;
         margin: 15px auto;
         text-align: center;
@@ -136,21 +136,15 @@ body {
      /* Campo de busca */
     #search-field {
         margin: 25px auto;
-        width: 250px;
+        width: 310px;
     }
 }
 
 /* Mobile L */
 @media only screen and (min-width: 375px) {
-    /* Intro */
-    .intro .span {
-        padding: 30px 0;
-    }
-
      /* Campo de busca */
     #search-field {
         margin: 35px auto;
-        width: 280px;
     }
 }
 
@@ -158,7 +152,6 @@ body {
 @media only screen and (min-width: 630px) {
     /* Header Container */
     .header-container {
-        width: 90%;
         height: 90px;
     }
 
@@ -171,6 +164,28 @@ body {
 
     .navbar-links li {
         margin-left: 35px;
+    }
+
+    /* Intro */
+    .intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .intro .span {
+        font-size: 3.5rem;
+    }
+
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+
+     /* Campo de busca */
+    #search-field {
+        width: 518px;
+        height: 50px;
     }
 }
 
@@ -186,38 +201,29 @@ body {
         margin-left: 50px;
     }
 
-    /* Main Catálogo
+    /* Main Catálogo */
     .main-container {
         width: 80%;
-        height: calc(100vh - 90px);
-        background-color: white;
-        margin: auto;
-        border-left: 5px solid #1b1b1b;
-        border-right: 5px solid #1b1b1b;
-        box-shadow: 0px 0px 20px 10px #1b1b1b;
     }
 
     /* Intro */
-    /* .intro {
+    .intro {
         width: 100%;
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-
-    .intro h1 {
-        font-size: 3.5rem;
-        color: #1b1b1b;
+        height: 35vh;
     }
 
     .intro .span {
+        font-size: 3.5rem;
         color: #632565;
-    } */
+    }
+
+    .intro h1 {
+        font-size: 3.0rem;
+        color: #1b1b1b;
+    }
 
     /* Campo de busca */
-    /* #search-field {
+    #search-field {
         width: 40%;
         height: 55px;
         border: 1px solid #632565;
@@ -225,7 +231,7 @@ body {
         outline: none;
         text-align: center;
         font-size: 1rem;
-    } */
+    }
 }
 
 li:hover {
