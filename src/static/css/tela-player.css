@@ -1,16 +1,18 @@
-/* ===== Footer ===== */
 /* ===== Config ===== */
 * {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 h2, p, li {
     font-family: 'Poppins', sans-serif;
+    cursor: default;
 }
 body{
     overflow-x: hidden;
     font-size: 10px;
+    background-color: rgb(36, 35, 35) !important;
 }
 footer{
     width: 100vw;
@@ -18,7 +20,88 @@ footer{
     margin-left: auto;
     margin-top: 5%;
     display: flex;
-    justify-content: space-between;  
+    justify-content: space-between;
+    background: #1b1b1b;
+    margin-bottom: 15px;
+    padding: 5px;  
+}
+/* ===== Footer ===== */
+.sobre h2{
+    position: relative;
+    color: rgb(160, 158, 158);       
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+}
+.sobre h2:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #632565;
+}
+.sobre p{
+    text-align: justify;
+    word-break: keep-all;
+    color: rgb(160, 158, 158);
+    margin: 5px;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+}
+.contact h2{
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    position: relative;
+    color: rgb(160, 158, 158);
+    font-weight: 700;
+    margin-bottom: 15px;
+}    
+.contact h2:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #632565;
+}
+.contact ul {
+    margin: 5px;
+    padding: 0;
+}
+.contact li {
+    color: rgb(160, 158, 158);
+    display: flex;
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    margin: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.social {
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+.social a:first-child{
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+.social a:last-child{
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 3px; 
+}
+.social a:first-child:hover{
+    background-color: #317ac2;
+}
+.social a:last-child:hover{
+    background-color: black;
+}
+.contact i{
+    color: white;
+    padding: 6px;
 }
 #buttonBack {
     position: fixed;
@@ -50,110 +133,19 @@ footer{
     footer{
         flex-direction: column;
         align-items: center;
-        background: #1b1b1b;
-    }
-    footer div{        
-        margin-bottom: 15px;
-        padding: 5px;
     }
     /* ===== Sobre ===== */
     .sobre{
         width: 100%;
     }
-    .sobre h2{
-        position: relative;
-        color: rgb(160, 158, 158);
-        font-weight: 700;
-        margin-bottom: 15px;
-        font-size: clamp(1.4rem, 3vw, 2rem);
-    }
-    .sobre h2:before{
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 50px;
-        height: 2px;
-        background: #632565;
-    }
-    .sobre p{
-        text-align: justify;
-        word-break: keep-all;
-        color: rgb(160, 158, 158);
-        margin: 5px;
-        font-size: clamp(1rem, 2vw, 1.6rem);
-    }
     /* ===== Contatos ===== */
     .contact{
         width: 100%;
     }
-    .contact h2{
-        font-size: clamp(1.6rem, 3vw, 2rem);
-        position: relative;
-        color: rgb(160, 158, 158);
-        font-weight: 700;
-        margin-bottom: 15px;
-    }
-    .contact h2:before{
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 50px;
-        height: 2px;
-        background: #632565;
-    }
-    .contact ul {
-        margin: 5px;
-        padding: 0;
-    }
-    .contact li {
-        color: rgb(160, 158, 158);
-        display: flex;
-        font-size: clamp(1.2rem, 2vw, 2rem);
-        margin: 5px;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .contact li h3{
-        max-width: 262px;
-    }
-    .social {
-        width: 90px;
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-    }
-    .social a:first-child{
-        background-color: transparent;
-        border: 1px solid white;
-        border-radius: 3px;
-    }
-    .social a:last-child{
-        background-color: transparent;
-        border: 1px solid white;
-        border-radius: 3px; 
-    }
-    .social a:first-child:hover{
-        background-color: #317ac2;
-    }
-    .social a:last-child:hover{
-        background-color: rgba(42, 43, 42, 0.781);
-    }
-    
-    .contact i{
-        color: white;
-        padding: 6px;
-    }
 }
 @media only screen and (min-width: 769px){
-    footer{
-        background: #1b1b1b;
-    }
     footer div{
-        margin-top: 15px;        
-        margin-bottom: 15px;
-        padding: 5px;
+        margin-top: 15px;  
     }
     /* ===== Sobre ===== */
     .sobre{
@@ -161,118 +153,23 @@ footer{
         height: 100%;
         margin-left: 20px;
     }
-    .sobre h2{
-        position: relative;
-        color: rgb(160, 158, 158);
-        font-weight: 700;
-        margin-bottom: 15px;
-        font-size: clamp(1.4rem, 3vw, 2rem);
-    }
-    .sobre h2:before{
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 50px;
-        height: 2px;
-        background: #632565;
-    }
-    .sobre p{
-        text-align: justify;
-        word-break: keep-all;
-        color: rgb(160, 158, 158);
-        margin: 5px;
-        font-size: clamp(1rem, 2vw, 1.4rem);
-    }
     /* ===== Contatos ===== */
     .contact{
         width: max-content;
         margin-right: 20px;
     }
-    .contact h2{
-        font-size: clamp(1.6rem, 3vw, 2rem);
-        position: relative;
-        color: rgb(160, 158, 158);
-        font-weight: 700;
-        margin-bottom: 15px;
-    }
-    .contact h2:before{
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 50px;
-        height: 2px;
-        background: #632565;
-    }
-    .contact ul {
-        margin: 5px;
-        padding: 0;
-    }
-    .contact li {
-        color: rgb(160, 158, 158);
-        display: flex;
-        font-size: clamp(1rem, 2vw, 1.4rem);
-        margin: 5px;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .social {
-        width: 90px;
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-    }
-    .social a:first-child{
-        background-color: transparent;
-        border: 1px solid white;
-        border-radius: 3px;
-    }
-    .social a:last-child{
-        background-color: transparent;
-        border: 1px solid white;
-        border-radius: 3px; 
-    }
-    .social a:first-child:hover{
-        background-color: #317ac2;
-    }
-    .social a:last-child:hover{
-        background-color: black;
-    }
-    .contact i{
-        color: white;
-        padding: 6px;
-    }
 }
 
 /* ===== Corpo ===== */
-* {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    overflow-x: hidden;
-    font-size: 10px;
-    background-color: rgb(36, 35, 35) !important;
-}
-h2{
-    cursor: default;
-}
-@media only screen and (min-width: 1024px){
-.tela{
+
+.tela {
     display: flex;
-    width: 90%;
     height: max-content;
     margin-top: 50px;
-}   
-    /* Player */
+}
+/* ===== Player ===== */
 .player{
-    width: 100%;
-    order: 1;
     max-height: 563px;
-    margin-left: 25px;
 }
 .wrapper{
     position: relative;
@@ -287,74 +184,53 @@ h2{
     width: 100%;
     height: 100%;
 }
-
-/* Informações Produção */
+/* ===== Informações Produção */
 .info-producao{
     color: rgb(160, 158, 158);
     display: grid;
-    width: 40%;
-    max-height: 563px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 10% 55% 10% 25%;
-    margin-left: 10%;
 }
 .info-producao div {
     display: flex;
     background-color: rgb(36, 35, 35);
 }
-h2{
+h2 {
     text-shadow: 0px 0px 11px #212529;
-    font-size: 1.2rem ;
-    margin: 10px;
-    padding-top: 10px;
 }
 .titulo{
     justify-content: center;
     align-items: center;
-    grid-column: 1/3;
 }
 .titulo h2{
     text-align: center;
     font-size: clamp(1.4rem, 2vw, 2rem);
     font-weight: 700;
 }
-.sinopse{
-    padding: 5px 5px;
-    grid-column: 1/3;
-    grid-row: 2/3;
-}
 .sinopse h2{
     text-align: justify;
     font-size: clamp(1.0rem, 1vw, 2rem);
-    margin: 0;
+    margin: 5px;
 }
 .dyg{
-    grid-column: 1/3;
-    grid-row: 3/4;
     justify-content: space-around;
     align-items: center;
 }
 .dyg h2 {
-    font-size: 1.1rem;
+    font-size: clamp(1.0rem, 1vw, 1.2rem);
     font-weight: 200;
     margin: 5px;
 }
 .producao{
     display: flex;
-    grid-column: 1/3;
-    grid-row: 4/5;
     flex-direction: column;
+    font-size: clamp(1.0rem, 1vw, 1.1rem);
 }
-.producao h2 {    
-    font-size: 1.1rem;
+.producao h2{
+    font-size: 1.2rem ;
 }
-}
+
 @media only screen and (max-width: 1024px) {   
 .tela{
-    display: flex;
     width: 100%;
-    height: fit-content;
-    margin-top: 50px 0px;
     flex-direction: column;
     align-content: center;
 }
@@ -362,73 +238,66 @@ h2{
 .player{
     width: 95%;
     order: -1;
-    max-height: 563px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.wrapper{
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
-}
-.embed{
-    border: 10px ridge #212529;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 /* Informações Produção */
 .info-producao{
-    color: rgb(160, 158, 158);
-    display: grid;
     width: 97vw;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
 }
-.info-producao div {
-    display: flex;
-}
-h2 {
-    text-shadow: 0px 0px 11px #212529;
-}
 .titulo .dyg .producao{
     height: fit-content;
-}
-.titulo{
-    justify-content: center;
-    align-items: center;
-}
-.titulo h2{
-    text-align: center;
-    font-size: clamp(1.4rem, 2vw, 3rem);
-    font-weight: 700;
-}
-.sinopse h2{
-    text-align: justify;
-    font-size: clamp(1rem, 1vw, 2rem);
-    margin: 5px;
 }
 .dyg{
     margin-top: 10px;
     margin-bottom: 10px;
-    justify-content: space-around;
-    align-items: center;
 }
-.dyg h2 {
-    font-size: clamp(1.0rem, 1vw, 2rem);
-    font-weight: 200;
-    margin: 5px;
+.producao h2{    
+    margin: 5px;    
+}
+}
+@media only screen and (min-width: 1025px){
+.tela{    
+    width: 90%;    
+}   
+    /* Player */
+.player{
+    width: 100%;
+    order: 1;    
+    margin-left: 25px;
+}
+/* Informações Produção */
+.info-producao{
+    width: 40%;
+    max-height: 563px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10% 55% 10% 25%;
+    margin-left: 10%;
+}
+h2{
+    font-size: 1.2rem ;
+    margin: 10px;
+    padding-top: 10px;
+}
+.titulo{
+    grid-column: 1/3;
+}
+.sinopse{
+    padding: 5px 5px;
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+.dyg{
+    grid-column: 1/3;
+    grid-row: 3/4;    
 }
 .producao{
-    flex-direction: column;
-}
-.producao h2{
-    font-size: clamp(1.0rem, 1vw, 2rem);
-    margin: 5px;    
+    grid-column: 1/3;
+    grid-row: 4/5;
 }
 }
