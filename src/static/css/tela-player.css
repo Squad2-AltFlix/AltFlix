@@ -22,7 +22,6 @@ footer{
     display: flex;
     justify-content: space-between;
     background: #1b1b1b;
-    margin-bottom: 15px;
     padding: 5px;  
 }
 /* ===== Footer ===== */
@@ -31,7 +30,7 @@ footer{
     color: rgb(160, 158, 158);       
     font-weight: 700;
     margin-bottom: 15px;
-    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-size: clamp(1.4rem, 3vw, 1.6rem);
 }
 .sobre h2:before{
     content: '';
@@ -47,10 +46,10 @@ footer{
     word-break: keep-all;
     color: rgb(160, 158, 158);
     margin: 5px;
-    font-size: clamp(1rem, 2vw, 1.4rem);
+    font-size: clamp(1rem, 2vw, 1.2rem);
 }
 .contact h2{
-    font-size: clamp(1.6rem, 3vw, 2rem);
+    font-size: clamp(1.6rem, 3vw, 1.6rem);
     position: relative;
     color: rgb(160, 158, 158);
     font-weight: 700;
@@ -72,7 +71,7 @@ footer{
 .contact li {
     color: rgb(160, 158, 158);
     display: flex;
-    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    font-size: clamp(1.2rem, 2vw, 1.2rem);
     margin: 5px;
     align-items: center;
     justify-content: space-between;
@@ -82,6 +81,7 @@ footer{
     display: flex;
     justify-content: space-between;
     margin: 0;
+    margin-left: 5px;
 }
 .social a:first-child{
     background-color: transparent;
@@ -156,12 +156,22 @@ footer{
     /* ===== Contatos ===== */
     .contact{
         width: max-content;
-        margin-right: 20px;
+        margin-right: 60px;
     }
 }
-
+/* ===== Minhas alterações do Header */
+.navbar.navbar-expand-lg.navbar-dark.bg-dark{
+    background-color: #1b1b1b !important;
+}
+header#navbar #navbarNav li:hover {
+    -webkit-transform: scale(1.3) !important;
+            transform: scale(1.3) !important;
+  }
+  header#navbar #navbarNav li {
+    -webkit-transition-duration: .5s !important;
+    transition-duration: .5s !important;
+  }
 /* ===== Corpo ===== */
-
 .tela {
     display: flex;
     height: max-content;
@@ -193,7 +203,7 @@ footer{
     display: flex;
     background-color: rgb(36, 35, 35);
 }
-h2 {
+.info-producao h2 {
     text-shadow: 0px 0px 11px #212529;
 }
 .titulo{
