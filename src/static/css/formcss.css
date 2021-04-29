@@ -8,14 +8,14 @@
   box-sizing: border-box;
 }
 body{
-  background:url(/src/static/imagem/bgform.jpg);
+  background:url(/src/static/images/bgform.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  font-size: 10px;
+  /* font-size: 10px; */
 }
 .caixabg {
   background: rgba(0, 0, 0, 0.699);
-  
+  font-size: 10px;
 }
 
 /*caixa do form*/
@@ -106,10 +106,10 @@ body{
   transform: scaleX(1);
 }
 
-.small{
-  display: block;
-  color: red;
-  font-size: 14px;
+.div-small {
+  display: block !important;
+  color: red !important;
+  font-size: 0.8em !important;
 }
 
 /*/////////////sobre filmes///////////////*/
@@ -198,31 +198,12 @@ textarea{
     border-radius: 10px;
 }
 
-input[type="file"] {
-  display: none;
-}
-
-#label-file{
-  padding: 20px 10px;
-  width: 170px;
-  background-color: #333;
-  color: #FFF;
-  text-align: center;
-  display: inline-block;
-  margin-top: 10px;
-  cursor: pointer;
-  margin: 10px 0px 10px 25px;
-  transition: 0.4s;
-}
-#label-file:hover {
-  transform:scale(1.05);
-  border-radius: 10px;
-
-}
 .formulario {
   padding-bottom:30px
 }
 
+
+  
  /*********************** MEDIA QUERY ************************/
  @media only screen and (max-width: 1700px) {
   .container {
