@@ -21,7 +21,7 @@ body{
 /*caixa do form*/
 
 .container {
-  width: 37%;
+  width: 30%;
   background: rgba(255, 255, 255, 0.767);
   margin: 50px auto;
   border-radius: 10px;
@@ -219,20 +219,18 @@ input[type="file"] {
 }
 
  /*********************** MEDIA QUERY ************************/
- 
+ @media only screen and (max-width: 1700px) {
+  .container {
+    width: 40%;
+  }
+}
  
 @media only screen and (max-width: 1280px) {
   .container {
-    width: 50%;
+    width: 45%;
   }
 }
 
-
-@media only screen and (max-width: 960px) {
-  .container {
-    width: 60%;
-  }
-}
 
 @media only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
