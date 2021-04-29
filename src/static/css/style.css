@@ -9,10 +9,6 @@
     display: none;
 }
 
-html {
-    height: 100vh;
-}
-
 body {
     background-color: #632565;
 }
@@ -138,11 +134,16 @@ header#navbar #navbarNav li:hover {
         /* height: 300px; */
         border-top: 3px solid #632565;
         border-bottom: 3px solid #632565;
-        background-color: #1b1b1b27;
+        background-color: transparent;
     }
 
     .swiper-button-prev, .swiper-button-next {
-        color: white !important;
+        color: #1b1b1b1a !important;
+        transition: 0.8s;
+    }
+
+    .swiper-button-prev:hover, .swiper-button-next:hover {
+        color: #1b1b1b !important;
     }
 
     /* Ficha Técnica */
@@ -229,13 +230,13 @@ header#navbar #navbarNav li:hover {
     /* Main Catálogo */
     .main-container {
         width: 80%;
-        min-height: calc(100vh - 71px);
+        min-height: calc(100vh - 64px);
     }
 
     /* Intro */
     .intro {
         width: 100%;
-        height: 35vh;
+        height: 350px;
     }
 
     .intro .span {
