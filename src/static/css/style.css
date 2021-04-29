@@ -9,6 +9,10 @@
     display: none;
 }
 
+html {
+    height: 100vh;
+}
+
 body {
     background-color: #632565;
 }
@@ -132,9 +136,9 @@ header#navbar #navbarNav li:hover {
     .swiper-container {
         width: 100%;
         /* height: 300px; */
-        border-top: 1px solid #632565;
-        border-bottom: 1px solid #632565;
-        background-color: #838383;
+        border-top: 3px solid #632565;
+        border-bottom: 3px solid #632565;
+        background-color: #1b1b1b27;
     }
 
     .swiper-button-prev, .swiper-button-next {
@@ -151,11 +155,14 @@ header#navbar #navbarNav li:hover {
     .info, .info-sin {
         margin: 0;
         padding: 0 20px 20px 20px;
+        text-decoration: underline #632565;
     }
 
     .info-sin {
         text-align: justify;
         font-size: 14px;
+        text-decoration: none;
+        color: #632565;
     }
 }
 
@@ -183,6 +190,10 @@ header#navbar #navbarNav li:hover {
 
 /* Tablet */
 @media only screen and (min-width: 630px) {
+    .main-container {
+        min-height: calc(100vh - 71px);
+    }
+    
     /* Intro */
     .intro {
         display: flex;
@@ -218,6 +229,7 @@ header#navbar #navbarNav li:hover {
     /* Main Catálogo */
     .main-container {
         width: 80%;
+        min-height: calc(100vh - 71px);
     }
 
     /* Intro */
@@ -241,5 +253,10 @@ header#navbar #navbarNav li:hover {
         width: 620px;
         height: 55px;
         font-size: 1.5rem;
+    }
+
+    /* Ficha Técnica */
+    .info, .info-sin {
+        padding: 0 20px 20px 20px;
     }
 }
