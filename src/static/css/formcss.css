@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 body{
-  background:url(/src/static/images/bgform.jpg);
+  background:url(/src/static/images/bgteste2.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   /* font-size: 10px; */
@@ -72,7 +72,7 @@ body{
 .input-data input:valid ~ label {
   transform: translateY(-20px);
   font-size: 15px;
-  color: #4158d0;
+  color: #882a8b;
 }
 
 .wrapper .input-data label{
@@ -96,7 +96,7 @@ body{
   content: "";
   height: 100%;
   width: 100%;
-  background: #4158d0;
+  background: #391f3a;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease;
@@ -202,7 +202,11 @@ textarea{
   padding-bottom:30px
 }
 
-
+#checkbox-termos{
+    padding-left: 20%;
+    padding-bottom: 20px;
+    padding-right: 20%;
+  }
   
  /*********************** MEDIA QUERY ************************/
  @media only screen and (max-width: 1700px) {

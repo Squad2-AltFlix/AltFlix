@@ -98,6 +98,15 @@ btnEnviar.addEventListener("click", function enviar() {
       }
       else document.querySelector("#data-oculto").classList.remove("div-small")
 
+
+      /* Validação URL */ {
+         if (form.dataLancamento.length == 0) {
+            document.querySelector("#url-oculto").classList.add("div-small")
+            error.push('erro')
+         }
+         else document.querySelector("#url-oculto").classList.remove("div-small")
+
+      }
    }
 
    if (error.length != 0) {

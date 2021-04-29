@@ -176,6 +176,7 @@
                     <input type="url" name="festivais" class="input-url" required >
                     <div class="underline"></div>
                     <label>Cole a url do vídeo</label>
+                    <small hidden id="url-oculto">*Precisamos da url do seu filme</small>  
                 </div>
             </div>
 
@@ -184,8 +185,13 @@
         </fieldset>
             
     </div>   
-        <input type="button" id="enviar" value="Enviar formúlario">
-        
+    <div id="checkbox-termos">
+        <label for="termo-de-solitacao">Li e aceito os</label>
+        <a href="http://termos.com">termos e condições</a>
+        <input type="checkbox" name="termo-de-solitacao" id="termo-de-solitacao">
+    </div>   
+     
+    <input type="button" id="enviar" value="Enviar formúlario">
     </form>
         
     </section>
