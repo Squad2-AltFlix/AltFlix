@@ -45,6 +45,7 @@
                     <input type="text" class="input-info" required>
                     <div class="underline"></div>
                     <label>Seu Nome</label>
+                    <small hidden id="nome">*O nome precisa ser preenchido</small>
             </div>
             </div>
             <div class="wrapper" >
@@ -52,6 +53,7 @@
                     <input type="email" class="input-info" required>
                     <div class="underline"></div>
                     <label>Seu email</label>
+                    <small hidden id="email">*O email precisa ser válido</small>
                 </div>
             </div>
 
@@ -60,6 +62,7 @@
                     <input type="tel" class="input-info" required>
                     <div class="underline"></div>
                     <label>Seu telefone</label>
+                    <small hidden id="tel">*O telefone precisa ser preenchido(com DDD)</small>
                 </div>
             </div>
 
@@ -98,6 +101,7 @@
                 <option value="Thriller">Thriller</option>
                 <option id="outro">Outro</option>
             </select> 
+            <small hidden id="selectOculto">*Selecione o genêro</small>
 
             <div class="wrapper div-oculta" >
                 <div class="input-data">
@@ -111,12 +115,14 @@
                     <input type="text" class="input-info" required>
                     <div class="underline"></div>
                     <label>Título do filme</label>
+                    <small hidden id="titulo-oculto">*Título precisa ser preenchido</small>
                 </div>
             </div> 
 
             <div class="caixa-filmedata">
                 <label id="filmedata-label" for="filme-data">Data da lançamento:</label>
-                <input class="filme-data" type="date" id="filme-data" name="filme-data" >    
+                <input class="filme-data" type="date" id="filme-data" name="filme-data" >
+                <small hidden id="data-oculto">*Escreva a data de lançamento</small>    
             </div>   
 
             <div class="wrapper caixa-classificacao">
@@ -140,7 +146,7 @@
                 <div class="input-data">
                     <input type="text" nome="distribuidora" class="input-info" required>
                     <div class="underline"></div>
-                    <label>Distribuidora</label>
+                    <label>Distribuidora(se houver)</label>
                 </div>
             </div>
             
@@ -170,4 +176,5 @@
 </body>
 </div>
 <script src="static/js/form.js"></script>
+<script src="static/js/validacao-form.js"></script>
 </html>
