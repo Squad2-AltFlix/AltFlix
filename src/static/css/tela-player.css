@@ -1,3 +1,246 @@
+/* ===== Footer ===== */
+/* ===== Config ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2, p, li {
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow-x: hidden;
+    font-size: 10px;
+}
+footer{
+    width: 100vw;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;  
+}
+#buttonBack {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    padding: 15px;
+    background-color: transparent;
+    border: 2px solid #632565;
+    border-radius: 10px;
+    font-size: 16px;
+    height: 55px;
+    width: 55px;
+    text-decoration: none;
+    color: #632565;
+    font-weight: bold;
+    transition: .5s;
+    z-index: 999;
+    display: none;
+}
+.far.fa-arrow-alt-circle-up.fa-7x {
+        font-size: 22px;
+}
+
+#buttonBack:hover {
+        background-color: #632565;
+        color: #fff;
+}
+@media only screen and (max-width: 768px){
+    footer{
+        flex-direction: column;
+        align-items: center;
+        background: #1b1b1b;
+    }
+    footer div{        
+        margin-bottom: 15px;
+        padding: 5px;
+    }
+    /* ===== Sobre ===== */
+    .sobre{
+        width: 100%;
+    }
+    .sobre h2{
+        position: relative;
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: 15px;
+        font-size: clamp(1.4rem, 3vw, 2rem);
+    }
+    .sobre h2:before{
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: #632565;
+    }
+    .sobre p{
+        text-align: justify;
+        word-break: keep-all;
+        color: whitesmoke;
+        margin: 5px;
+        font-size: clamp(1rem, 2vw, 1.6rem);
+    }
+    /* ===== Contatos ===== */
+    .contact{
+        width: 100%;
+    }
+    .contact h2{
+        font-size: clamp(1.6rem, 3vw, 2rem);
+        position: relative;
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    .contact h2:before{
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: #632565;
+    }
+    .contact ul {
+        margin: 5px;
+        
+    }
+    .contact li {
+        color: whitesmoke;
+        display: flex;
+        font-size: clamp(1.2rem, 2vw, 2rem);
+        margin: 5px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .social {
+        width: 90px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+    .social a:first-child{
+        background-color: #0A66C2;
+        border: 1px solid white;
+        border-radius: 3px;
+    }
+    .social a:last-child{
+        background-color: rgba(23, 24, 23, 0.781);
+        border: 1px solid white;
+        border-radius: 3px; 
+    }
+    .social a:first-child:hover{
+        background-color: #317ac2;
+    }
+    .social a:last-child:hover{
+        background-color: rgba(42, 43, 42, 0.781);
+    }
+    
+    .contact i{
+        color: white;
+        padding: 6px;
+    }
+}
+@media only screen and (min-width: 769px){
+    footer{
+        background: #1b1b1b;
+    }
+    footer div{
+        margin-top: 15px;        
+        margin-bottom: 15px;
+        padding: 5px;
+    }
+    /* ===== Sobre ===== */
+    .sobre{
+        width: 40%;
+        height: 100%;
+    }
+    .sobre h2{
+        position: relative;
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: 15px;
+        font-size: clamp(1.4rem, 3vw, 2rem);
+    }
+    .sobre h2:before{
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: #632565;
+    }
+    .sobre p{
+        text-align: justify;
+        word-break: keep-all;
+        color: whitesmoke;
+        margin: 5px;
+        font-size: clamp(1rem, 2vw, 1.6rem);
+    }
+    /* ===== Contatos ===== */
+    .contact{
+        width: 40%;
+    }
+    .contact h2{
+        font-size: clamp(1.6rem, 3vw, 2rem);
+        position: relative;
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    .contact h2:before{
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: #632565;
+    }
+    .contact ul {
+        margin: 5px;
+        
+    }
+    .contact li {
+        color: whitesmoke;
+        display: flex;
+        font-size: clamp(1rem, 2vw, 1.6rem);
+        margin: 5px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .social {
+        width: 90px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+    .social a:first-child{
+        background-color: #0A66C2;
+        border: 1px solid white;
+        border-radius: 3px;
+    }
+    .social a:last-child{
+        background-color: rgba(23, 24, 23, 0.781);
+        border: 1px solid white;
+        border-radius: 3px; 
+    }
+    .social a:first-child:hover{
+        background-color: #317ac2;
+    }
+    .social a:last-child:hover{
+        background-color: rgba(42, 43, 42, 0.781);
+    }
+    .contact i{
+        color: white;
+        padding: 6px;
+    }
+}
+
+/* ===== Corpo ===== */
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
