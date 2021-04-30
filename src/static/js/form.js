@@ -101,7 +101,7 @@ btnEnviar.addEventListener("click", function enviar() {
 
 
       /* Validação URL */
-         if (form.dataLancamento.length == 0) {
+         if (form.url.length == 0) {
             document.querySelector("#url-oculto").classList.add("div-small")
             error.push('erro')
          }
