@@ -18,7 +18,41 @@ async function moviePlay(id) {
 
 async function movie() {
     let movie = await videoAll()
-    console.log(movie);
+
+    movie.forEach((element, index) => {
+        $('.swiper-wrapper').prepend(`
+            <div class="swiper-slide">
+                <img src="${element[0]}" alt="${element[1]}" class="movie-pic">
+                <span class="movie-title">
+                    <a class="${element[2]}">${element[1]}</a>
+                 </span>
+            </div>
+        `)
+
+        if(index == movie.length - 1) {
+            new Swiper('.swiper-container', {
+                direction: 'horizontal',
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            });
+        }
+
+    });
+
+    // console.log(movie);
 }
 movie()
 
