@@ -101,7 +101,7 @@ form{
 
 .wrapper .input-data label{
   position: absolute;
-  bottom: 10px;
+  bottom: -10px;
   left: 0;
   color: rgb(56, 52, 52);
   pointer-events: none; 
@@ -140,10 +140,9 @@ form{
 
 
 .span-sobrefilme {
-  font-weight: bold;
   display: block;
   margin: 30px 0px 10px 30px;
-
+  color: rgb(56, 52, 52);
 }
 /*select*/
 
@@ -156,7 +155,7 @@ form{
   margin-left: 30px;
   outline: none;
   border: none;
-  background: rgba(255, 255, 255, 0.616);;
+  background: rgba(255, 255, 255, 0.616);
   border-bottom: 2px solid silver;
   display: inline-block;
 }
@@ -187,6 +186,7 @@ form{
 .caixa-filmedata{
   margin-left: 30px;
   margin-top: 10px;
+  color: rgb(56, 52, 52);
 }
 .caixa-filmedata input {
   text-align: center;
