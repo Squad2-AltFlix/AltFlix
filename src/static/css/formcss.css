@@ -1,21 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Poppins:wght@300;400;700&display=swap');
-@
 
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  height: 100%;
 }
 
-body{
-  background:url(/src/static/images/bgteste2.jpeg);
+main {
+  height: max-content;
+}
+
+main::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  bottom: -50px;
+  background-image: url(/src/static/images/bgteste2.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: top center;
+  filter: brightness(.4);
+  z-index: -999;
 }
 
-.caixabg {
-  background: rgba(0, 0, 0, 0.699);
+.effect-parallax {
+  color: #fff;
+  margin: 0 auto;
+  width: 100%;
+  /* max-width: 1920px; */
+  position: relative;
+  min-height: 100%;
+  background-position: 50% 0;
+  background-repeat: repeat;
+  /* background-attachment: fixed; */
   font-size: 10px;
 }
 

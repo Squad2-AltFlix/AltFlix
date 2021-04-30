@@ -3,7 +3,6 @@ function doSomething() {
    let divOculta = document.querySelector(".div-oculta")
    divOculta.classList.remove('div-oculta')
    divOculta.classList.add('div-no-oculta')
-
 }
 
 /* Pegando as infos do form*/
@@ -108,11 +107,10 @@ btnEnviar.addEventListener("click", function enviar() {
          else document.querySelector("#url-oculto").classList.remove("div-small")
       
       /*validação sinopse*/
-      if (form.sinopse.length < 500) {
+      if (form.sinopse.length < 100) {
          document.querySelector("#sinopse-oculto").classList.add("div-small")
          error.push('erro')
       }
-      else c
       
 
       /* validação checkbox*/
