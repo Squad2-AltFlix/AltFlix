@@ -75,8 +75,13 @@ header#navbar #navbarNav li:hover {
     /* Main Catálogo */
     .main-container {
         width: 100%;
-        background-color: white;
+        min-height: calc(100vh - 64px);
         margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: white;
         border-left: 5px solid #1b1b1b;
         border-right: 5px solid #1b1b1b;
         border-bottom: 5px solid #1b1b1b;
@@ -86,7 +91,7 @@ header#navbar #navbarNav li:hover {
     /* Intro */
     .intro {
         width: 100%;
-        height: 33vh;
+        height: 211px;
     }
 
     .intro .span {
@@ -119,13 +124,18 @@ header#navbar #navbarNav li:hover {
         text-align: center;
     }
 
-    input[type="search"]::-webkit-search-cancel-button { display: none; }
-    input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+    input[type="search"]::-webkit-search-cancel-button {
+        display: none; 
+    }
+    input[type=text]::-ms-clear {  
+        display: none; 
+        width : 0; 
+        height: 0; 
+    }
 
     /* Movies */
     .movies {
         width: 100%;
-        height: 300px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -135,6 +145,7 @@ header#navbar #navbarNav li:hover {
         display: block;
         margin: auto;
         height: 300px;
+        /* border: 4px solid #632565; */
     }
 
     .swiper-container {
@@ -149,12 +160,8 @@ header#navbar #navbarNav li:hover {
     }
 
     .swiper-button-prev, .swiper-button-next {
-        color: #1b1b1b6e !important;
+        color: #ffffff !important;
         transition: 0.8s;
-    }
-
-    .swiper-button-prev:hover, .swiper-button-next:hover {
-        color: #1b1b1b !important;
     }
 
     /* Ficha Técnica */
@@ -191,12 +198,17 @@ header#navbar #navbarNav li:hover {
 
 /* Tablet */
 @media only screen and (min-width: 630px) {
+    div.container {
+        padding-left: 0 !important;
+    }
+    
     .main-container {
         min-height: calc(100vh - 71px);
     }
     
     /* Intro */
     .intro {
+        height: 350px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -226,6 +238,10 @@ header#navbar #navbarNav li:hover {
         margin: auto;
         box-shadow: 0px 0px 20px 10px #1b1b1b;
     }
+
+    div.container {
+        padding-left: 0.75rem !important;
+    }
     
     /* Main Catálogo */
     .main-container {
@@ -236,7 +252,6 @@ header#navbar #navbarNav li:hover {
     /* Intro */
     .intro {
         width: 100%;
-        height: 350px;
     }
 
     .intro .span {
@@ -256,5 +271,15 @@ header#navbar #navbarNav li:hover {
         width: 620px;
         height: 55px;
         font-size: 1.5rem;
+    }
+
+    /* Swiper */
+    .swiper-button-prev, .swiper-button-next {
+        color: #1b1b1b6e !important;
+        transition: 0.3s;
+    }
+
+    .swiper-button-prev:hover, .swiper-button-next:hover {
+        color: #1b1b1b !important;
     }
 }
