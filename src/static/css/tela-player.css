@@ -18,7 +18,7 @@ footer{
     width: 100vw;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 5%;
+    margin-top: 10%;
     display: flex;
     justify-content: space-between;
     background: #1b1b1b;
@@ -163,6 +163,9 @@ footer{
 .navbar.navbar-expand-lg.navbar-dark.bg-dark{
     background-color: #1b1b1b !important;
 }
+header#navbar #navbarNav {
+    margin-left: 400px;
+  }
 header#navbar #navbarNav li:hover {
     -webkit-transform: scale(1.3) !important;
             transform: scale(1.3) !important;
@@ -187,7 +190,7 @@ header#navbar #navbarNav li:hover {
     padding-top: 56.25%;
 }
 .embed{
-    border: 10px ridge #212529;
+    border: 10px ridge #1b1b1b;
     position: absolute;
     top: 0;
     left: 0;

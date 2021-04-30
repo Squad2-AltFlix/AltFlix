@@ -7,12 +7,12 @@ header#navbar a {
 }
 
 header#navbar a img {
-  width: 150px;
-  height: 50px;
+  width: 134px;
+  height: 38px;
 }
 
 header#navbar #navbarNav {
-  margin-left: 400px;
+  margin-right: 30px;
 }
 
 header#navbar #navbarNav li {
@@ -32,7 +32,7 @@ header#navbar #navbarNav li:hover {
 
 @media (max-width: 990px) {
   header#navbar button.navbar-toggler {
-    margin-top: -49px;
+    margin-top: -43px;
     margin-bottom: 10px;
   }
   header#navbar #navbarNav {
