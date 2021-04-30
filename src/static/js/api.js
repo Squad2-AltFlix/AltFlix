@@ -27,23 +27,22 @@ async function videoSearch(id) {
             let technicalTeam = response.data.items[0].snippet.description.substring(response.data.items[0].snippet.description.indexOf('EQUIPE TÉCNICA')).split('\n')
 
             const movieInformations = {
-                title: response.data.items[0].snippet.title,
-                description: description[1],
-                duration: moreInformations[0].trim(),
-                type: moreInformations[1].trim(),
-                year: moreInformations[2].trim(),
-                technicalTeam: technicalTeam,
+                'title': response.data.items[0].snippet.title,
+                'description': description[1],
+                'duration': moreInformations[0].trim(),
+                'type': moreInformations[1].trim(),
+                'year': moreInformations[2].trim(),
+                'technicalTeam': technicalTeam,
             }
 
-            return JSON.parse(movieInformations)
+            return movieInformations
         })
         .catch((error) => {
             return error
         })
 }
 
-let x = videoSearch('ke8X3SE0XE8')
-console.log(x);
+console.log(videoSearch('ke8X3SE0XE8'));
 
 async function sendEmail() {
     await axios.post('https://api.staticforms.xyz/submit' + $(".formulario").serialize())
