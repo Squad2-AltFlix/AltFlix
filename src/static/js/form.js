@@ -14,7 +14,6 @@ let btnEnviar = document.querySelector('#enviar')
 btnEnviar.addEventListener("click", function enviar() {
    let informacoes = []
 
-
    for (let i = 0; i < informacoesForm.length; i++) {
       informacoes.push(informacoesForm[i].value)
    }
@@ -34,7 +33,7 @@ btnEnviar.addEventListener("click", function enviar() {
       festivais: informacoes[8],
       genero: select,
       dataLancamento: lancamento,
-      url:informacoes[9],
+      url: informacoes[9],
       sinopse: informacoes[10]
    }
 
@@ -107,7 +106,7 @@ btnEnviar.addEventListener("click", function enviar() {
          else document.querySelector("#url-oculto").classList.remove("div-small")
       
       /*validação sinopse*/
-      if (form.sinopse.length < 100) {
+      if (form.sinopse.length >= 100) {
          document.querySelector("#sinopse-oculto").classList.add("div-small")
          error.push('erro')
       }
@@ -129,7 +128,4 @@ btnEnviar.addEventListener("click", function enviar() {
       document.write('ok')
    }
 
-
 });
-
-

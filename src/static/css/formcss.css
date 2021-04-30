@@ -24,24 +24,22 @@ main::before {
   background-size: cover;
   background-position: top center;
   filter: brightness(.4);
-  z-index: -999;
+  z-index: -1;
 }
 
 .effect-parallax {
   color: #fff;
   margin: 0 auto;
   width: 100%;
-  /* max-width: 1920px; */
   position: relative;
   min-height: 100%;
   background-position: 50% 0;
   background-repeat: repeat;
-  /* background-attachment: fixed; */
   font-size: 10px;
 }
 
 /*caixa do form*/
-form{
+form {
   padding: 30px 0px;
 }
 .container {
@@ -62,9 +60,7 @@ form{
   padding: 30px 65px;
   font-size: 35px;
   line-height: 1.2;
-  color: #333;
-   
-  
+  color: #333; 
 }
 
 /*///////////////////// inputs ///////////////////////*/
@@ -91,6 +87,7 @@ form{
   outline: none;
   background: none;
 }
+/* .input-data input:valid ~ label */
 
 .input-data input:focus ~ label,
 .input-data input:valid ~ label {
