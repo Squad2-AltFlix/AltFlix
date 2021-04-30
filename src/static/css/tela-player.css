@@ -163,9 +163,6 @@ footer{
 .navbar.navbar-expand-lg.navbar-dark.bg-dark{
     background-color: #1b1b1b !important;
 }
-header#navbar #navbarNav {
-    margin-left: 400px;
-  }
 header#navbar #navbarNav li:hover {
     -webkit-transform: scale(1.3) !important;
             transform: scale(1.3) !important;

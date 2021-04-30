@@ -1,153 +1,220 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AltFlix</title>
-    <link rel="shortcut icon" href="static/images/logo-small.png" type="image/x-icon">
-    <link rel="stylesheet" href="static/css/tela-player.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/css/main.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
-</head>
+    <link
+      rel="shortcut icon"
+      href="static/images/logo-small.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="static/css/tela-player.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <header id="navbar">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand">
-                    <img src="./static/images/logo.png" alt="Logo AltFlix" id="logo-img" />
-                </a>
-            </div>
-            <div class="container-fluid justify-content-end">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Cadastro</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand">
+            <img
+              src="./static/images/logo.png"
+              alt="Logo AltFlix"
+              id="logo-img"
+            />
+          </a>
+        </div>
+        <div class="container-fluid justify-content-end">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav d-flex justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Cadastro</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sobre</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
-
     <section class="tela">
-        <!-- Seção do Player -->
-        <div class="player">
-            <div class="wrapper">
-                <iframe src="https://www.youtube.com/embed/Mwik6jv58OU" class="embed" title="Filme"
-                    allowfullscreen="true"></iframe>
-            </div>
+      <!-- Seção do Player -->
+      <div class="player">
+        <div class="wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/Mwik6jv58OU"
+            class="embed"
+            title="Filme"
+            allowfullscreen="true"
+          ></iframe>
         </div>
-        <!-- Seção de Info da Produção -->
-        <div class="info-producao">
-            <div class="titulo">
-                <h2>13 Pétalas</h2>
-            </div>
-            <div class="sinopse">
-                <h2>&nbsp;&nbsp;&nbsp;Uma flor misteriosa é deixada na porta de um homem que vive sozinho em uma casa
-                    afastada da cidade grande. O tal homem apenas coloca a estranha flor para dentro de casa e sai para
-                    trabalhar. O que ele não esperava é que, cada pétala daquela flor, eram os dias de sua vida. </h2>
-            </div>
-            <div class="dyg">
-                <h2 class="duration">4min43s</h2>
-                <h2 class="year">2020</h2>
-                <h2 class="genre">Terror</h2>
-            </div>
-            <div class="producao">
-                <h2>Direção: Daniel Pires</h2>
-                <h2>Roteiro: Daniel Pires</h2>
-                <h2>Equipe técnica: Universo Lenda</h2>
-            </div>
+      </div>
+      <!-- Seção de Info da Produção -->
+      <div class="info-producao">
+        <div class="titulo">
+          <h2>13 Pétalas</h2>
         </div>
+        <div class="sinopse">
+          <h2>
+            &nbsp;&nbsp;&nbsp;Uma flor misteriosa é deixada na porta de um homem
+            que vive sozinho em uma casa afastada da cidade grande. O tal homem
+            apenas coloca a estranha flor para dentro de casa e sai para
+            trabalhar. O que ele não esperava é que, cada pétala daquela flor,
+            eram os dias de sua vida.
+          </h2>
+        </div>
+        <div class="dyg">
+          <h2 class="duration">4min43s</h2>
+          <h2 class="year">2020</h2>
+          <h2 class="genre">Terror</h2>
+        </div>
+        <div class="producao">
+          <h2>Direção: Daniel Pires</h2>
+          <h2>Roteiro: Daniel Pires</h2>
+          <h2>Equipe técnica: Universo Lenda</h2>
+        </div>
+      </div>
     </section>
-    <a href="#top" id="buttonBack"><i class="far fa-arrow-alt-circle-up fa-7x"></i></a>
+    <a href="#top" id="buttonBack"
+      ><i class="far fa-arrow-alt-circle-up fa-7x"></i
+    ></a>
     <footer>
-        <div class="sobre">
-            <h2>Sobre</h2>
-            <p>
-                &nbsp;&nbsp;&nbsp; AltFlix é um projeto voltado para pessoas que amam
-                Cinema, tantos os que amam assistir, quanto os produtores
-                independentes que amam fazer acontecer. A idealizadora do projeto
-                Milena Maganin compartilhou esse sonho com 5 pessoas, Edson Primo,
-                Elisabete Alves, Felipe Pavan e Gustavo de Vito e Moares Oliveira para
-                tornar ele em realidade durante o Hackathon organizado pelo Grupo
-                FCamara.
-            </p>
-        </div>
-        <div class="contact">
-            <h2>Contate-nos</h2>
-            <ul>
-                <li class="Edson">
-                    Edson Primo
-                    <div class="social">
-                        <a target="_blank" href="https://www.linkedin.com/in/edson-primo-94904a209/"><i
-                                class="fab fa-linkedin-in"></i></a>
-                        <a target="_blank" href="https://github.com/edsonPrimo"><i class="fab fa-github"></i></a>
-                    </div>
-                </li>
-                <li class="Elisabete">
-                    Elisabete A. Santos
-                    <div class="social">
-                        <a target="_blank" href="https://www.linkedin.com/mwlite/in/elisabete-alves-675637135"><i
-                                class="fab fa-linkedin-in"></i></a>
-                        <a target="_blank" href="https://github.com/elisabetealves"><i class="fab fa-github"></i></a>
-                    </div>
-                </li>
-                <li class="Felipe">
-                    Felipe Pavan
-                    <div class="social">
-                        <a target="_blank" href="https://www.linkedin.com/in/felipe-pavan-guedes-7659909a/"><i
-                                class="fab fa-linkedin-in"></i></a>
-                        <a target="_blank" href="https://github.com/FelipePavan13"><i class="fab fa-github"></i></a>
-                    </div>
-                </li>
-                <li class="Gustavo">
-                    Gustavo de Vito
-                    <div class="social">
-                        <a target="_blank" href="https://www.linkedin.com/in/gustavo-de-vito-70aa99206/"><i
-                                class="fab fa-linkedin-in"></i></a>
-                        <a target="_blank" href="https://github.com/GustavoDeVito"><i class="fab fa-github"></i></a>
-                    </div>
-                </li>
-                <li class="Milena">
-                    Milena Maganin
-                    <div class="social">
-                        <a target="_blank" href="https://www.linkedin.com/in/milenamaganin/"><i
-                                class="fab fa-linkedin-in"></i></a>
-                        <a target="_blank" href="https://github.com/mimaganin"><i class="fab fa-github"></i></a>
-                    </div>
-                </li>
-                <li class="Moares">
-                    Moares Oliveira
-                    <div class="social">
-                        <a target="_blank" href="https://www.linkedin.com/in/moares-o-422393127/"><i
-                                class="fab fa-linkedin-in"></i></a>
-                        <a target="_blank" href="https://github.com/MoaresOliveira"><i class="fab fa-github"></i></a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+      <div class="sobre">
+        <h2>Sobre</h2>
+        <p>
+          &nbsp;&nbsp;&nbsp; AltFlix é um projeto voltado para pessoas que amam
+          Cinema, tantos os que amam assistir, quanto os produtores
+          independentes que amam fazer acontecer. A idealizadora do projeto
+          Milena Maganin compartilhou esse sonho com 5 pessoas, Edson Primo,
+          Elisabete Alves, Felipe Pavan e Gustavo de Vito e Moares Oliveira para
+          tornar ele em realidade durante o Hackathon organizado pelo Grupo
+          FCamara.
+        </p>
+      </div>
+      <div class="contact">
+        <h2>Contate-nos</h2>
+        <ul>
+          <li class="Edson">
+            Edson Primo
+            <div class="social">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/edson-primo-94904a209/"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a target="_blank" href="https://github.com/edsonPrimo"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </li>
+          <li class="Elisabete">
+            Elisabete A. Santos
+            <div class="social">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/mwlite/in/elisabete-alves-675637135"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a target="_blank" href="https://github.com/elisabetealves"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </li>
+          <li class="Felipe">
+            Felipe Pavan
+            <div class="social">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/felipe-pavan-guedes-7659909a/"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a target="_blank" href="https://github.com/FelipePavan13"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </li>
+          <li class="Gustavo">
+            Gustavo de Vito
+            <div class="social">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/gustavo-de-vito-70aa99206/"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a target="_blank" href="https://github.com/GustavoDeVito"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </li>
+          <li class="Milena">
+            Milena Maganin
+            <div class="social">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/milenamaganin/"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a target="_blank" href="https://github.com/mimaganin"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </li>
+          <li class="Moares">
+            Moares Oliveira
+            <div class="social">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/moares-o-422393127/"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a target="_blank" href="https://github.com/MoaresOliveira"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </footer>
-    <script src="https://kit.fontawesome.com/0dd55cd624.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-JEW9xMcG8RjmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
-    </script>
-</body>
-
+    <script
+      src="https://kit.fontawesome.com/0dd55cd624.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
