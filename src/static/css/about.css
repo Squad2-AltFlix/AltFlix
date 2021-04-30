@@ -1,0 +1,282 @@
+  
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-image: url('/src/static/images/bgteste2.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Header Bootstrap */
+header .bg-dark{
+    background-color: #1b1b1b !important;
+}
+header#navbar a {
+    cursor: pointer;
+}
+
+header#navbar a img {
+    width: 134px;
+    height: 38px;
+}
+
+header#navbar #navbarNav {
+    margin-right: 0px;
+}
+
+header#navbar #navbarNav li {
+    font-family: 'Poppins', sans-serif;
+    padding: 0 20px;
+    -webkit-transition-duration: .8s;
+    transition-duration: .8s;
+    cursor: pointer;
+}
+
+.nav-link {
+    color: #ffffff !important;
+}
+
+header#navbar #navbarNav li:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.nav-link:hover {
+    color: #7b2e7e !important;
+}
+.contact img{
+    max-width: 34px;
+    max-height: 34px;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+@media (max-width: 990px) {
+    .container{
+        max-width: 720px;
+    }
+    header#navbar button.navbar-toggler {
+        margin-top: -43px;
+        margin-bottom: 10px;
+    }
+
+    header#navbar #navbarNav {
+        margin-left: 0 !important;
+        text-align: right;
+    }
+
+    header#navbar #navbarNav li.nav-item:hover {
+        -webkit-transform: translate(-3%, 0) !important;
+        transform: translate(-3%, 0) !important;
+    }
+}
+.card{
+    background-color: #1b1b1bd3;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 70px;
+}
+.social{
+    margin-left: 10px;
+}
+/* ======= */
+@media only screen and (max-width: 768px){
+
+    /* ===== Sobre ===== */
+    .sobre{
+        width: 100%;
+        padding: 15px;
+    }
+    .sobre h2{
+        position: relative;
+        color: rgb(160, 158, 158);
+        font-weight: 700;
+        margin-bottom: 15px;
+        font-size: clamp(1.4rem, 3vw, 2rem);
+    }
+    .sobre h2:before{
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: #632565;
+    }
+    .sobre p{
+        text-align: justify;
+        word-break: keep-all;
+        color: rgb(160, 158, 158);
+        margin: 5px;
+        font-size: clamp(1rem, 2vw, 1.6rem);
+    }
+    /* ===== Contatos ===== */
+    .contact{
+        width: 100%;
+        padding: 15px;
+    }
+    .contact h2{
+        font-size: clamp(1.6rem, 3vw, 2rem);
+        position: relative;
+        color: rgb(160, 158, 158);
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    .contact h2:before{
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: #632565;
+    }
+    .contact ul {
+        margin: 5px;
+        padding: 0;
+    }
+    .contact li {
+        color: rgb(160, 158, 158);
+        display: flex;
+        font-size: clamp(1.2rem, 2vw, 2rem);
+        margin: 5px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .contact li h3{
+        max-width: 262px;
+    }
+    .social {
+        width: 90px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+    .social a:first-child{
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 3px;
+    }
+    .social a:last-child{
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 3px; 
+    }
+    .social a:first-child:hover{
+        background-color: #317ac2;
+    }
+    .social a:last-child:hover{
+        background-color: rgba(42, 43, 42, 0.781);
+    }
+    
+    .contact i{
+        color: white;
+        padding: 6px;
+    }
+}
+@media only screen and (min-width: 769px){
+    /* ===== Sobre ===== */
+    .card{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 70vh;
+    }
+    .sobre{
+        width: 40%;
+        height: 100%;
+        margin-top: 10%;
+    }
+    .sobre h2{
+        position: relative;
+        color: rgb(160, 158, 158);
+        font-weight: 700;
+        margin-bottom: 15px;
+        font-size: clamp(1.4rem, 3vw, 2rem);
+    }
+    .sobre h2:before{
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: #632565;
+    }
+    .sobre p{
+        text-align: justify;
+        word-break: keep-all;
+        color: rgb(160, 158, 158);
+        margin: 5px;
+        font-size: clamp(1rem, 2vw, 1.4rem);
+    }
+    /* ===== Contatos ===== */
+    .contact{
+        width: max-content;
+        margin-top: 10%;
+    }
+    .contact h2{
+        font-size: clamp(1.6rem, 3vw, 2rem);
+        position: relative;
+        color: rgb(160, 158, 158);
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    .contact h2:before{
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: #632565;
+    }
+    .contact ul {
+        margin: 5px;
+        padding: 0;
+    }
+    .contact li {
+        color: rgb(160, 158, 158);
+        display: flex;
+        font-size: clamp(1rem, 2vw, 1.4rem);
+        margin: 5px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .social {
+        width: 90px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+    .social a:first-child{
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 3px;
+    }
+    .social a:last-child{
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 3px; 
+    }
+    .social a:first-child:hover{
+        background-color: #317ac2;
+    }
+    .social a:last-child:hover{
+        background-color: black;
+    }
+    .contact i{
+        color: white;
+        padding: 6px;
+    }
+}
