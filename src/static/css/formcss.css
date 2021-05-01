@@ -90,12 +90,13 @@ form {
 .input-animacao {
   transform: translateY(-20px);
   font-size: 15px;
-  color: #882a8b !important
+  /* color: #882a8b !important */
+  color: #503b50 !important
 }
 .input-div input:focus ~ label{
   transform: translateY(-20px);
   font-size: 15px;
-  color: #882a8b;
+  color: #503b50;
 }
 
 .wrapper .input-div label{
@@ -120,7 +121,7 @@ form {
   content: "";
   height: 100%;
   width: 100%;
-  background: #391f3a;
+  background: #272227;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease;
