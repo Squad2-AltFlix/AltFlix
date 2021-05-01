@@ -1,0 +1,221 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('/src/static/images/bgteste2.jpeg');
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+.card {
+    background-color: #1b1b1bd3;
+    min-width: 270px;
+    width: 95%;
+    height: max-content;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 70px;
+    border-radius: 10px;
+    cursor: default;
+
+    .sobre {
+        max-width: 600px;
+
+        h2 {
+            position: relative;
+            color: rgb(160, 158, 158);
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: clamp(1.4rem, 2vw, 2rem);
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 50px;
+                height: 2px;
+                background: #632565;
+            }
+        }
+
+        p {
+            text-align: justify;
+            word-break: keep-all;
+            color: rgb(160, 158, 158);
+            margin: 5px;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+        }
+    }
+
+    .contact {
+        max-width: 600px;
+        margin-bottom: 50px;
+
+        h2 {
+            font-size: clamp(1.4rem, 2vw, 2rem);
+            position: relative;
+            color: rgb(160, 158, 158);
+            font-weight: 700;
+            margin-bottom: 15px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 50px;
+                height: 2px;
+                background: #632565;
+            }
+        }
+
+        ul {
+            margin: 5px;
+            padding: 0;
+        }
+
+        li {
+            min-width: 230px;
+            color: rgb(160, 158, 158);
+            display: flex;
+            font-size: clamp(1.1rem, 2vw, 1.2rem);
+            margin: 5px;
+            align-items: center;
+            justify-content: space-between;
+
+            img {
+                position: relative;
+                border: 1px solid white;
+            }
+        }
+
+    }
+
+    .social {
+        margin-left: 10px;
+        width: max-content;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 0;
+
+        a {
+            position: absolute;
+        }
+
+        a:first-of-type {
+            background-color: #317ac288;
+            border: 1px solid white;
+            border-radius: 3px;
+
+            &:hover {
+                background-color: #317ac2;
+            }
+        }
+
+        a:last-child {
+            background-color: #00000088;
+            border: 1px solid white;
+            border-radius: 3px;
+
+            &:hover {
+                background-color: black;
+            }
+        }
+
+        i {
+            color: white;
+            padding: 6px;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+
+    /* ===== Sobre ===== */
+    .sobre {
+        width: 100%;
+        padding: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+    .contact {
+        width: 100%;
+        padding: 15px;
+        margin-left: auto;
+        margin-right: auto;
+
+        img {
+            filter: grayscale(100%);
+        }
+
+        .social {
+            a:last-child {
+                margin-left: 36px;
+            }
+
+            img {
+                border-radius: 3px;
+                width: 68px;
+                height: 68px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        /* ===== Sobre ===== */
+        .sobre {
+            width: 40%;
+            height: 100%;
+            margin-top: 50px;
+        }
+
+        /* ===== Contatos ===== */
+        .contact {
+            width: max-content;
+            margin-top: 50px;
+
+            .social {
+                a {
+                    display: none;
+                }
+
+                img {
+                    border-radius: 50%;
+                    width: 62px;
+                    height: 62px;
+                }
+
+                &:hover img {
+                    filter: grayscale(100%);
+                    transition: filter 0.5s ease-in-out;
+                    border-radius: 3px;
+                    transition: border-radius 0.1s;
+                }
+
+                &:hover a {
+                    display: block;
+                    transition: display 0.5s ease-in-out;
+                }
+
+                a:last-child {
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+
+}
