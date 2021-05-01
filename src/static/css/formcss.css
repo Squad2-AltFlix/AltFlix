@@ -23,12 +23,11 @@ main::before {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  filter: brightness(.4);
+  filter: brightness(.2);
   z-index: -1;
 }
 
 .effect-parallax {
-  color: #fff;
   margin: 0 auto;
   width: 100%;
   position: relative;
@@ -43,7 +42,7 @@ form {
   padding: 30px 0px;
 }
 .container {
-  width: 30%;
+  width: 50%;
   background: rgba(255, 255, 255, 0.767);
   margin: 50px auto;
   border-radius: 10px;
@@ -72,13 +71,13 @@ form {
 }
 
 
-.wrapper .input-data{
+.wrapper .input-div{
   height: 40px;
   width: 100%;
   position: relative;
 }
 
-.wrapper .input-data input{
+.wrapper .input-div input{
   height: 100%;
   width: 100%;
   border: none;
@@ -87,32 +86,36 @@ form {
   outline: none;
   background: none;
 }
-/* .input-data input:valid ~ label */
 
-.input-data input:focus ~ label,
-.input-data input:valid ~ label {
+.input-animacao {
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: #882a8b !important
+}
+.input-div input:focus ~ label{
   transform: translateY(-20px);
   font-size: 15px;
   color: #882a8b;
 }
 
-.wrapper .input-data label{
+.wrapper .input-div label{
   position: absolute;
   bottom: -10px;
   left: 0;
-  color: rgb(56, 52, 52);
+  /* color: rgb(56, 52, 52); */
+
   pointer-events: none; 
   transition: all 0.3s ease;
 }
 
-.input-data .underline{
+.input-div .underline{
   position: absolute;
   height: 2px;
   width: 100%;
   bottom: 0;
 }
 
-.input-data .underline:before{
+.input-div .underline:before{
   position: absolute;
   content: "";
   height: 100%;
@@ -123,7 +126,7 @@ form {
   transition: transform 0.3s ease;
 }
 
-.input-data input:focus ~ .underline:before{
+.input-div input:focus ~ .underline:before{
   transform: scaleX(1);
 }
 
@@ -131,20 +134,27 @@ form {
   display: block !important;
   color: red !important;
   font-size: 0.8em !important;
+  height: fit-content;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
+.wrapper span {
+  color: red;
+  font-size: 0.9em;
+}
 /*/////////////sobre filmes///////////////*/
 
 
-.span-sobrefilme {
+fieldset h2 {
   display: block;
-  margin: 30px 0px 10px 30px;
+  margin: 30px 0px 0px 30px;
   color: rgb(56, 52, 52);
+  font-weight: bold;
 }
 /*select*/
 
 .selecaofilme {
-  width: 40%;
+  width: 250px;
   height: 30px;
   font-size: 16px;
   display: block;
@@ -152,6 +162,7 @@ form {
   margin-left: 30px;
   outline: none;
   border: none;
+  border-radius: 4px;
   background: rgba(255, 255, 255, 0.616);
   border-bottom: 2px solid silver;
   display: inline-block;
@@ -168,22 +179,23 @@ form {
 #selectOculto{
   margin-left: 30px;
 }
-/*input data*/
+/*input div*/
 
 .filme-data{
   display: block;
   border: none;
   height: 30px;
-  width: 42%;
   background:rgba(255, 255, 255, 0.616);
   border-radius: 4px;
   margin-bottom: 10px; 
+  width: 250px;
 
 }
 .caixa-filmedata{
   margin-left: 30px;
   margin-top: 10px;
   color: rgb(56, 52, 52);
+  
 }
 .caixa-filmedata input {
   text-align: center;
@@ -192,10 +204,10 @@ form {
   margin-bottom: 5px;
 }
 
-.caixa-classificacao .wrapper{
+.caixa-metade-tela .wrapper{
     display: inline-block;
-    width: 40%;
-}
+    width: 45%;
+  }
 
 textarea{
   border-radius: 5px;
@@ -228,50 +240,80 @@ textarea{
   }
   
  /*********************** MEDIA QUERY ************************/
- @media only screen and (max-width: 1700px) {
+ @media only screen and (min-width: 1700px) {
+  .container {
+    width: 32%;
+  }
+}
+@media only screen and (min-device-width: 1300px) and (max-device-width: 1700px) {
   .container {
     width: 40%;
   }
 }
- 
-@media only screen and (max-width: 1280px) {
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1300px) {
   .container {
-    width: 45%;
+    width: 50%;
   }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px)  {
-
   .container {
     width: 60%;
   } 
-}
-
-@media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
-  .container {
-    width: 70%;
-    font-size: 16px
-  } 
   .titulo{
-    font-size: 28px
+    padding: 30px;
   }
   .selecaofilme {
-    width: 58%;
+    width: 230px;
   }
-  
+  .caixa-metade-tela .wrapper{
+    width: 50%;
+    margin: 0px;
+    padding: 10px 0px;
+  }
+  .filme-data{
+    width: 230px;
+  }
+}
+@media screen and (min-device-width: 481px) and (max-device-width: 767px) { 
+  .container {
+    width: 70%;
+    font-size: 15px;
+  } 
+  .wrapper{
+    width: 93%;
+    background: none;
+    padding: 10px 10px;
+  }
+  .titulo{
+    font-size: 26px;
+    padding:25px
+  }
+  fieldset h2 {
+    margin: 30px 0px 5px 10px;
+  }
+  .selecaofilme {
+    width: 230px;
+    margin-top: 10px;
+  } 
   .wrapper-semtitulo{
     padding-left: 10px;
   }
-  .caixa-classificacao .wrapper{
-    display: inline-block;
-    width: 70%;
+  .caixa-metade-tela .wrapper{
+    width: 50%;
+    margin: 0px;
+  }
+  .caixa-metade-tela {
+    padding: 0px;
+    margin-left: 0px;
   }
   .filme-data{
-    width: 65%;
+    width: 230px;
   }
 }
 
-@media only screen and (max-device-width: 481px) { 
+@media only screen and (min-device-width: 320px) and (max-device-width: 481px) { 
   .container {
     width: 80%;
     font-size: 15px;
@@ -280,26 +322,37 @@ textarea{
   .wrapper{
     width: 93%;
     background: none;
-    padding: 15px 10px;
+    padding: 10px 10px;
   }
   .titulo{
     font-size: 22px;
-    padding: 5px 20px;
+    padding: 25px 20px;
+  }
+  fieldset h2 {
+    margin: 30px 0px 0px 10px;
   }
   .selecaofilme {
-    width: 58%;
+    width: 180px;
+    margin-top: 12px;
   }
   .wrapper-semtitulo{
-      padding-left: 10px;
-    }
- 
-  .caixa-classificacao .wrapper{
-      display: inline-block;
-      width: 50%;
-    }
-
+    padding-left: 10px;
+    
+  }
+  .caixa-metade-tela .wrapper{
+    display: inline-block;
+    width: 60%;
+    margin-left: 10px;
+  }
+  .caixa-metade-tela .wrapper {
+    margin: 0px;
+  }
+  .caixa-metade-tela{
+    padding: 0px;
+    margin-left: 0px;
+  }  
   .filme-data{
-    width: 65%;
+    width: 180px;
   }
 
 }

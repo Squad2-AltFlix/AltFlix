@@ -1,17 +1,31 @@
 /* função para aparecer um input quando selecionado outro no select */
 function doSomething() {
-   let divOculta = document.querySelector(".div-oculta")
-   divOculta.classList.remove('div-oculta')
-   divOculta.classList.add('div-no-oculta')
-}
+   let selectValue = document.querySelector('select')
+   var divOculta = document.querySelector(".div-oculta")
 
+   if (selectValue.value == "outro") {
+     divOculta.classList.add('div-no-oculta')
+   }
+   else {
+   divOculta.classList.remove('div-no-oculta')
+   }
+}
+/* Animação do form */
+
+const informacoesForm = document.querySelectorAll(".input-info")
+
+document.querySelectorAll(".input-div").forEach(item => {
+   item.addEventListener('input', function() {
+      let label = item.childNodes[5]
+      label.classList.add("input-animacao")
+   })
+ })
+ 
 /* Pegando as infos do form*/
 
-let informacoesForm = document.querySelectorAll(".input-info")
 let btnEnviar = document.querySelector('#enviar')
+btnEnviar.addEventListener("click", function enviar(event) {
 
-
-btnEnviar.addEventListener("click", function enviar() {
    let informacoes = []
 
    for (let i = 0; i < informacoesForm.length; i++) {
@@ -20,21 +34,19 @@ btnEnviar.addEventListener("click", function enviar() {
 
    let select = document.querySelector("select").value
    let lancamento = document.querySelector('#filme-data').value
-
+   console.log (informacoes)
    const informacaoFilme = {
       nome: informacoes[0],
       email: informacoes[1],
       tel: informacoes[2],
       produtora: informacoes[3],
       titulo: informacoes[4],
-      classificacao: informacoes[5],
-      temporadasEpisodios: informacoes[6],
-      distribuidora: informacoes[7],
-      festivais: informacoes[8],
+      classificaoIndicativa: informacoes[5],
+      duracao: informacoes[6],
       genero: select,
       dataLancamento: lancamento,
-      url: informacoes[9],
-      sinopse: informacoes[10]
+      url: informacoes[7],
+      sinopse: informacoes[8]
    }
 
    let escolhaGenero = document.querySelector("#genero").value
@@ -66,7 +78,7 @@ btnEnviar.addEventListener("click", function enviar() {
       else document.querySelector("#email").classList.remove("div-small")
 
 
-      /* validação email */
+      /* validação telefone */
       const isValidPhone = (phone) => {
          const sanitizedPhone = phone.replace(/\D/g, '');
          return sanitizedPhone.length >= 10 && sanitizedPhone.length <= 11;
@@ -99,30 +111,30 @@ btnEnviar.addEventListener("click", function enviar() {
 
 
       /* Validação URL */
-         if (form.url.length == 0) {
-            document.querySelector("#url-oculto").classList.add("div-small")
-            error.push('erro')
-         }
-         else document.querySelector("#url-oculto").classList.remove("div-small")
-      
+      if (form.url.length == 0) {
+         document.querySelector("#url-oculto").classList.add("div-small")
+         error.push('erro')
+      }
+      else document.querySelector("#url-oculto").classList.remove("div-small")
+
       /*validação sinopse*/
-      if (form.sinopse.length >= 100) {
+      if (form.sinopse.length < 100) {
          document.querySelector("#sinopse-oculto").classList.add("div-small")
          error.push('erro')
       }
-      
 
       /* validação checkbox*/
-      let checkbox = document.querySelector("#termo-de-solitacao")
-      if (!checkbox.checked) {
-         document.querySelector("#checkbox-oculto").classList.add("div-small")
-         error.push('erro')
-         return
-      }
+      // let checkbox = document.querySelector("#termo-de-solitacao")
+      // if (!checkbox.checked) {
+      //    document.querySelector("#checkbox-oculto").classList.add("div-small")
+      //    error.push('erro')
+      //    return
+      // }
    }
-   console.log(error)
+
    if (error.length != 0) {
-      return
+      console.log(error)
+      event.preventDefault()
    }
    else {
       document.write('ok')
