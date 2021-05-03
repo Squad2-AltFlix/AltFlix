@@ -4,10 +4,10 @@ function doSomething() {
    var divOculta = document.querySelector(".div-oculta")
 
    if (selectValue.value == "outro") {
-     divOculta.classList.add('div-no-oculta')
+      divOculta.classList.add('div-no-oculta')
    }
    else {
-   divOculta.classList.remove('div-no-oculta')
+      divOculta.classList.remove('div-no-oculta')
    }
 }
 /* Animação do form */
@@ -15,26 +15,27 @@ function doSomething() {
 const informacoesForm = document.querySelectorAll(".input-info")
 
 document.querySelectorAll(".input-div").forEach(item => {
-   item.addEventListener('input', function() {
+   item.addEventListener('input', function () {
       let label = item.childNodes[5]
       label.classList.add("input-animacao")
    })
- })
- 
+})
+
 /* Pegando as infos do form*/
 
 let btnEnviar = document.querySelector('#enviar')
 btnEnviar.addEventListener("click", function enviar(event) {
-
+   event.preventDefault()
    let informacoes = []
-
+   
    for (let i = 0; i < informacoesForm.length; i++) {
       informacoes.push(informacoesForm[i].value)
    }
 
    let select = document.querySelector("select").value
    let lancamento = document.querySelector('#filme-data').value
-   console.log (informacoes)
+   console.log(informacoes)
+
    const informacaoFilme = {
       nome: informacoes[0],
       email: informacoes[1],
@@ -134,10 +135,29 @@ btnEnviar.addEventListener("click", function enviar(event) {
 
    if (error.length != 0) {
       console.log(error)
-      event.preventDefault()
    }
    else {
-      document.write('ok')
-   }
+      console.log(informacaoFilme)
+  
+      fetch('https://api.staticforms.co/submit?form=anOf2b', {
+         method: 'POST',
+         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+         body: JSON.stringify({ "email": document.getElementsByName("email").value })
 
+      })
+         .then(response => {
+            console.log(response);
+            if (response.status == 200) {
+               alert('ok')
+            } else {
+              alert('deu ruim')
+            }
+         })
+         .catch(error => {
+            console.log(error)
+            message.innerHTML = "<div><h2>Oops. Something went wrong!</h2></div>";
+            formContainer.parentNode.replaceChild(message, formContainer);
+         })
+      // });
+   }  
 });

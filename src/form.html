@@ -14,162 +14,147 @@
 <main class="effect-parallax"> 
     <section class="container">
         
-        <form class="formulario">
-
-        <!-- <input type="hidden" name="accessKey" value="e44fc5d0-0b52-4cb1-9f79-fefc3800d89c"> -->
-        
-            <h1 class="titulo">Queremos seu filme no nosso site!</h1>
-
-        <div class=wrapper-semtitulo>   
-            <div class="wrapper" >
-                <div class="input-div">
-                    <input type="text" class="input-info" autocomplete="off" >
-                    <div class="underline"></div>
-                    <label>Seu Nome<span> *</span></label>
                     <small hidden id="nome">O nome precisa ser preenchido</small>
-            </div>
-            </div>
-            <div class="wrapper" >
-                <div class="input-div">
-                    <input type="text" class="input-info" autocomplete="off">
-                    <div class="underline"></div>
-                    <label>Seu email<span> *</span></label>
-                    <small hidden id="email">O email precisa ser válido</small>
-                </div>
-            </div>
-
-            <div class="wrapper" >
-                <div class="input-div">
-                    <input type="tel" class="input-info" autocomplete="off" >
-                    <div class="underline"></div>
-                    <label>Seu telefone<span> *</span></label>
-                    <small hidden id="tel">Preencha o Telefone com DDD</small>
-                </div>
-            </div>
-
-            <div class="wrapper" >
-                <div class="input-div">
-                    <input type="text" class="input-info" autocomplete="off">
-                    <div class="underline"></div>
-                    <label>Nome da produtora</label>
-                </div>
-            </div>
-
-        <fieldset>         
-            <h2 class="sobrefilme">Sobre o filme/série</h2>
+        <form class="formulario" type="submit" action="POST">
+        <!-- <input type="hidden" name="accessKey" value="71ff71d9-a0f7-4bd0-918b-570bd293622f"> -->
             
-            <div class="wrapper">
-                <div class="input-div">
-                    <input type="text" class="input-info" autocomplete="off">
-                    <div class="underline"></div>
-                    <label>Título do filme<span> *</span></label>
-                    <small hidden id="titulo-oculto">Título precisa ser preenchido</small>
-                </div>
-            </div> 
-           
-                 <select class="selecaofilme" onchange="doSomething()"> 
-                    <option>Selecione</option>
-                    <option value="Ação">Ação</option>
-                    <option value="Aventura">Aventura</option>
-                    <option value="Cinema de arte">Cinema de arte</option>
-                    <option value="Comédia">Comédia</option>
-                    <option value="Comédia romântica">Comédia romântica</option>
-                    <option value="Dança">Dança</option>
-                    <option value="Documentário">Documentário</option>
-                    <option value="Docuficção">Docuficção</option>
-                    <option value="Drama">Drama</option>
-                    <option value="Espionagem">Espionagem</option>
-                    <option value="Faroeste">Faroeste</option>
-                    <option value="Fantasia">Fantasia</option>
-                    <option value="Ficção científica">Ficção científica</option>
-                    <option value="Filmes de guerra">Filmes de guerra</option>
-                    <option value="Musical">Musical</option>
-                    <option value="Policial">Policial</option>
-                    <option value="Romance">Romance</option>
-                    <option value="Seriado">Seriado</option>
-                    <option value="Suspense">Suspense</option>
-                    <option value="Terror">Terror</option>
-                    <option value="Thriller">Thriller</option>
-                    <option value="outro" id="outro">Outro</option>
-                </select>
-                <small hidden id="selectOculto">Selecione o genêro</small>
-            
-            <div class="wrapper div-oculta" >
-                <div class="input-div">
-                    <input type="text" id="genero" autocomplete="off" >
-                    <div class="underline"></div>
-                    <label>Digite o gênero</label>
-                </div>
-            </div>
-            
-            <div class="caixa-filmedata">
-                <label id="data-label" for="filme-data">Data de lançamento:<span> *</span></label>
-                <input class="filme-data" type="date" id="filme-data" name="filme-data" autocomplete="off" >
-                <small hidden id="data-oculto">Escreva a data de lançamento</small>    
-            </div>   
+                <h1 class="titulo">Queremos seu filme no nosso site!</h1>
 
-            <div class="wrapper caixa-metade-tela">
-                <div class="wrapper">
+            <div class=wrapper-semtitulo>   
+                <div class="wrapper" >
                     <div class="input-div">
-                        <input type="text" id="classificacao-indicativa" class="input-info" autocomplete="off" >
+                        <input type="text" name="name" class="input-info" autocomplete="off" >
                         <div class="underline"></div>
-                        <label>Classificação</label>
+                        <label>Seu Nome<span> *</span></label>
+                        <small hidden id="nome">O nome precisa ser preenchido</small>
                     </div>
                 </div>
+                <div class="wrapper" >
+                    <div class="input-div">
+                        <input type="text"  name="email" class="input-info" autocomplete="off">
+                        <div class="underline"></div>
+                        <label>Seu email<span> *</span></label>
+                        <small hidden id="email">O email precisa ser válido</small>
+                    </div>
+                </div>
+
+                <div class="wrapper" >
+                    <div class="input-div">
+                        <input type="tel" name="phone" class="input-info" autocomplete="off" >
+                        <div class="underline"></div>
+                        <label>Seu telefone<span> *</span></label>
+                        <small hidden id="tel">Preencha o Telefone com DDD</small>
+                    </div>
+                </div>
+
+                <div class="wrapper" >
+                    <div class="input-div">
+                        <input type="text" name="produtora" class="input-info" autocomplete="off">
+                        <div class="underline"></div>
+                        <label>Nome da produtora</label>
+                    </div>
+                </div>
+
+            <fieldset>         
+                <h2 class="sobrefilme">Sobre o filme/série</h2>
+                
                 <div class="wrapper">
                     <div class="input-div">
-                        <input type="text" name="duracao" class="input-info" autocomplete="off">
+                        <input type="text" name="titulo" class="input-info" autocomplete="off">
                         <div class="underline"></div>
-                        <label>Duração</label>
+                        <label>Título do filme<span> *</span></label>
+                        <small hidden id="titulo-oculto">Título precisa ser preenchido</small>
                     </div>
                 </div> 
-            </div> 
-
-            <!-- <div class="wrapper">
-                <div class="input-div">
-                    <input type="text" nome="distribuidora" class="input-info" >
-                    <div class="underline"></div>
-                    <label>Distribuidora</label>
+            
+                    <select class="selecaofilme" onchange="doSomething()"> 
+                        <option>Selecione</option>
+                        <option value="Ação">Ação</option>
+                        <option value="Aventura">Aventura</option>
+                        <option value="Cinema de arte">Cinema de arte</option>
+                        <option value="Comédia">Comédia</option>
+                        <option value="Comédia romântica">Comédia romântica</option>
+                        <option value="Dança">Dança</option>
+                        <option value="Documentário">Documentário</option>
+                        <option value="Docuficção">Docuficção</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Espionagem">Espionagem</option>
+                        <option value="Faroeste">Faroeste</option>
+                        <option value="Fantasia">Fantasia</option>
+                        <option value="Ficção científica">Ficção científica</option>
+                        <option value="Filmes de guerra">Filmes de guerra</option>
+                        <option value="Musical">Musical</option>
+                        <option value="Policial">Policial</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Seriado">Seriado</option>
+                        <option value="Suspense">Suspense</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="outro" id="outro">Outro</option>
+                    </select>
+                    <small hidden id="selectOculto">Selecione o genêro</small>
+                
+                <div class="wrapper div-oculta" >
+                    <div class="input-div">
+                        <input type="text" id="genero" name="genero" autocomplete="off" >
+                        <div class="underline"></div>
+                        <label>Digite o gênero</label>
+                    </div>
                 </div>
-            </div>
-             -->
+                
+                <div class="caixa-filmedata">
+                    <label id="data-label" for="filme-data">Data de lançamento:<span> *</span></label>
+                    <input class="filme-data" type="date" id="filme-data" name="filme-data" autocomplete="off" >
+                    <small hidden id="data-oculto">Escreva a data de lançamento</small>    
+                </div>   
 
-            <!-- <div class="wrapper">
-                <div class="input-div">
-                    <input type="text" name="festivais" class="input-info" >
-                    <div class="underline"></div>
-                    <label>Festivais</label>
+                <div class="wrapper caixa-metade-tela">
+                    <div class="wrapper">
+                        <div class="input-div">
+                            <input type="text" id="classificacao-indicativa" name="classificacao-indicativa" class="input-info" autocomplete="off" >
+                            <div class="underline"></div>
+                            <label>Classificação</label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-div">
+                            <input type="text" name="duracao" class="input-info" autocomplete="off">
+                            <div class="underline"></div>
+                            <label>Duração</label>
+                        </div>
+                    </div> 
+                </div> 
+
+                <div class="wrapper">
+                    <div class="input-div">
+                        <input type="text" name="url" class="input-info" autocomplete="off" >
+                        <div class="underline"></div>
+                        <label>Cole a url do vídeo(YouTube)<span> *</span></label>
+                        <small hidden id="url-oculto">Precisamos da url do seu filme</small>  
+                    </div>
                 </div>
+
+                <div class="wrapper sinopse" >
+                    <textarea name="sinopse" id="sinopse" name="message" autocomplete="off" class="input-info" placeholder="Escreva a sinópse do filme (mínimo 100 caracteres)" ></textarea>
+                    <small hidden id="sinopse-oculto">Escreva a sinopse do filme (mínimo 100 caracteres)</small>
+                </div> 
+            </fieldset>
+
+            <!-- <div id="checkbox-termos">
+                <label for="termo-de-solitacao">Li e aceito os</label>
+                <a href="http://termos.com">termos e condições</a>
+                <input type="checkbox" value="true" name="termo-de-solitacao" id="termo-de-solitacao">
+                <small hidden id="checkbox-oculto">*Confirme o termo</small> 
             </div> -->
+        </div>
 
-            <div class="wrapper">
-                <div class="input-div">
-                    <input type="text" name="url" class="input-info" autocomplete="off" >
-                    <div class="underline"></div>
-                    <label>Cole a url do vídeo(YouTube)<span> *</span></label>
-                    <small hidden id="url-oculto">Precisamos da url do seu filme</small>  
-                </div>
-            </div>
 
-            <div class="wrapper sinopse" >
-                <textarea name="sinopse" id="sinopse" autocomplete="off" class="input-info" placeholder="Escreva a sinópse do filme (mínimo 100 caracteres)" ></textarea>
-                <small hidden id="sinopse-oculto">Escreva a sinopse do filme (mínimo 100 caracteres)</small>
-            </div> 
-        </fieldset>
-
-        <!-- <div id="checkbox-termos">
-            <label for="termo-de-solitacao">Li e aceito os</label>
-            <a href="http://termos.com">termos e condições</a>
-            <input type="checkbox" value="true" name="termo-de-solitacao" id="termo-de-solitacao">
-            <small hidden id="checkbox-oculto">*Confirme o termo</small> 
-        </div> -->
-    </div>
-
-    <input type="submit" id="enviar" value="Enviar formúlario">    
+        <input type="submit" id="enviar" value="Enviar Formulário">    
     </form>
 
     </section>
 </main>
+
+<script src="static/js/form.js"></script> 
 </body>
-<script src="static/js/form.js"></script>
 </html>
