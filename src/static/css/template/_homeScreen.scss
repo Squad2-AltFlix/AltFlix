@@ -1,79 +1,11 @@
-* {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-body {
-    background-color: #632565;
-}
-
-/* Header Bootstrap */
-header#navbar a {
-    cursor: pointer;
-}
-
-header#navbar a img {
-    width: 134px;
-    height: 38px;
-}
-
-header#navbar #navbarNav {
-    margin-right: 0px;
-}
-
-header#navbar #navbarNav li {
-    font-family: 'Poppins', sans-serif;
-    padding: 0 20px;
-    -webkit-transition-duration: .8s;
-    transition-duration: .8s;
-    cursor: pointer;
-}
-
-.nav-link {
-    color: #ffffff !important;
-}
-
-header#navbar #navbarNav li:hover {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-}
-
-.nav-link:hover {
-    color: #7b2e7e !important;
-}
-
-@media (max-width: 990px) {
-    header#navbar button.navbar-toggler {
-        margin-top: -43px;
-        margin-bottom: 10px;
-    }
-
-    header#navbar #navbarNav {
-        margin-left: 0 !important;
-        text-align: right;
-    }
-
-    header#navbar #navbarNav li.nav-item:hover {
-        -webkit-transform: translate(-3%, 0) !important;
-        transform: translate(-3%, 0) !important;
-    }
-}
+// body {
+//     background-color: #632565;
+// }
 
 /* Mobile S */
 @media only screen and (min-width: 320px) {
-    /* Header */
-    #navbar {
-        width: 100%;
-    }
-
     /* Main Catálogo */
-    .main-container {
+    #main-container {
         width: 100%;
         min-height: calc(100vh - 64px);
         margin: auto;
@@ -202,7 +134,7 @@ header#navbar #navbarNav li:hover {
         padding-left: 0 !important;
     }
     
-    .main-container {
+    #main-container {
         min-height: calc(100vh - 71px);
     }
     
@@ -232,19 +164,12 @@ header#navbar #navbarNav li:hover {
 
 /* Desktop */
 @media only screen and (min-width: 1025px) {
-    /* Header */
-    #navbar {
-        width: 80%;
-        margin: auto;
-        box-shadow: 0px 0px 20px 10px #1b1b1b;
-    }
-
     div.container {
         padding-left: 0.75rem !important;
     }
     
     /* Main Catálogo */
-    .main-container {
+    #main-container {
         width: 80%;
         min-height: calc(100vh - 64px);
     }

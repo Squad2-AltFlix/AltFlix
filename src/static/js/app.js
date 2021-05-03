@@ -1,20 +1,42 @@
-async function moviePlay(id) {
-    let movie = await videoSearch(id)
-
-    $('.wrapper').append(`<iframe src="https://www.youtube.com/embed/${id}" class="embed" title="Filme" allowfullscreen="true"></iframe>`)
-    $('.titulo').append(`<h2>${movie.title}</h2>`)
-    $('.sinopse').append(`<h2>&nbsp;&nbsp;&nbsp;${movie.description}</h2>`)
-    $('.dyg').append(`
-        <h2 class="duration">${movie.duration}</h2>
-        <h2 class="year">${movie.year}</h2>
-        <h2 class="genre">${movie.type}</h2>
-    `)
-
-    movie.technicalTeam.forEach(element => {
-        $('.producao').append(`<h2>${element}</h2>`)
-    });
+window.onload = () => {
+    getScreenHome()
 }
-// moviePlay('ke8X3SE0XE8')
+
+screenNew = (call) => {
+    const screen = call.href.substring(call.href.indexOf("#") + 1)
+
+    $('#content').children().attr("id", screen)
+
+    window.scrollTo(0,0);
+
+    if (screen == "home") { getScreenHome() }
+    else if (screen == "form") { getScreenForm() }
+    else if (screen == "movie") { getScreenMovie() }
+    else if (screen == "about") { getScreenAbout() }
+}
+
+async function moviePlay(call) {
+    $('#content').children().attr("id", 'movie')
+    window.scrollTo(0,0);
+    getScreenMovie()
+
+    const id = call.href.substring(call.href.indexOf("=") + 1)
+
+    // let movie = await videoSearch(id)
+
+    // $('.wrapper').append(`<iframe src="https://www.youtube.com/embed/${id}" class="embed" title="Filme" allowfullscreen="true"></iframe>`)
+    // $('.titulo').append(`<h2>${movie.title}</h2>`)
+    // $('.sinopse').append(`<h2>&nbsp;&nbsp;&nbsp;${movie.description}</h2>`)
+    // $('.dyg').append(`
+    //     <h2 class="duration">${movie.duration}</h2>
+    //     <h2 class="year">${movie.year}</h2>
+    //     <h2 class="genre">${movie.type}</h2>
+    // `)
+
+    // movie.technicalTeam.forEach(element => {
+    //     $('.producao').append(`<h2>${element}</h2>`)
+    // });
+}
 
 async function movie() {
     let movie = await videoAll()
@@ -24,7 +46,7 @@ async function movie() {
             <div class="swiper-slide">
                 <img src="${element[0]}" alt="${element[1]}" class="movie-pic">
                 <span class="movie-title">
-                    <a class="${element[2]}">${element[1]}</a>
+                    <a href="#movie=${element[2]}" onclick="moviePlay(this)">${element[1]}</a>
                  </span>
             </div>
         `)
@@ -51,13 +73,4 @@ async function movie() {
         }
 
     });
-
-    // console.log(movie);
 }
-movie()
-
-//form 
-$(".formulario").submit((event) => {
-    event.preventDefault();
-    sendEmail()
-});

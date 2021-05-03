@@ -4,7 +4,7 @@ const apiIdChannelYoutube = 'UCfhJhcy7L2FwCGiXfXLuq2w'
 async function videoAll() {
     let resp = await axios.get('https://www.googleapis.com/youtube/v3/search?key=' + apiKeyYoutube + '&part=snippet,id&channelId=' + apiIdChannelYoutube)
     
-    console.log(resp);
+    // console.log(resp);
 
     let movie = []
 
