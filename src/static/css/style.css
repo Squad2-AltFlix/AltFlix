@@ -112,7 +112,6 @@ header#navbar #navbarNav li:hover {
         width: 241px;
         height: 30px;
         margin: 15px auto;
-        /* text-align: center; */
         border: 1px solid #632565;
         border-radius: 5px;
         outline: none;
@@ -136,14 +135,11 @@ header#navbar #navbarNav li:hover {
     /* Movies */
     .movies {
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .swiper-slide {
         width: 100%;
-        height: 400px !important;
+        height: 300px !important;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -151,20 +147,18 @@ header#navbar #navbarNav li:hover {
     }
 
     .movie-container {
-        background-color: green;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: auto;
-        width: 480px;
-        height: 260px;
+        width: 300px;
+        height: 160px;
         box-shadow: 0px 0px 30px 5px rgba(0,0,0,1);
     }
 
     .movie-pic {
-        /* display: block;
-        margin: auto; */
         clip-path: inset(13% 0 13% 0);
+        width: 300px;
     }
 
     .swiper-container {
@@ -281,6 +275,20 @@ header#navbar #navbarNav li:hover {
     .intro h1 {
         font-size: 3.0rem;
         color: #1b1b1b;
+    }
+    
+    /* Movies */
+    .movie-container {
+        width: 480px;
+        height: 260px;
+    }
+
+    .swiper-slide {
+        height: 400px !important;
+    }
+
+    .movie-pic {
+        width: 480px;
     }
 
     /* Search Field */
