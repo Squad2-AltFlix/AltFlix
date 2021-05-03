@@ -1,0 +1,12 @@
+.movie-title p {
+    color: #1b1b1b;
+    cursor: pointer;
+}
+
+.fas {
+    transition: .3s;
+}
+
+.movie-title p:hover .fas {
+    color: #632565;
+}
