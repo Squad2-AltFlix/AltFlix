@@ -7,7 +7,7 @@ screenNew = (call) => {
 
     $('#content').children().attr("id", screen)
 
-    window.scrollTo(0,0);
+    window.scrollTo(0,0)
 
     if (screen == "home") { getScreenHome() }
     else if (screen == "form") { getScreenForm() }
@@ -15,38 +15,18 @@ screenNew = (call) => {
     else if (screen == "about") { getScreenAbout() }
 }
 
-async function moviePlay(call) {
-    $('#content').children().attr("id", 'movie')
-    window.scrollTo(0,0);
-    getScreenMovie()
-
-    const id = call.href.substring(call.href.indexOf("=") + 1)
-
-    // let movie = await videoSearch(id)
-
-    // $('.wrapper').append(`<iframe src="https://www.youtube.com/embed/${id}" class="embed" title="Filme" allowfullscreen="true"></iframe>`)
-    // $('.titulo').append(`<h2>${movie.title}</h2>`)
-    // $('.sinopse').append(`<h2>&nbsp;&nbsp;&nbsp;${movie.description}</h2>`)
-    // $('.dyg').append(`
-    //     <h2 class="duration">${movie.duration}</h2>
-    //     <h2 class="year">${movie.year}</h2>
-    //     <h2 class="genre">${movie.type}</h2>
-    // `)
-
-    // movie.technicalTeam.forEach(element => {
-    //     $('.producao').append(`<h2>${element}</h2>`)
-    // });
-}
-
-async function movie() {
-    let movie = await videoAll()
-
+async function movieHome() {
+    const movie = await videoAll()
+    
     movie.forEach((element, index) => {
         $('.swiper-wrapper').prepend(`
             <div class="swiper-slide">
-                <img src="${element[0]}" alt="${element[1]}" class="movie-pic">
+                <div class="movie-container">
+                    <img src="${element[0]}"
+                    alt="${element[1]}" class="movie-pic">
+                </div>
                 <span class="movie-title">
-                    <a href="#movie=${element[2]}" onclick="moviePlay(this)">${element[1]}</a>
+                    <p><a href="#movie=${element[2]}" onclick="moviePlay(this)">${element[1]} <i class="fas fa-caret-square-right"></i></a></p>                    
                  </span>
             </div>
         `)
@@ -73,4 +53,33 @@ async function movie() {
         }
 
     });
+}
+
+function movieSearch() {
+
+}
+
+async function moviePlay(call) {
+    $('#content').children().attr("id", 'movie')
+
+    window.scrollTo(0,0)
+
+    getScreenMovie()
+
+    const id = call.href.substring(call.href.indexOf("=") + 1)
+
+    // let movie = await videoSearch(id)
+
+    // $('.wrapper').append(`<iframe src="https://www.youtube.com/embed/${id}" class="embed" title="Filme" allowfullscreen="true"></iframe>`)
+    // $('.titulo').append(`<h2>${movie.title}</h2>`)
+    // $('.sinopse').append(`<h2>&nbsp;&nbsp;&nbsp;${movie.description}</h2>`)
+    // $('.dyg').append(`
+    //     <h2 class="duration">${movie.duration}</h2>
+    //     <h2 class="year">${movie.year}</h2>
+    //     <h2 class="genre">${movie.type}</h2>
+    // `)
+
+    // movie.technicalTeam.forEach(element => {
+    //     $('.producao').append(`<h2>${element}</h2>`)
+    // });
 }

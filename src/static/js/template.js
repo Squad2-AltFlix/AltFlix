@@ -3,32 +3,13 @@ getScreenHome = () => {
         el: "#home",
         template: `
             <main id="main-container">
-                <!-- Intro and Search Field -->
                 <section class="intro">
                     <h1><span class="span">Olá!</span> Qual será o filme de hoje?</h1>
                     <input type="search" name="search" placeholder="Procure um filme" autocomplete="off" id="search-field">
                 </section>        
-                <!-- Carousel -->
                 <section class="movies">
                     <div class="swiper-container">
-                        <div class="swiper-wrapper">
-
-                            <div class="swiper-slide">
-                                <img src="https://scontent.faqa1-1.fna.fbcdn.net/v/t1.18169-9/10487261_834618706556657_6192580130883943466_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=e3f864&_nc_ohc=n2GuLRHiMJ0AX9mHocc&_nc_ht=scontent.faqa1-1.fna&oh=a477970261b3303278e0f4c809576125&oe=60AE37BD"
-                                    alt="Cartaz Patrícia - O filme" class="movie-pic">
-                                <span class="movie-title">
-                                    <a href="#movie=5vudaM5Neek" onclick="moviePlay(this)">Patrícia</a>
-                                </span>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://scontent.faqa1-1.fna.fbcdn.net/v/t1.18169-9/10487261_834618706556657_6192580130883943466_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=e3f864&_nc_ohc=n2GuLRHiMJ0AX9mHocc&_nc_ht=scontent.faqa1-1.fna&oh=a477970261b3303278e0f4c809576125&oe=60AE37BD"
-                                    alt="Cartaz Patrícia - O filme" class="movie-pic">
-                                <span class="movie-title">
-                                    <a href="#movie=5vudaM5Neek" onclick="moviePlay(this)">Patrícia</a>
-                                </span>
-                            </div>
-
-                        </div>
+                        <div class="swiper-wrapper"></div>
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                     </div>
@@ -56,7 +37,7 @@ getScreenHome = () => {
         },
     });
 
-    // movie()
+    movieHome()
     document.body.style.background = '#632565'
 }
 
@@ -64,9 +45,7 @@ getScreenForm = () => {
     new Vue({
         el: "#form",
         template: `
-            <div id="home">
-                <h1>Home</h1>
-            </div>
+            <div id="form"></div>
         `,
     })   
 }
@@ -76,11 +55,8 @@ getScreenMovie = () => {
         el: "#movie",
         template: `
             <section class="tela">
-                <!-- Titulo -->
                 <h2 class="titulo">Mulheres Rio Acima</h2>
-                
                 <div class="playersinopse">
-                <!-- Seção do Player -->
                 <div class="player">
                     <div class="wrapper">
                     <iframe
@@ -90,9 +66,7 @@ getScreenMovie = () => {
                         allowfullscreen="true"
                     ></iframe>
                     </div>
-                </div>
-                <!-- Sinopse -->
-        
+                </div>        
                 <div class="sinopse">
                     <h2>
                     &nbsp;&nbsp;&nbsp;O documentário que traz para a tela histórias de
@@ -108,8 +82,6 @@ getScreenMovie = () => {
                     artistas e organizadoras do encontro.
                     </h2>
                 </div>
-                
-                
                 </div>
                 <div class="dygproducao">
                 <div class="dyg">
@@ -127,17 +99,107 @@ getScreenMovie = () => {
             </section>
         `,
     })
-
-    document.body.style.background = 'rgb(36, 35, 35)'
 }
 
 getScreenAbout = () => {
     new Vue({
         el: "#about",
-        template: `
-            <div id="home">
-                <h1>Home</h1>
-            </div>
+            template: `
+            <section class="card">
+                <div class="sobre">
+                <h2>Sobre</h2>
+                <p>
+                    &nbsp;&nbsp;&nbsp; ALTFLIX é um projeto voltado para pessoas que amam
+                    Cinema, tantos os que amam assistir, quanto os produtores
+                    independentes que amam fazer acontecer. A idealizadora do projeto
+                    Milena Maganin compartilhou esse sonho com 5 pessoas, Edson Primo,
+                    Elisabete Alves, Felipe Pavan e Gustavo de Vito e Moares Oliveira para
+                    tornar ele em realidade durante o Hackathon organizado pelo Grupo
+                    FCamara.
+                </p>
+                </div>
+                <div class="contact">
+                <h2>Contate-nos</h2>
+                <ul>
+                    <li class="Edson">
+                    Edson Primo&nbsp;&nbsp;&nbsp;
+                    <div class="social">
+                        <img src="https://unavatar.now.sh/github/edsonPrimo" />
+                        <a target="_blank" href="https://www.linkedin.com/in/edson-primo-94904a209/"><i class="fab fa-linkedin-in"></i></a>
+                        <a target="_blank" href="https://github.com/edsonPrimo"><i class="fab fa-github"></i></a>
+                    </div>
+                    </li>
+                    <li class="Elisabete">
+                    Elisabete Alves&nbsp;&nbsp;&nbsp;
+                    <div class="social">
+                        <img src="https://unavatar.now.sh/github/elisabetealves" />
+                        <a target="_blank" href="https://www.linkedin.com/mwlite/in/elisabete-alves-675637135"><i class="fab fa-linkedin-in"></i></a>
+                        <a target="_blank" href="https://github.com/elisabetealves"><i class="fab fa-github"></i></a>
+                    </div>
+                    </li>
+                    <li class="Felipe">
+                    Felipe Pavan&nbsp;&nbsp;&nbsp;
+                    <div class="social">
+                        <img src="https://unavatar.now.sh/github/FelipePavan13" />
+                        <a
+                        target="_blank"
+                        href="https://www.linkedin.com/in/felipe-pavan-guedes-7659909a/"
+                        ><i class="fab fa-linkedin-in"></i
+                        ></a>
+                        <a target="_blank" href="https://github.com/FelipePavan13"
+                        ><i class="fab fa-github"></i
+                        ></a>
+                    </div>
+                    </li>
+                    <li class="Gustavo">
+                    Gustavo de Vito&nbsp;&nbsp;&nbsp;
+                    <div class="social">
+                        <img src="https://unavatar.now.sh/github/GustavoDeVito" />
+                        <a
+                        target="_blank"
+                        href="https://www.linkedin.com/in/gustavo-de-vito-70aa99206/"
+                        ><i class="fab fa-linkedin-in"></i
+                        ></a>
+                        <a target="_blank" href="https://github.com/GustavoDeVito"
+                        ><i class="fab fa-github"></i
+                        ></a>
+                    </div>
+                    </li>
+                    <li class="Milena">
+                    Milena Maganin&nbsp;&nbsp;&nbsp;
+                    <div class="social">
+                        <img src="https://unavatar.now.sh/github/mimaganin" />
+                        <a
+                        target="_blank"
+                        href="https://www.linkedin.com/in/milenamaganin/"
+                        ><i class="fab fa-linkedin-in"></i
+                        ></a>
+                        <a target="_blank" href="https://github.com/mimaganin"
+                        ><i class="fab fa-github"></i
+                        ></a>
+                    </div>
+                    </li>
+                    <li class="Moares">
+                    Moares Oliveira&nbsp;&nbsp;&nbsp;
+                    <div class="social">
+                        <img src="https://unavatar.now.sh/github/MoaresOliveira" />
+                        <a
+                        target="_blank"
+                        href="https://www.linkedin.com/in/moares-o-422393127/"
+                        ><i class="fab fa-linkedin-in"></i
+                        ></a>
+                        <a target="_blank" href="https://github.com/MoaresOliveira"
+                        ><i class="fab fa-github"></i
+                        ></a>
+                    </div>
+                    </li>
+                </ul>
+                </div>
+            </section>
         `,
-    })   
+    })
+
+    document.body.style.backgroundImage = 'url("/src/static/images/bgteste2.jpeg")'
+    document.body.style.backgroundRepeat = 'repeat-y'
+    document.body.style.backgroundSize = 'cover'
 }

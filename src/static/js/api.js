@@ -1,4 +1,4 @@
-const apiKeyYoutube = 'AIzaSyBcjhgbZUYfZ7vOgwuYZMJVrVLaCKniNd4'
+const apiKeyYoutube = 'AIzaSyDzAKa2ncr1vwQsDEHbJqWux7_U05UB6gU' //api pessoal
 const apiIdChannelYoutube = 'UCfhJhcy7L2FwCGiXfXLuq2w'
 
 async function videoAll() {
@@ -6,22 +6,23 @@ async function videoAll() {
     
     // console.log(resp);
 
-    let movie = []
-
     // element.snippet.thumbnails.default.url,
     // element.snippet.thumbnails.high.url,
     // element.snippet.thumbnails.medium.url,
 
+    let movie = []
+
     resp.data.items.forEach((element, index) => {
-        if (!(index == 0 && element.snippet.title == 'ALTFLIX Brasil')) {           
+        if (!(index == 0 && element.snippet.title == 'ALTFLIX Brasil')) {
             movie.push([
                 element.snippet.thumbnails.high.url,
                 element.snippet.title,
-                element.id.videoId,                
+                element.id.videoId,
             ])
         }
     });
 
+    // console.log(movie);
     return movie
 }
 // videoAll()

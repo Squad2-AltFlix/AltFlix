@@ -50,6 +50,30 @@ header#navbar #navbarNav li:hover {
   }
 }
 
+/* Button Link */
+a {
+  color: #1b1b1b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1b1b1b;
+}
+
+.movie-title p {
+  color: #1b1b1b;
+  cursor: pointer;
+}
+
+.fas {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.movie-title p:hover .fas {
+  color: #632565;
+}
+
 /* Mobile S */
 @media only screen and (min-width: 320px) {
   /* Main Catálogo */
@@ -131,6 +155,25 @@ header#navbar #navbarNav li:hover {
   /* Movies */
   .movies {
     width: 100%;
+  }
+  .swiper-slide {
+    width: 100%;
+    height: 300px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .movie-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -140,18 +183,20 @@ header#navbar #navbarNav li:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: auto;
+    width: 300px;
+    height: 160px;
+    -webkit-box-shadow: 0px 0px 30px 5px black;
+            box-shadow: 0px 0px 30px 5px black;
   }
   .movie-pic {
-    display: block;
-    margin: auto;
-    height: 300px;
-    /* border: 4px solid #632565; */
+    -webkit-clip-path: inset(13% 0 13% 0);
+            clip-path: inset(13% 0 13% 0);
+    width: 300px;
   }
   .swiper-container {
     width: 100%;
-    border-top: 3px solid #632565;
-    border-bottom: 3px solid #632565;
-    background-color: transparent;
+    background-color: #1b1b1b52;
   }
   .swiper-wrapper {
     padding: 20px 0;
@@ -253,6 +298,16 @@ header#navbar #navbarNav li:hover {
   .intro h1 {
     font-size: 3.0rem;
     color: #1b1b1b;
+  }
+  .movie-container {
+    width: 480px;
+    height: 260px;
+  }
+  .swiper-slide {
+    height: 400px !important;
+  }
+  .movie-pic {
+    width: 480px;
   }
   /* Search Field */
   #search-field {
@@ -449,6 +504,221 @@ header#navbar #navbarNav li {
   .sinopse {
     max-width: 40vw;
     padding-left: 25px;
+  }
+}
+
+.card {
+  background-color: #1b1b1bd3;
+  min-width: 270px;
+  width: 95%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 70px;
+  border-radius: 10px;
+  cursor: default;
+}
+
+.card .sobre {
+  max-width: 600px;
+}
+
+.card .sobre h2 {
+  position: relative;
+  color: #a09e9e;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+.card .sobre h2::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #632565;
+}
+
+.card .sobre p {
+  text-align: justify;
+  word-break: keep-all;
+  color: #a09e9e;
+  margin: 5px;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.card .contact {
+  max-width: 600px;
+  margin-bottom: 50px;
+}
+
+.card .contact h2 {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  position: relative;
+  color: #a09e9e;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.card .contact h2::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #632565;
+}
+
+.card .contact ul {
+  margin: 5px;
+  padding: 0;
+}
+
+.card .contact li {
+  min-width: 230px;
+  color: #a09e9e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: clamp(1.1rem, 2vw, 1.2rem);
+  margin: 5px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card .contact li img {
+  position: relative;
+  border: 1px solid white;
+}
+
+.card .social {
+  margin-left: 10px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+.card .social a {
+  position: absolute;
+}
+
+.card .social a:first-of-type {
+  background-color: #317ac288;
+  border: 1px solid white;
+  border-radius: 3px;
+  margin-top: 30px;
+}
+
+.card .social a:first-of-type:hover {
+  background-color: #317ac2;
+}
+
+.card .social a:last-child {
+  background-color: #00000088;
+  border: 1px solid white;
+  border-radius: 3px;
+  margin-top: 30px;
+}
+
+.card .social a:last-child:hover {
+  background-color: black;
+}
+
+.card .social i {
+  color: white;
+  padding: 6px;
+}
+
+@media only screen and (max-width: 991px) {
+  /* ===== Sobre ===== */
+  .sobre {
+    width: 100%;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+  .contact {
+    width: 100%;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact img {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+  }
+  .contact .social a:last-child {
+    margin-left: 36px;
+  }
+  .contact .social img {
+    border-radius: 3px;
+    width: 68px;
+    height: 68px;
+  }
+}
+
+@media only screen and (min-width: 991px) {
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    /* ===== Sobre ===== */
+    /* ===== Contatos ===== */
+  }
+  .card .sobre {
+    width: 40%;
+    height: 100%;
+    margin-top: 50px;
+  }
+  .card .contact {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin-top: 50px;
+  }
+  .card .contact .social a {
+    display: none;
+  }
+  .card .contact .social img {
+    border-radius: 50%;
+    width: 62px;
+    height: 62px;
+  }
+  .card .contact .social:hover img {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+    -webkit-transition: -webkit-filter 0.5s ease-in-out;
+    transition: -webkit-filter 0.5s ease-in-out;
+    transition: filter 0.5s ease-in-out;
+    transition: filter 0.5s ease-in-out, -webkit-filter 0.5s ease-in-out;
+    border-radius: 3px;
+    -webkit-transition: border-radius 0.1s;
+    transition: border-radius 0.1s;
+  }
+  .card .contact .social:hover a {
+    display: block;
+    -webkit-transition: display 0.5s ease-in-out;
+    transition: display 0.5s ease-in-out;
+  }
+  .card .contact .social a:last-child {
+    margin-left: 30px;
   }
 }
 /*# sourceMappingURL=main.css.map */
