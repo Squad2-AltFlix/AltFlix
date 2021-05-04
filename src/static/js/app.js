@@ -1,8 +1,23 @@
 window.onload = () => {
-    getScreenHome()
+    async function movieCall() {
+        await videoAll()
+        await getScreenHome()
+    }
+    movieCall()
+
+    $(() => {
+        $("#search-field" ).autocomplete({
+          source: [
+            "Natação",
+            "Futebol",
+            "Vôlei",
+            "Basquete"
+          ]
+        });
+    });
 }
 
-screenNew = (call) => {
+function screenNew(call) {
     const screen = call.href.substring(call.href.indexOf("#") + 1)
 
     $('#content').children().attr("id", screen)
@@ -16,17 +31,15 @@ screenNew = (call) => {
 }
 
 async function movieHome() {
-    const movie = await videoAll()
-    
-    movie.forEach((element, index) => {
-        $('.swiper-wrapper').prepend(`
+    for (let index = 0; index < movie.length; index++) {
+       $('.swiper-wrapper').prepend(`
             <div class="swiper-slide">
                 <div class="movie-container">
-                    <img src="${element[0]}"
-                    alt="${element[1]}" class="movie-pic">
+                    <img src="${movie[index].thumbnails}"
+                    alt="${movie[index].title}" class="movie-pic">
                 </div>
                 <span class="movie-title">
-                    <p><a href="#movie=${element[2]}" onclick="moviePlay(this)">${element[1]} <i class="fas fa-caret-square-right"></i></a></p>                    
+                    <p><a href="#movie=${movie[index].videoId}" onclick="moviePlay(this)">${movie[index].title} <i class="fas fa-caret-square-right"></i></a></p>                    
                  </span>
             </div>
         `)
@@ -51,12 +64,7 @@ async function movieHome() {
                 },
             });
         }
-
-    });
-}
-
-function movieSearch() {
-
+    }
 }
 
 async function moviePlay(call) {
@@ -68,18 +76,47 @@ async function moviePlay(call) {
 
     const id = call.href.substring(call.href.indexOf("=") + 1)
 
-    // let movie = await videoSearch(id)
+    // let moviePlay = await videoSearch(id)
 
     // $('.wrapper').append(`<iframe src="https://www.youtube.com/embed/${id}" class="embed" title="Filme" allowfullscreen="true"></iframe>`)
-    // $('.titulo').append(`<h2>${movie.title}</h2>`)
-    // $('.sinopse').append(`<h2>&nbsp;&nbsp;&nbsp;${movie.description}</h2>`)
+    // $('.titulo').append(`${moviePlay.title}`)
+    // $('.sinopse').append(`<h2>&nbsp;&nbsp;&nbsp;${moviePlay.description}</h2>`)
     // $('.dyg').append(`
-    //     <h2 class="duration">${movie.duration}</h2>
-    //     <h2 class="year">${movie.year}</h2>
-    //     <h2 class="genre">${movie.type}</h2>
+    //     <h2 class="duration">${moviePlay.duration}</h2>
+    //     <h2 class="year">${moviePlay.year}</h2>
+    //     <h2 class="genre">${moviePlay.type}</h2>
     // `)
 
-    // movie.technicalTeam.forEach(element => {
+    // moviePlay.technicalTeam.forEach(element => {
     //     $('.producao').append(`<h2>${element}</h2>`)
     // });
 }
+
+function movieSearch(search, key) {
+    if(key.key == "Enter") {
+        let result = ""
+
+        for (let index = 0; index < movie.length; index++) {
+            if(!(movie[index].title.search(search.value))) { 
+                result = search.value
+                break
+            }
+        }
+
+        if(result == "") {
+            $('#search-field').val('Filme Não Encontrado!')
+            setTimeout(() => {
+                $('#search-field').val('')
+            }, 1500)
+        }
+
+    }    
+}
+
+/*
+
+    Style autocomplete, trocar array
+    ficha em horizontal: 4min genero ano
+    implementar forms screen
+
+*/

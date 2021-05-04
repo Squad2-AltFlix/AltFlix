@@ -5,7 +5,7 @@ getScreenHome = () => {
             <main id="main-container">
                 <section class="intro">
                     <h1><span class="span">Olá!</span> Qual será o filme de hoje?</h1>
-                    <input type="search" name="search" placeholder="Procure um filme" autocomplete="off" id="search-field">
+                    <input type="search" name="search" placeholder="Procure um filme" id="search-field" onkeyup="movieSearch(this, event)">
                 </section>        
                 <section class="movies">
                     <div class="swiper-container">
@@ -17,25 +17,6 @@ getScreenHome = () => {
             </main>
         `,
     })
-
-    new Swiper('.swiper-container', {
-        direction: 'horizontal',
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
-    });
 
     movieHome()
     document.body.style.background = '#632565'
@@ -50,23 +31,24 @@ getScreenForm = () => {
     })   
 }
 
+// teste
 getScreenMovie = () => {
     new Vue({
         el: "#movie",
         template: `
-            <section class="tela">
-                <h2 class="titulo">Mulheres Rio Acima</h2>
-                <div class="playersinopse">
-                <div class="player">
-                    <div class="wrapper">
-                    <iframe
-                        src="https://www.youtube.com/embed/ke8X3SE0XE8"
-                        class="embed"
-                        title="Filme"
-                        allowfullscreen="true"
-                    ></iframe>
-                    </div>
-                </div>        
+        <section class="tela">
+            <h2 class="titulo">Mulheres Rio Acima</h2>
+            <div class="playersinopse">
+            <div class="player">
+                <div class="wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/ke8X3SE0XE8"
+                    class="embed"
+                    title="Filme"
+                    allowfullscreen="true"
+                ></iframe>
+                </div>
+            </div>        
                 <div class="sinopse">
                     <h2>
                     &nbsp;&nbsp;&nbsp;O documentário que traz para a tela histórias de
@@ -82,8 +64,8 @@ getScreenMovie = () => {
                     artistas e organizadoras do encontro.
                     </h2>
                 </div>
-                </div>
-                <div class="dygproducao">
+            </div>
+            <div class="dygproducao">
                 <div class="dyg">
                     <h2 class="duration">4min43s</h2>
                     <h2 class="year">2020</h2>
@@ -96,10 +78,38 @@ getScreenMovie = () => {
                     <h2>Câmera, still e making of: Renata Prado</h2>
                     <h2>Produção: Coletivo Mulheres Rio Acima</h2>
                 </div>
-            </section>
+            </div>
+        </section>
         `,
     })
+
+    document.body.style.background = 'rgb(36, 35, 35)'
 }
+
+
+// getScreenMovie = () => {
+//     new Vue({
+//         el: "#movie",
+//         template: `
+//         <section class="tela">
+//             <h2 class="titulo"></h2>
+//             <div class="playersinopse">
+//             <div class="player">
+//                 <div class="wrapper">
+//                 </div>
+//             </div>        
+//                 <div class="sinopse"></div>
+//             </div>
+//             <div class="dygproducao">
+//                 <div class="dyg"></div>
+//                 <div class="producao"></div>
+//             </div>
+//         </section>
+//         `,
+//     })
+
+//     document.body.style.background = 'rgb(36, 35, 35)'
+// }
 
 getScreenAbout = () => {
     new Vue({
