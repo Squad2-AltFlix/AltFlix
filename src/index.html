@@ -12,6 +12,7 @@
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/button.css">
+    <link rel="stylesheet" href="static/css/card.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
@@ -57,11 +58,11 @@
             <h1><span class="span">Olá!</span> Qual será o filme de hoje?</h1>
             <input type="search" name="search" placeholder="Procure um filme" autocomplete="off" id="search-field">
         </section>
-        <!-- Carousel -->
+        <!-- Movie Cards -->
         <section class="movies">
             <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                <!-- <div class="swiper-wrapper">
+                        <div class="swiper-slide">
                         <div class="movie-container">
                             <img src="https://i.ytimg.com/vi/F3QuLTth6tY/hqdefault.jpg"
                             alt="Cartaz Patrícia - O filme" class="movie-pic">
@@ -126,7 +127,16 @@
                     </div>
                 </div>
                 <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="swiper-button-next"></div> -->
+                <div class="movie-card">
+                    <div class="card" style="width: 22rem;">
+                        <img class="card-img-top" src="https://i.ytimg.com/vi/F3QuLTth6tY/hqdefault.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h2 class="card-title">Título do Filme</h2>
+                          <a href="#" class="button">Assistir</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
