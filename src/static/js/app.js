@@ -4,17 +4,6 @@ window.onload = () => {
         await getScreenHome()
     }
     movieCall()
-
-    $(() => {
-        $("#search-field" ).autocomplete({
-          source: [
-            "Natação",
-            "Futebol",
-            "Vôlei",
-            "Basquete"
-          ]
-        });
-    });
 }
 
 function screenNew(call) {
@@ -22,7 +11,7 @@ function screenNew(call) {
 
     $('#content').children().attr("id", screen)
 
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0)
 
     if (screen == "home") { getScreenHome() }
     else if (screen == "form") { getScreenForm() }
@@ -32,7 +21,7 @@ function screenNew(call) {
 
 async function movieHome() {
     for (let index = 0; index < movie.length; index++) {
-       $('.swiper-wrapper').prepend(`
+        $('.swiper-wrapper').prepend(`
             <div class="swiper-slide">
                 <div class="movie-container">
                     <img src="${movie[index].thumbnails}"
@@ -44,7 +33,7 @@ async function movieHome() {
             </div>
         `)
 
-        if(index == movie.length - 1) {
+        if (index == movie.length - 1) {
             new Swiper('.swiper-container', {
                 direction: 'horizontal',
                 loop: true,
@@ -65,12 +54,14 @@ async function movieHome() {
             });
         }
     }
+
+    homeSearch()
 }
 
 async function moviePlay(call) {
     $('#content').children().attr("id", 'movie')
 
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0)
 
     getScreenMovie()
 
@@ -93,24 +84,38 @@ async function moviePlay(call) {
 }
 
 function movieSearch(search, key) {
-    if(key.key == "Enter") {
+    if (key.key == "Enter") {
         let result = ""
 
         for (let index = 0; index < movie.length; index++) {
-            if(!(movie[index].title.search(search.value))) { 
+            if (!(movie[index].title.search(search.value))) {
                 result = search.value
                 break
             }
         }
 
-        if(result == "") {
+        if (result == "") {
             $('#search-field').val('Filme Não Encontrado!')
+            $('#search-field').blur()
             setTimeout(() => {
                 $('#search-field').val('')
-            }, 1500)
+                $('#search-field').focus()
+            }, 1400)
         }
 
-    }    
+    }
+}
+
+function homeSearch() {
+    let autoSearch = new Array()
+
+    for (let index = 0; index < movie.length; index++) {
+        autoSearch.push(movie[index].title)
+    }
+
+    $("#search-field").autocomplete({
+        source: autoSearch
+    });
 }
 
 /*

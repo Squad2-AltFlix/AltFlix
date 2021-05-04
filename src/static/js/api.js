@@ -1,5 +1,4 @@
-// const apiKeyYoutube = 'AIzaSyDrmGIJgrDOZMT-USZOHhM2IdxkUWNwGGM' //project
-const apiKeyYoutube = 'AIzaSyAQ9BLb23GbwOGS9QHIpfvjC63FThwRuUA'
+const apiKeyYoutube = 'AIzaSyDrmGIJgrDOZMT-USZOHhM2IdxkUWNwGGM'
 const apiIdChannelYoutube = 'UCfhJhcy7L2FwCGiXfXLuq2w'
 
 let movie = new Array()
