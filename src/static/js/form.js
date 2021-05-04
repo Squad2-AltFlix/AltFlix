@@ -34,7 +34,7 @@ btnEnviar.addEventListener("click", function enviar(event) {
 
    let select = document.querySelector("select").value
    let lancamento = document.querySelector('#filme-data').value
-   console.log(informacoes)
+   
 
    const informacaoFilme = {
       nome: informacoes[0],
@@ -54,7 +54,7 @@ btnEnviar.addEventListener("click", function enviar(event) {
    if (escolhaGenero.length > 0) {
       informacoesForm.genero = escolhaGenero
    }
-   console.log(informacaoFilme)
+   const formString = JSON.stringify(informacaoFilme)
    /***************** VALIDAÇÂO ************************/
 
    let error = []
@@ -63,7 +63,7 @@ btnEnviar.addEventListener("click", function enviar(event) {
    function validacao(form) {
 
       /*nome validação*/
-      if (form.nome.length == 0) {
+         if (form.nome.length == 0) {
          document.querySelector("#nome").classList.add("div-small")
          error.push('erro')
       }
@@ -132,32 +132,45 @@ btnEnviar.addEventListener("click", function enviar(event) {
       //    return
       // }
    }
-
+   
    if (error.length != 0) {
       console.log(error)
-   }
-   else {
-      console.log(informacaoFilme)
-  
-      fetch('https://api.staticforms.co/submit?form=anOf2b', {
-         method: 'POST',
-         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-         body: JSON.stringify({ "email": document.getElementsByName("email").value })
+     
+   } else 
 
-      })
-         .then(response => {
-            console.log(response);
-            if (response.status == 200) {
-               alert('ok')
-            } else {
-              alert('deu ruim')
-            }
-         })
-         .catch(error => {
-            console.log(error)
-            message.innerHTML = "<div><h2>Oops. Something went wrong!</h2></div>";
-            formContainer.parentNode.replaceChild(message, formContainer);
-         })
-      // });
-   }  
-});
+   Email.send({
+      Host : "smtp.gmail.com",
+      Username : "altflix.squard2@gmail.com",
+      Password : "sbfx$2ud",
+      To : 'altflix.squard2@gmail.com',
+      From : "altflix.squard2@gmail.com",
+      Subject : "This is the subject",
+      Body : `${formString}`
+  }).then(
+    message => alert(message)
+  );
+
+
+   // else { 
+   //    // fetch('https://api.staticforms.xyz/submit', {
+   //    fetch('https://api.staticforms.co/submit?form=anOf2b', {
+   //       method: 'POST',
+   //       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+   //       body: JSON.stringify({ "email": document.getElementsByName("email").value })
+
+   //    })
+   //       .then(response => {
+   //          console.log(response);
+   //          if (response.status == 200) {
+   //             alert('ok')
+   //          } else {
+   //            alert('deu ruim')
+   //          }
+   //       })
+   //       .catch(error => {
+   //          console.log(error)
+   //          message.innerHTML = "<div><h2>Oops. Something went wrong!</h2></div>";
+   //          formContainer.parentNode.replaceChild(message, formContainer);
+   //       })
+   //   }  
+   });
