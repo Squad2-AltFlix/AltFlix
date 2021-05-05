@@ -83,6 +83,7 @@ getScreenForm = () => {
     })   
 }
 
+
 // teste
 getScreenMovie = () => {
     new Vue({

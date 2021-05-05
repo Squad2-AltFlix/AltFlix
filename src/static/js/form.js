@@ -1,3 +1,166 @@
+screenForm = (screen_num) => {
+   window.scrollTo(0, 0)
+
+   if (screen_num == 1) { 
+      new Vue({
+         el: '.form',
+         template: `
+            <div class="form">
+
+               <div class="wrapper">
+                  <div class="input-div">
+                     <input type="text" name="name" class="input-info" autocomplete="off">
+                     <div class="underline"></div>
+                     <label>Nome<span> *</span></label>
+                     <small hidden id="nome">Nome Obrigatório</small>
+                  </div>
+               </div>
+               <div class="wrapper">
+                  <div class="input-div">
+                     <input type="text" name="email" class="input-info" autocomplete="off">
+                     <div class="underline"></div>
+                     <label>Email<span> *</span></label>
+                     <small hidden id="email">Email Obrigatório</small>
+                  </div>
+               </div>
+   
+               <div class="wrapper">
+                  <div class="input-div">
+                     <input type="tel" name="phone" class="input-info" autocomplete="off">
+                     <div class="underline"></div>
+                     <label>Telefone<span> *</span></label>
+                     <small hidden id="tel">Telefone Obrigatório</small>
+                  </div>                  
+               </div>
+
+               <button type="button" class="btn btn-outline-primary right" onclick="screenForm(2)"><i class="fas fa-arrow-right"></i></button>               
+            </div>
+         `,
+      })
+   }
+
+   else if (screen_num == 2) { 
+      new Vue({
+         el: '.form',
+         template: `
+            <div class="form">
+   
+               <div class="wrapper">
+                  <div class="input-div">
+                     <input type="text" name="produtora" class="input-info" autocomplete="off">
+                     <div class="underline"></div>
+                     <label>Nome da Produtora</label>
+                  </div>
+               </div>
+   
+               <div class="wrapper">
+                  <div class="input-div">
+                     <input type="text" name="titulo" class="input-info" autocomplete="off">
+                     <div class="underline"></div>
+                     <label>Título do Filme<span> *</span></label>
+                     <small hidden id="titulo-oculto">Título Obrigatório</small>
+                  </div>
+               </div>
+   
+               <div class="wrapper">
+                  <div class="input-div">
+                     <input type="text" id="classificacao-indicativa" name="classificacao-indicativa"
+                           class="input-info" autocomplete="off">
+                     <div class="underline"></div>
+                     <label>Classificação</label>
+                  </div>
+               </div>
+   
+               <button type="button" class="btn btn-outline-primary left" onclick="screenForm(1)"><i class="fas fa-arrow-left"></i></button>
+               <button type="button" class="btn btn-outline-primary right" onclick="screenForm(3)"><i class="fas fa-arrow-right"></i></button>
+            </div>
+         `,
+      })
+   }
+
+   else if (screen_num == 3) {
+      new Vue({
+         el: '.form',
+         template: `
+            <div class="form">
+   
+               <div class="wrapper">
+                  <label id="data-label" for="filme-data">Genêro<span> *</span></label>
+                  <br />                        
+                  <select class="selecaofilme" onchange="doSomething()">
+                     <option>Selecione</option>
+                     <option value="Ação">Ação</option>
+                     <option value="Aventura">Aventura</option>
+                     <option value="Cinema de arte">Cinema de arte</option>
+                     <option value="Comédia">Comédia</option>
+                     <option value="Comédia romântica">Comédia romântica</option>
+                     <option value="Dança">Dança</option>
+                     <option value="Documentário">Documentário</option>
+                     <option value="Docuficção">Docuficção</option>
+                     <option value="Drama">Drama</option>
+                     <option value="Espionagem">Espionagem</option>
+                     <option value="Faroeste">Faroeste</option>
+                     <option value="Fantasia">Fantasia</option>
+                     <option value="Ficção científica">Ficção científica</option>
+                     <option value="Filmes de guerra">Filmes de guerra</option>
+                     <option value="Musical">Musical</option>
+                     <option value="Policial">Policial</option>
+                     <option value="Romance">Romance</option>
+                     <option value="Seriado">Seriado</option>
+                     <option value="Suspense">Suspense</option>
+                     <option value="Terror">Terror</option>
+                     <option value="Thriller">Thriller</option>
+                     <option value="outro" id="outro">Outro</option>
+                  </select>
+                  <small hidden id="selectOculto">Genêro Obrigatório</small>
+               </div>
+   
+               <div class="wrapper div-oculta">
+                  <div class="input-div">                            
+                     <input type="text" id="genero" name="genero" autocomplete="off">
+                     <div class="underline"></div>
+                     <label>Digite o Gênero:</label>
+                  </div>
+               </div>
+   
+               <div class="caixa-filmedata">
+                  <label id="data-label" for="filme-data">Data de Lançamento<span> *</span></label>
+                  <input class="filme-data" type="date" id="filme-data" name="filme-data" autocomplete="off">
+                  <small hidden id="data-oculto">Data de Lançamento Obrigatório</small>
+               </div>
+   
+               <br />
+   
+               <div class="wrapper">
+                  <div class="input-div">
+                     <input type="text" name="url" class="input-info" autocomplete="off">
+                     <div class="underline"></div>
+                     <label>URL do Vídeo<span> *</span></label>
+                     <small hidden id="url-oculto">URL do Filme Obrigatório</small>
+                  </div>
+               </div>
+   
+               <div class="wrapper">
+                  <textarea name="sinopse" id="sinopse" autocomplete="off" class="input-info"
+                     placeholder="Sinópse do Filme"></textarea>
+                  <small hidden id="sinopse-oculto">Escreva no mínimo 100 caracteres</small>
+               </div>
+
+                  <button type="button" class="btn btn-outline-primary left" onclick="screenForm(2)"><i class="fas fa-arrow-left"></i></button>
+                  <button type="button" class="btn btn-outline-primary right" onclick="screenForm(4)"><i class="fas fa-arrow-right"></i></button>
+               </div>
+            </div>
+         `,
+      })
+   }
+   // <input type="submit" id="enviar" value="Enviar Formulário">
+
+   else if (screen_num == 4) {
+      console.log("Tela de confirmação dos dados");
+   }
+}
+screenForm(1)
+
 /* função para aparecer um input quando selecionado outro no select */
 function doSomething() {
    let selectValue = document.querySelector('select')
@@ -27,14 +190,14 @@ let btnEnviar = document.querySelector('#enviar')
 btnEnviar.addEventListener("click", function enviar(event) {
    event.preventDefault()
    let informacoes = []
-   
+
    for (let i = 0; i < informacoesForm.length; i++) {
       informacoes.push(informacoesForm[i].value)
    }
 
    let select = document.querySelector("select").value
    let lancamento = document.querySelector('#filme-data').value
-   
+
 
    const informacaoFilme = {
       nome: informacoes[0],
@@ -63,7 +226,7 @@ btnEnviar.addEventListener("click", function enviar(event) {
    function validacao(form) {
 
       /*nome validação*/
-         if (form.nome.length == 0) {
+      if (form.nome.length == 0) {
          document.querySelector("#nome").classList.add("div-small")
          error.push('erro')
       }
@@ -132,23 +295,23 @@ btnEnviar.addEventListener("click", function enviar(event) {
       //    return
       // }
    }
-   
+
    if (error.length != 0) {
       console.log(error)
-     
-   } else 
 
-   Email.send({
-      Host : "smtp.gmail.com",
-      Username : "altflix.squard2@gmail.com",
-      Password : "sbfx$2ud",
-      To : 'altflix.squard2@gmail.com',
-      From : "altflix.squard2@gmail.com",
-      Subject : "This is the subject",
-      Body : `${formString}`
-  }).then(
-    message => alert(message)
-  );
+   } else
+
+      Email.send({
+         Host: "smtp.gmail.com",
+         Username: "altflix.squard2@gmail.com",
+         Password: "sbfx$2ud",
+         To: 'altflix.squard2@gmail.com',
+         From: "altflix.squard2@gmail.com",
+         Subject: "This is the subject",
+         Body: `${formString}`
+      }).then(
+         message => alert(message)
+      );
 
 
    // else { 
@@ -173,4 +336,4 @@ btnEnviar.addEventListener("click", function enviar(event) {
    //          formContainer.parentNode.replaceChild(message, formContainer);
    //       })
    //   }  
-   });
+});
