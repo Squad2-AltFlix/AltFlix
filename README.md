@@ -101,44 +101,18 @@ $ npm run start
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-#### **Website**  ([React](https://reactjs.org/)  +  [TypeScript](https://www.typescriptlang.org/))
+#### **Website**  [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)  +  [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS) + [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
--   **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
--   **[React Icons](https://react-icons.github.io/react-icons/)**
+-   **[Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)**
+-   **[Swiper JS](https://swiperjs.com/get-started)**
 -   **[Axios](https://github.com/axios/axios)**
--   **[Leaflet](https://react-leaflet.js.org/en/)**
--   **[React Leaflet](https://react-leaflet.js.org/)**
--   **[React Dropzone](https://github.com/react-dropzone/react-dropzone)**
+-   **[jQuery](https://api.jquery.com/)**
+-   **[Sass](https://sass-lang.com/documentation)**
+-   **[SmtpJS](https://smtpjs.com/v3/smtp.js)**
+-   **[Font Awesome](https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use)**
+     
 
-> Veja o arquivo  [package.json](https://github.com/tgmarinho/README-ecoleta/blob/master/web/package.json)
 
-#### [](https://github.com/tgmarinho/Ecoleta#server-nodejs--typescript)**Server**  ([NodeJS](https://nodejs.org/en/)  +  [TypeScript](https://www.typescriptlang.org/))
-
--   **[Express](https://expressjs.com/)**
--   **[CORS](https://expressjs.com/en/resources/middleware/cors.html)**
--   **[KnexJS](http://knexjs.org/)**
--   **[SQLite](https://github.com/mapbox/node-sqlite3)**
--   **[ts-node](https://github.com/TypeStrong/ts-node)**
--   **[dotENV](https://github.com/motdotla/dotenv)**
--   **[Multer](https://github.com/expressjs/multer)**
--   **[Celebrate](https://github.com/arb/celebrate)**
--   **[Joi](https://github.com/hapijs/joi)**
-
-> Veja o arquivo  [package.json](https://github.com/tgmarinho/README-ecoleta/blob/master/server/package.json)
-
-#### [](https://github.com/tgmarinho/Ecoleta#mobile-react-native--typescript)**Mobile**  ([React Native](http://www.reactnative.com/)  +  [TypeScript](https://www.typescriptlang.org/))
-
--   **[Expo](https://expo.io/)**
--   **[Expo Google Fonts](https://github.com/expo/google-fonts)**
--   **[React Navigation](https://reactnavigation.org/)**
--   **[React Native Maps](https://github.com/react-native-community/react-native-maps)**
--   **[Expo Constants](https://docs.expo.io/versions/latest/sdk/constants/)**
--   **[React Native SVG](https://github.com/react-native-community/react-native-svg)**
--   **[Axios](https://github.com/axios/axios)**
--   **[Expo Location](https://docs.expo.io/versions/latest/sdk/location/)**
--   **[Expo Mail Composer](https://docs.expo.io/versions/latest/sdk/mail-composer/)**
-
-> Veja o arquivo  [package.json](https://github.com/tgmarinho/README-ecoleta/blob/master/mobile/package.json)
 
 #### [](https://github.com/tgmarinho/Ecoleta#utilit%C3%A1rios)**Utilitários**
 
