@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-
 # AltFlix
 
 ### Project online in Netlify:
@@ -99,12 +97,12 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/edsonPrimo"><img style="border-radius: 50%;" src="https://unavatar.now.sh/github/edsonPrimo" width="100px;" alt=""/><br /><sub><b>Edson Primo</b></sub></a><br /><a target="_blank" href="https://www.linkedin.com/in/edson-primo-94904a209/"><i class="fab fa-linkedin-in"></i></a> <a target="_blank" href="https://github.com/edsonPrimo"><i class="fab fa-github"></i></a></td>    
-    <td align="center"><a href="https://github.com/elisabetealves"><img style="border-radius: 50%;" src="https://unavatar.now.sh/github/elisabetealves" width="100px;" alt=""/><br /><sub><b>Elisabete Alves</b></sub></a><br /><a target="_blank" href="https://www.linkedin.com/mwlite/in/elisabete-alves-675637135"><i class="fab fa-linkedin-in"></i></a> <a target="_blank" href="https://github.com/elisabetealves"><i class="fab fa-github"></i></a></td>    
-    <td align="center"><a href="https://github.com/FelipePavan13"><img style="border-radius: 50%;" src="https://unavatar.now.sh/github/FelipePavan13" width="100px;" alt=""/><br /><sub><b>Felipe Pavan</b></sub></a><br /><a target="_blank" href="https://www.linkedin.com/in/felipe-pavan-guedes-7659909a/"><i class="fab fa-linkedin-in"></i></a> <a target="_blank" href="https://github.com/FelipePavan13"><i class="fab fa-github"></i></a></td>
-    <td align="center"><a href="https://github.com/GustavoDeVito"><img style="border-radius: 50%;" src="https://unavatar.now.sh/github/GustavoDeVito" width="100px;" alt=""/><br /><sub><b>Gustavo de Vito</b></sub></a><br /><a target="_blank" href="https://www.linkedin.com/in/gustavo-de-vito-70aa99206/"><i class="fab fa-linkedin-in"></i></a> <a target="_blank" href="https://github.com/GustavoDeVito"><i class="fab fa-github"></i></a></td>
-    <td align="center"><a href="https://github.com/mimaganin"><img style="border-radius: 50%;" src="https://unavatar.now.sh/github/mimaganin" width="100px;" alt=""/><br /><sub><b>Milena Maganin</b></sub></a><br /><a target="_blank" href="https://www.linkedin.com/in/milenamaganin/"><i class="fab fa-linkedin-in"></i></a> <a target="_blank" href="https://github.com/mimaganin"><i class="fab fa-github"></i></a></td>
-    <td align="center"><a href="https://github.com/MoaresOliveira"><img style="border-radius: 50%;" src="https://unavatar.now.sh/github/MoaresOliveira" width="100px;" alt=""/><br /><sub><b>Moares Oliveira</b></sub></a><br /><a target="_blank" href="https://www.linkedin.com/in/moares-o-422393127/"><i class="fab fa-linkedin-in"></i></a>  <a target="_blank" href="https://github.com/MoaresOliveira"><i class="fab fa-github"></i></a></td>    
+    <td align="center"><a href="https://github.com/edsonPrimo"><img style="border-radius: 50%;" src="https://unavatar.now.sh/github/edsonPrimo" width="100px;" alt=""/><br /><sub><b>Edson Primo</b></sub></a><br /><a target="_blank" href="https://www.linkedin.com/in/edson-primo-94904a209/">LinkedIn</a> </td>    
+    <td align="center"><a href="https://github.com/elisabetealves"><img style="border-radius: 50%;" src="https://unavatar.now.sh/github/elisabetealves" width="100px;" alt=""/><br /><sub><b>Elisabete Alves</b></sub></a><br /><a target="_blank" href="https://www.linkedin.com/mwlite/in/elisabete-alves-675637135">LinkedIn</a> </td>    
+    <td align="center"><a href="https://github.com/FelipePavan13"><img style="border-radius: 50%;" src="https://unavatar.now.sh/github/FelipePavan13" width="100px;" alt=""/><br /><sub><b>Felipe Pavan</b></sub></a><br /><a target="_blank" href="https://www.linkedin.com/in/felipe-pavan-guedes-7659909a/">LinkedIn</a> </td>
+    <td align="center"><a href="https://github.com/GustavoDeVito"><img style="border-radius: 50%;" src="https://unavatar.now.sh/github/GustavoDeVito" width="100px;" alt=""/><br /><sub><b>Gustavo de Vito</b></sub></a><br /><a target="_blank" href="https://www.linkedin.com/in/gustavo-de-vito-70aa99206/">LinkedIn</a> </td>
+    <td align="center"><a href="https://github.com/mimaganin"><img style="border-radius: 50%;" src="https://unavatar.now.sh/github/mimaganin" width="100px;" alt=""/><br /><sub><b>Milena Maganin</b></sub></a><br /><a target="_blank" href="https://www.linkedin.com/in/milenamaganin/">LinkedIn</a></td>
+    <td align="center"><a href="https://github.com/MoaresOliveira"><img style="border-radius: 50%;" src="https://unavatar.now.sh/github/MoaresOliveira" width="100px;" alt=""/><br /><sub><b>Moares Oliveira</b></sub></a><br/><a target="_blank" href="https://www.linkedin.com/in/moares-o-422393127/">LinkedIn</a> </td>    
   </tr>
   
 </table>
