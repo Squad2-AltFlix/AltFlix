@@ -1,5 +1,3 @@
-# AltFlix
-
 ### Project online in Netlify:
 - [AltFlix](https://altflix.netlify.app)
 
@@ -24,10 +22,8 @@ Tabela de conteúdos
    * [Sobre o projeto](#-sobre-o-projeto)
    * [Funcionalidades](#-funcionalidades)
    * [Layout](#-layout)
-   * [Como executar o projeto](#-como-executar-o-projeto)
    * [Tecnologias](#-tecnologias)
    * [Contribuidores](#-contribuidores)
-   * [Como contribuir no projeto](#-como-contribuir-no-projeto)
    * [Licença](#user-content--licença)
 <!--te-->
 
@@ -49,23 +45,11 @@ O projeto foi desenvolvido para o Hackathon organizado pela empresa FCâmara em 
   - [x] equipe técnica
   - [x] nome da produtora
 
-- [x] Os usuários tem acesso a plataforma em qualquer dispositivo, podendo assistir ao filme dentro da própria plataforma através do player.
+- [x] Os usuários tem acesso a plataforma em qualquer dispositivo, podendo assistir o filme dentro da própria plataforma através do player.
 
 ---
 
 ## 🎨 Layout
-
----
-
-## 🚀 Como executar o projeto
-
----
-
-### Pré-requisitos
-
-Antes de começar, você vai precisar ter instalado em sua máquina a seguintes ferramenta:
-[Git](https://git-scm.com)
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 ---
 
@@ -79,7 +63,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   **[Swiper JS](https://swiperjs.com/get-started)**
 -   **[Axios](https://github.com/axios/axios)**
 -   **[jQuery](https://api.jquery.com/)**
--   **[Sass](https://sass-lang.com/documentation)**
+-   **[SASS](https://sass-lang.com/documentation)**
 -   **[SmtpJS](https://smtpjs.com/v3/smtp.js)**
 -   **[Font Awesome](https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use)**
      
@@ -102,19 +86,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
   
 </table>
 
-## 💪 Como contribuir no projeto
-
-1. Faça um **fork** do projeto.
-2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
-3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
-4. Envie as suas alterações: `git push origin my-feature`
-> Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](./CONTRIBUTING.md)
-
 ---
-
 
 ## 📝 Licença
 
-Este projeto esta sobe a licença [MIT](./LICENSE).
+Este projeto esta sob a licença [MIT](./LICENSE).
 
 ---
