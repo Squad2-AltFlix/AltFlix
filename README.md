@@ -1,7 +1,3 @@
-### Project online in Netlify:
-- [AltFlix](https://altflix.netlify.app)
-
-
 <h1 align="center">
      🎬 <a href="#" alt="site do altflix"> AltFlix </a>
 </h1>
@@ -15,6 +11,9 @@
    <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 
 </p>
+
+### Projeto online no Netlify:
+- [AltFlix](https://altflix.netlify.app)
 
 Tabela de conteúdos
 =================
