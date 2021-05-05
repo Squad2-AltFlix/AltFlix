@@ -12,7 +12,7 @@
 
 </p>
 
-### Projeto online no Netlify:
+### Projeto online no Netlify
 - [AltFlix](https://altflix.netlify.app)
 
 Tabela de conteúdos
@@ -32,7 +32,7 @@ Tabela de conteúdos
 🎬 AltFlix -  A plataforma para produtores independentes é utilizada para sanar o problema de visibilidade das produções que não possuem tanto investimento e criar um lugar que facilite ao usuário que goste de consumir esse tipo de entretenimento.
 
 
-O projeto foi desenvolvido para o Hackathon organizado pela empresa FCâmara em parceria com a Alura.
+O projeto foi desenvolvido para o Hackathon organizado pela empresa FCamara em parceria com a Alura.
 
 ---
 
