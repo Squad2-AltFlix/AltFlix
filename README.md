@@ -12,10 +12,10 @@
 
 </p>
 
-### Projeto online no Netlify
+## Projeto online no Netlify
 - [AltFlix](https://altflix.netlify.app)
 
-Tabela de conteúdos
+## Tabela de conteúdos
 =================
 <!--ts-->
    * [Sobre o projeto](#-sobre-o-projeto)
