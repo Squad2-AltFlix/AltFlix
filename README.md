@@ -25,14 +25,9 @@ Tabela de conteúdos
    * [Funcionalidades](#-funcionalidades)
    * [Layout](#-layout)
    * [Como executar o projeto](#-como-executar-o-projeto)
-     * [Pré-requisitos](#pré-requisitos)
-     * [Rodando a aplicação web (Frontend)](#user-content--rodando-a-aplicação-web-frontend)
    * [Tecnologias](#-tecnologias)
-     * [WebSite](#user-content-website--react----typescript)
-     * [Mobile](#user-content-mobile--react-native----typescript)
    * [Contribuidores](#-contribuidores)
    * [Como contribuir no projeto](#-como-contribuir-no-projeto)
-   * [Autor](#-autor)
    * [Licença](#user-content--licença)
 <!--te-->
 
