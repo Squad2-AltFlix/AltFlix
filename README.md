@@ -27,7 +27,7 @@ Tabela de conteúdos
 <!--te-->
 
 
-## 💻 Sobre o projeto
+## 💻 Sobre o Projeto
 
 🎬 AltFlix -  A plataforma para produtores independentes é utilizada para sanar o problema de visibilidade das produções que não possuem tanto investimento e criar um lugar que facilite ao usuário que goste de consumir esse tipo de entretenimento.
 
