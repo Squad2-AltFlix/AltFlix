@@ -2,11 +2,11 @@ getScreenHome = () => {
     new Vue({
         el: "#home",
         template: `
-            <main id="main-container">
+            <main class="main-container">
                 <section class="intro">
                     <h1><span class="span">Olá!</span> Qual será o filme de hoje?</h1>
                     <input type="search" name="search" placeholder="Procure um filme" id="search-field" onkeyup="movieSearch(this, event)">
-                </section>        
+                </section>
                 <section class="movies">
                     <div class="swiper-container">
                         <div class="swiper-wrapper"></div>
@@ -18,8 +18,60 @@ getScreenHome = () => {
         `,
     })
 
-    movieHome()
-    document.body.style.background = '#632565'
+    for (let index = 0; index < movie.length; index++) {
+        $('.swiper-wrapper').prepend(`
+            <div class="swiper-slide">
+                <div class="movie-container">
+                    <img src="${movie[index].thumbnails}"
+                    alt="${movie[index].title}" class="movie-pic">
+                </div>
+                <span class="movie-title">
+                    <p><a href="#movie=${movie[index].videoId}" onclick="moviePlay(this)">${movie[index].title} <i class="fas fa-caret-square-right"></i></a></p>                    
+                 </span>
+            </div>
+        `)
+
+        if (index == movie.length - 1) {
+            new Swiper('.swiper-container', {
+                direction: 'horizontal',
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            });
+        }
+    }
+
+    homeSearch()
+    // document.body.style.background = '#632565'
+}
+
+getScreenHomeSearch = (id, img, title) => {
+    new Vue({
+        el: ".swiper-container",
+        template: `
+            <div class="movie-card">
+                <div class="card" style="width: 22rem;">
+                    <img class="card-img-top" src="${img}" alt="${title}">
+                    <div class="card-body">
+                        <h2 class="card-title">${title}</h2>
+                        <a href="#movie=${id}" class="button" onclick="moviePlay(this)">Assistir</a>
+                    </div>
+                </div>
+            </div>
+        `,
+    })
 }
 
 getScreenForm = () => {
@@ -86,27 +138,37 @@ getScreenMovie = () => {
     document.body.style.background = 'rgb(36, 35, 35)'
 }
 
-
-// getScreenMovie = () => {
+// getScreenMovie = (id, moviePlay) => {
 //     new Vue({
 //         el: "#movie",
 //         template: `
 //         <section class="tela">
-//             <h2 class="titulo"></h2>
+//             <h2 class="titulo">${moviePlay.title}</h2>
 //             <div class="playersinopse">
 //             <div class="player">
 //                 <div class="wrapper">
+//                     <iframe src="https://www.youtube.com/embed/${id}" class="embed" title="Filme" allowfullscreen="true"></iframe>
 //                 </div>
 //             </div>        
-//                 <div class="sinopse"></div>
+//                 <div class="sinopse">
+//                     <h2>&nbsp;&nbsp;&nbsp;${moviePlay.description}</h2>
+//                 </div>
 //             </div>
 //             <div class="dygproducao">
-//                 <div class="dyg"></div>
+//                 <div class="dyg">
+//                     <h2 class="duration">${moviePlay.duration}</h2>
+//                     <h2 class="year">${moviePlay.year}</h2>
+//                     <h2 class="genre">${moviePlay.type}</h2>
+//                 </div>
 //                 <div class="producao"></div>
 //             </div>
 //         </section>
 //         `,
 //     })
+
+//     moviePlay.technicalTeam.forEach(element => {
+//         $('.producao').append(`<h2>${element}</h2>`)
+//     });
 
 //     document.body.style.background = 'rgb(36, 35, 35)'
 // }

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/formcss.css">
+</head>
+
+<body>
+    <main class="effect-parallax">
+        <section class="container">
+
+            <form class="formulario" type="submit" method="POST">
+                <h1 class="titulo">Queremos seu filme no nosso site!</h1>
+
+                <div class=wrapper-semtitulo>
+                    <div class="wrapper">
+                        <div class="input-div">
+                            <input type="text" name="name" class="input-info" autocomplete="off">
+                            <div class="underline"></div>
+                            <label>Nome<span> *</span></label>
+                            <small hidden id="nome">Nome Obrigatório</small>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="input-div">
+                            <input type="text" name="email" class="input-info" autocomplete="off">
+                            <div class="underline"></div>
+                            <label>Email<span> *</span></label>
+                            <small hidden id="email">Email Obrigatório</small>
+                        </div>
+                    </div>
+
+                    <div class="wrapper">
+                        <div class="input-div">
+                            <input type="tel" name="phone" class="input-info" autocomplete="off">
+                            <div class="underline"></div>
+                            <label>Telefone<span> *</span></label>
+                            <small hidden id="tel">Telefone Obrigatório</small>
+                        </div>
+                    </div>
+
+                    <h2 class="sobrefilme">Sobre o Filme</h2>
+
+                    <div class="wrapper">
+                        <div class="input-div">
+                            <input type="text" name="produtora" class="input-info" autocomplete="off">
+                            <div class="underline"></div>
+                            <label>Nome da Produtora</label>
+                        </div>
+                    </div>
+
+                    <div class="wrapper">
+                        <div class="input-div">
+                            <input type="text" name="titulo" class="input-info" autocomplete="off">
+                            <div class="underline"></div>
+                            <label>Título do Filme<span> *</span></label>
+                            <small hidden id="titulo-oculto">Título Obrigatório</small>
+                        </div>
+                    </div>
+
+                    <div class="wrapper">
+                        <div class="input-div">
+                            <input type="text" id="classificacao-indicativa" name="classificacao-indicativa"
+                                class="input-info" autocomplete="off">
+                            <div class="underline"></div>
+                            <label>Classificação</label>
+                        </div>
+                    </div>
+
+                    <div class="wrapper">
+                        <label id="data-label" for="filme-data">Genêro<span> *</span></label>
+                        <br />                        
+                        <select class="selecaofilme" onchange="doSomething()">
+                            <option>Selecione</option>
+                            <option value="Ação">Ação</option>
+                            <option value="Aventura">Aventura</option>
+                            <option value="Cinema de arte">Cinema de arte</option>
+                            <option value="Comédia">Comédia</option>
+                            <option value="Comédia romântica">Comédia romântica</option>
+                            <option value="Dança">Dança</option>
+                            <option value="Documentário">Documentário</option>
+                            <option value="Docuficção">Docuficção</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Espionagem">Espionagem</option>
+                            <option value="Faroeste">Faroeste</option>
+                            <option value="Fantasia">Fantasia</option>
+                            <option value="Ficção científica">Ficção científica</option>
+                            <option value="Filmes de guerra">Filmes de guerra</option>
+                            <option value="Musical">Musical</option>
+                            <option value="Policial">Policial</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Seriado">Seriado</option>
+                            <option value="Suspense">Suspense</option>
+                            <option value="Terror">Terror</option>
+                            <option value="Thriller">Thriller</option>
+                            <option value="outro" id="outro">Outro</option>
+                        </select>
+                        <small hidden id="selectOculto">Genêro Obrigatório</small>
+                    </div>
+
+                    <div class="wrapper div-oculta">
+                        <div class="input-div">                            
+                            <input type="text" id="genero" name="genero" autocomplete="off">
+                            <div class="underline"></div>
+                            <label>Digite o Gênero:</label>
+                        </div>
+                    </div>
+
+                    <div class="caixa-filmedata">
+                        <label id="data-label" for="filme-data">Data de Lançamento<span> *</span></label>
+                        <input class="filme-data" type="date" id="filme-data" name="filme-data" autocomplete="off">
+                        <small hidden id="data-oculto">Data de Lançamento Obrigatório</small>
+                    </div>
+
+                    <br />
+
+                    <div class="wrapper">
+                        <div class="input-div">
+                            <input type="text" name="url" class="input-info" autocomplete="off">
+                            <div class="underline"></div>
+                            <label>URL do Vídeo<span> *</span></label>
+                            <small hidden id="url-oculto">URL do Filme Obrigatório</small>
+                        </div>
+                    </div>
+
+                    <div class="wrapper">
+                        <textarea name="sinopse" id="sinopse" name="message" autocomplete="off" class="input-info"
+                            placeholder="Sinópse do Filme"></textarea>
+                        <small hidden id="sinopse-oculto">Escreva no mínimo 100 caracteres</small>
+                    </div>
+                </div>
+
+                <input type="submit" id="enviar" value="Enviar Formulário">
+            </form>
+
+        </section>
+    </main>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="static/js/form.js"></script>
+
+</body>
+
+</html>

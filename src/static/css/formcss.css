@@ -1,0 +1,391 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+main {
+  height: max-content;
+}
+
+main::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  bottom: -50px;
+  background-image: url(/src/static/images/bgteste2.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  filter: brightness(.2);
+  z-index: -1;
+}
+
+.effect-parallax {
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  min-height: 100%;
+  background-position: 50% 0;
+  background-repeat: repeat;
+  font-size: 10px;
+}
+
+/*caixa do form*/
+
+form {
+  padding: 30px 0px;
+}
+
+.container {
+  width: 50%;
+  background: rgba(255, 255, 255, 0.767);
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.493); 
+  font-size: 1.7em;
+}
+
+.wrapper-semtitulo {
+  padding-left: 30px;
+}
+
+.titulo {
+  text-align: center;
+  font-weight: bold;
+  padding: 30px 65px;
+  font-size: 35px;
+  line-height: 1.2;
+  color: #333; 
+}
+
+/*///////////////////// inputs ///////////////////////*/
+
+.wrapper {
+  width: 93%;
+  background: none;
+  padding: 15px 30px;
+}
+
+
+.wrapper .input-div {
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.wrapper .input-div input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid rgba(68, 66, 66, 0.459);
+  outline: none;
+  background: none;
+}
+
+.input-animacao {
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: #882a8b !important;
+  /* color: #503b50 !important; */
+}
+
+.input-div input:focus ~ label {
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: #882a8b !important;
+  /* color: #503b50; */
+}
+
+.wrapper .input-div label {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  /* color: rgb(56, 52, 52); */
+
+  pointer-events: none; 
+  transition: all 0.3s ease;
+}
+
+.input-div .underline {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+}
+
+.input-div .underline:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #272227;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.input-div input:focus ~ .underline:before{
+  transform: scaleX(1);
+}
+
+.div-small {
+  display: block !important;
+  color: red !important;
+  font-size: 0.8em !important;
+  height: fit-content;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.wrapper span, .caixa-filmedata span {
+  color: red;
+  font-size: 0.9em;
+}
+/*/////////////sobre filmes///////////////*/
+
+.sobrefilme {
+  display: block;
+  margin: 30px 0px 0px 30px;
+  color: rgb(56, 52, 52);
+  font-weight: bold;
+}
+
+/*select*/
+.selecaofilme {
+  width: 250px;
+  height: 30px;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 10px;
+  /* margin-left: 30px; */
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.616);
+  border-bottom: 2px solid silver;
+  display: inline-block;
+}
+
+/* input oculto*/
+.div-oculta {
+  display: none;
+}
+
+.div-no-oculta {
+  width: 46%;
+  display: inline-block;
+}
+
+/*input div*/
+.filme-data {
+  display: block;
+  border: none;
+  height: 30px;
+  background:rgba(255, 255, 255, 0.616);
+  border-radius: 4px;
+  margin-bottom: 10px; 
+  width: 250px;
+
+}
+
+.caixa-filmedata {
+  margin-left: 30px;
+  margin-top: 10px;
+  /* color: rgb(56, 52, 52); */
+}
+
+.caixa-filmedata input {
+  text-align: center;
+}
+
+#filmedata-label {
+  margin-bottom: 5px;
+}
+
+.caixa-metade-tela .wrapper {
+    display: inline-block;
+    width: 45%;
+}
+
+textarea {
+  border-radius: 5px;
+  width: 100%;
+  height: 10em;
+  background: rgba(255, 255, 255, 0.616);
+  padding: 4px;
+  resize: none;
+  overflow: hidden;
+}
+
+/* botão enviar e botão url */
+#enviar {
+    height: 50px;
+    width: 160px;
+    background: #333;
+    color: white;
+    border: none;
+    display: block;
+    margin: 0px auto;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#enviar:hover {
+    transform: scale(1.1);
+    border-radius: 10px;
+}
+
+#checkbox-termos {
+    padding-left: 20%;
+    padding-bottom: 20px;
+    padding-right: 20%;
+  }
+
+ /*********************** MEDIA QUERY ************************/
+ @media only screen and (min-width: 1700px) {
+  .container {
+    width: 32%;
+  }
+}
+
+@media only screen and (min-device-width: 1300px) and (max-device-width: 1700px) {
+  .container {
+    width: 40%;
+    max-width: 600px;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1300px) {
+  .container {
+    width: 50%;
+    max-width: 550px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)  {
+  .container {
+    width: 60%;
+    max-width: 500px;
+  }
+
+  .titulo {
+    padding: 30px;
+  }
+
+  .selecaofilme {
+    width: 230px;
+  }
+
+  .caixa-metade-tela .wrapper {
+    width: 50%;
+    margin: 0px;
+    padding: 10px 0px;
+  }
+  
+  .filme-data {
+    width: 230px;
+  }
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 767px) { 
+  .container {
+    width: 70%;
+    max-width: 450px;
+    font-size: 15px;
+  }
+
+  .wrapper {
+    width: 93%;
+    background: none;
+    padding: 10px 10px;
+  }
+
+  .titulo {
+    font-size: 26px;
+    padding:25px
+  }
+
+  .sobrefilme {
+    margin: 30px 0px 5px 10px;
+  }
+
+  .selecaofilme {
+    width: 230px;
+    margin-top: 10px;
+  }
+
+  .wrapper-semtitulo {
+    padding-left: 10px;
+  }
+
+  .caixa-metade-tela .wrapper {
+    width: 50%;
+    margin: 0px;
+  }
+
+  .caixa-metade-tela {
+    padding: 0px;
+    margin-left: 0px;
+  }
+
+  .filme-data {
+    width: 230px;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 481px) { 
+  .container {
+    width: 80%;
+    font-size: 15px;
+    padding: 0px;
+  }
+
+  .wrapper {
+    width: 93%;
+    background: none;
+    padding: 10px 10px;
+  }
+
+  .titulo {
+    font-size: 22px;
+    padding: 25px 20px;
+  }
+
+  .sobrefilme {
+    margin: 30px 0px 0px 10px;
+  }
+
+  .selecaofilme {
+    width: 180px;
+    margin-top: 12px;
+  }
+
+  .wrapper-semtitulo {
+    padding-left: 10px;    
+  }
+
+  .caixa-metade-tela .wrapper {
+    display: inline-block;
+    width: 60%;
+    margin-left: 10px;
+  }
+
+  .caixa-metade-tela .wrapper {
+    margin: 0px;
+  }
+
+  .caixa-metade-tela {
+    padding: 0px;
+    margin-left: 0px;
+  }
+  
+  .filme-data {
+    width: 180px;
+  }
+
+}

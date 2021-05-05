@@ -19,68 +19,17 @@ function screenNew(call) {
     else if (screen == "about") { getScreenAbout() }
 }
 
-async function movieHome() {
-    for (let index = 0; index < movie.length; index++) {
-        $('.swiper-wrapper').prepend(`
-            <div class="swiper-slide">
-                <div class="movie-container">
-                    <img src="${movie[index].thumbnails}"
-                    alt="${movie[index].title}" class="movie-pic">
-                </div>
-                <span class="movie-title">
-                    <p><a href="#movie=${movie[index].videoId}" onclick="moviePlay(this)">${movie[index].title} <i class="fas fa-caret-square-right"></i></a></p>                    
-                 </span>
-            </div>
-        `)
-
-        if (index == movie.length - 1) {
-            new Swiper('.swiper-container', {
-                direction: 'horizontal',
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                scrollbar: {
-                    el: '.swiper-scrollbar',
-                },
-            });
-        }
-    }
-
-    homeSearch()
-}
-
 async function moviePlay(call) {
     $('#content').children().attr("id", 'movie')
 
-    window.scrollTo(0, 0)
-
-    getScreenMovie()
-
     const id = call.href.substring(call.href.indexOf("=") + 1)
 
-    // let moviePlay = await videoSearch(id)
+    const moviePlay = await videoSearch(id)
 
-    // $('.wrapper').append(`<iframe src="https://www.youtube.com/embed/${id}" class="embed" title="Filme" allowfullscreen="true"></iframe>`)
-    // $('.titulo').append(`${moviePlay.title}`)
-    // $('.sinopse').append(`<h2>&nbsp;&nbsp;&nbsp;${moviePlay.description}</h2>`)
-    // $('.dyg').append(`
-    //     <h2 class="duration">${moviePlay.duration}</h2>
-    //     <h2 class="year">${moviePlay.year}</h2>
-    //     <h2 class="genre">${moviePlay.type}</h2>
-    // `)
+    getScreenMovie()
+    //getScreenMovie(id, moviePlay)
 
-    // moviePlay.technicalTeam.forEach(element => {
-    //     $('.producao').append(`<h2>${element}</h2>`)
-    // });
+    window.scrollTo(0, 0)
 }
 
 function movieSearch(search, key) {
@@ -90,19 +39,29 @@ function movieSearch(search, key) {
         for (let index = 0; index < movie.length; index++) {
             if (!(movie[index].title.search(search.value))) {
                 result = search.value
+
+                const videoId = movie[index].videoId
+                const thumbnails = movie[index].thumbnails
+                const title = movie[index].title
+
+                getScreenHomeSearch(videoId, thumbnails, title)
+
                 break
             }
         }
 
         if (result == "") {
-            $('#search-field').val('Filme Não Encontrado!')
-            $('#search-field').blur()
+            $('#search-field').val('Filme Não Encontrado!').blur()
             setTimeout(() => {
-                $('#search-field').val('')
-                $('#search-field').focus()
+                $('#search-field').val('').focus()
             }, 1400)
         }
 
+    }
+    
+    else if (search.value == "") {
+        $('#content').children().attr("id", 'home')
+        getScreenHome()
     }
 }
 
@@ -120,7 +79,7 @@ function homeSearch() {
 
 /*
 
-    Style autocomplete, trocar array
+    Style autocomplete
     ficha em horizontal: 4min genero ano
     implementar forms screen
 

@@ -1,28 +1,28 @@
-.card {
+section.card {
     background-color: #1b1b1bd3;
     min-width: 270px;
     width: 95%;
     height: max-content;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 70px;
+    margin-top: 30px;
     border-radius: 10px;
     cursor: default;
 }
-  
-.card .sobre {
+
+section.card .sobre {
     max-width: 600px;
 }
-  
-.card .sobre h2 {
+
+section.card .sobre h2 {
     position: relative;
     color: #a09e9e;
     font-weight: 700;
     margin-bottom: 15px;
     font-size: clamp(1.4rem, 2vw, 2rem);
 }
-  
-.card .sobre h2::before {
+
+section.card .sobre h2::before {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -31,29 +31,29 @@
     height: 2px;
     background: #632565;
 }
-  
-.card .sobre p {
+
+section.card .sobre p {
     text-align: justify;
     word-break: keep-all;
     color: #a09e9e;
     margin: 5px;
     font-size: clamp(1rem, 2vw, 1.2rem);
 }
-  
-.card .contact {
+
+section.card .contact {
     max-width: 600px;
     margin-bottom: 50px;
 }
-  
-.card .contact h2 {
+
+section.card .contact h2 {
     font-size: clamp(1.4rem, 2vw, 2rem);
     position: relative;
     color: #a09e9e;
     font-weight: 700;
     margin-bottom: 15px;
 }
-  
-.card .contact h2::before {
+
+section.card .contact h2::before {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -62,13 +62,13 @@
     height: 2px;
     background: #632565;
 }
-  
-.card .contact ul {
+
+section.card .contact ul {
     margin: 5px;
     padding: 0;
 }
-  
-.card .contact li {
+
+section.card .contact li {
     min-width: 230px;
     color: #a09e9e;
     display: flex;
@@ -76,50 +76,50 @@
     margin: 5px;
     justify-content: space-between;
 }
-  
-.card .contact li img {
+
+section.card .contact li img {
     position: relative;
     border: 1px solid white;
 }
-  
-.card .social {
+
+section.card .social {
     margin-left: 10px;
     width: max-content;
     display: flex;
     margin: 0;
 }
-  
-.card .social a {
+
+section.card .social a {
     position: absolute;
 }
-  
-.card .social a:first-of-type {
+
+section.card .social a:first-of-type {
     background-color: #317ac288;
     border: 1px solid white;
     border-radius: 3px;
     margin-top: 30px;
 }
-  
-.card .social a:first-of-type:hover {
+
+section.card .social a:first-of-type:hover {
     background-color: #317ac2;
 }
-  
-.card .social a:last-child {
+
+section.card .social a:last-child {
     background-color: #00000088;
     border: 1px solid white;
     border-radius: 3px;
     margin-top: 30px;
 }
-  
-.card .social a:last-child:hover {
+
+section.card .social a:last-child:hover {
     background-color: black;
 }
-  
-.card .social i {
+
+section.card .social i {
     color: white;
     padding: 6px;
 }
-  
+
 @media only screen and (max-width: 991px) {
     /* ===== Sobre ===== */
     .sobre {
@@ -155,7 +155,7 @@
   
 @media only screen and (min-width: 991px) {
 
-    .card {
+    section.card {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -163,40 +163,40 @@
       /* ===== Contatos ===== */
     }
     
-    .card .sobre {
+    section.card .sobre {
       width: 40%;
       height: 100%;
       margin-top: 50px;
     }
 
-    .card .contact {
+    section.card .contact {
         width: max-content;
         margin-top: 50px;
     }
 
-    .card .contact .social a {
+    section.card .contact .social a {
         display: none;
     }
 
-    .card .contact .social img {
+    section.card .contact .social img {
         border-radius: 50%;
         width: 62px;
         height: 62px;
     }
 
-    .card .contact .social:hover img {
+    section.card .contact .social:hover img {
         filter: grayscale(100%);
         transition: filter 0.5s ease-in-out;        
         border-radius: 3px;
         transition: border-radius 0.1s;
     }
 
-    .card .contact .social:hover a {
+    section.card .contact .social:hover a {
       display: block;
       transition: display 0.5s ease-in-out;
     }
 
-    .card .contact .social a:last-child {
+    section.card .contact .social a:last-child {
       margin-left: 30px;
     }
 
