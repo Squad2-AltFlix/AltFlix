@@ -80,8 +80,6 @@ function homeSearch() {
 /*
 
     Style autocomplete
-    ficha em horizontal: 4min genero ano
-    nome na tela sobre errado
     background carrossel
 
 */

@@ -75,6 +75,7 @@ section.card .contact li {
     font-size: clamp(1.1rem, 2vw, 1.2rem);
     margin: 5px;
     justify-content: space-between;
+    align-items: center;
 }
 
 section.card .contact li img {
@@ -120,7 +121,7 @@ section.card .social i {
     padding: 6px;
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 990px) {
     /* ===== Sobre ===== */
     .sobre {
         width: 100%;
@@ -199,5 +200,4 @@ section.card .social i {
     section.card .contact .social a:last-child {
       margin-left: 30px;
     }
-
 }

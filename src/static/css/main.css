@@ -484,15 +484,23 @@ header#navbar #navbarNav li {
 }
 
 .dygproducao {
-  margin: 15px;
+  margin: 15px 15px 15px 25px;
 }
 
 .dyg {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .dyg h2 {
@@ -661,6 +669,9 @@ section.card .contact li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section.card .contact li img {
@@ -710,7 +721,7 @@ section.card .social i {
   padding: 6px;
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 990px) {
   /* ===== Sobre ===== */
   .sobre {
     width: 100%;

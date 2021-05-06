@@ -71,11 +71,13 @@ header#navbar #navbarNav li {
     
 }
 .dygproducao{
-    margin: 15px;
+    margin: 15px 15px 15px 25px;
 }
 .dyg{
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+    display: flex;
+    flex-direction: row;
 }
 .dyg h2 {
     font-size: clamp(1.0rem, 1vw, 1.2rem);

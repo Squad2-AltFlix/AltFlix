@@ -37,20 +37,43 @@ main::before {
 
 /*caixa do form*/
 
+form {
+  cursor: default !important;
+}
+
 form.formulario {
   padding: 40px 0px;
 }
 
 form.formulario button.left {
   float: left;
-  margin-top: -5px;
-  margin-left: 30px;
 }
 
 form.formulario button.right {
   float: right;
-  margin-top: -5px;
-  margin-right: 60px;
+}
+
+form.formulario button.btn {
+  background-color: transparent;
+  border: 1px solid #632565;
+  color: #632565;
+}
+
+form.formulario button.btn:hover {
+  background-color: #632565;
+  color: #fff;
+}
+
+form.formulario button.btn:focus {
+  box-shadow: 0px 0px 0px 4px rgb(99, 37, 101, .3);
+}
+
+select {
+  appearance: none;
+}
+
+.fas.fa-chevron-down {
+  font-size: 5em;
 }
 
 .container {
@@ -62,14 +85,14 @@ form.formulario button.right {
   font-size: 1.7em;
 }
 
-.wrapper-semtitulo {
+/* .wrapper-semtitulo {
   padding-left: 30px;
-}
+} */
 
 .titulo {
   text-align: center;
   font-weight: bold;
-  padding: 30px 65px;
+  padding: 15px;
   font-size: 35px;
   line-height: 1.2;
   color: #333; 
@@ -78,9 +101,9 @@ form.formulario button.right {
 /*///////////////////// inputs ///////////////////////*/
 
 .wrapper {
-  width: 93%;
+  width: 100%;
   background: none;
-  padding: 15px 30px;
+  padding: 19px 30px;
 }
 
 
@@ -103,13 +126,13 @@ form.formulario button.right {
 .input-animacao {
   transform: translateY(-20px);
   font-size: 15px;
-  color: #882a8b !important;
+  color: #632565 !important;
 }
 
 .input-div input:focus ~ label {
   transform: translateY(-20px);
   font-size: 15px;
-  color: #882a8b !important;
+  color: #632565 !important;
 }
 
 .wrapper .input-div label {
@@ -198,14 +221,13 @@ form.formulario button.right {
   border-radius: 4px;
   margin-bottom: 10px; 
   width: 250px;
-
 }
 
-.caixa-filmedata {
+/* .caixa-filmedata {
   margin-left: 30px;
   margin-top: 10px;
-  /* color: rgb(56, 52, 52); */
-}
+  color: rgb(56, 52, 52);
+} */
 
 .caixa-filmedata input {
   text-align: center;
@@ -308,7 +330,7 @@ textarea {
   }
 
   .wrapper {
-    width: 93%;
+    width: 100%;
     background: none;
     padding: 10px 10px;
   }
