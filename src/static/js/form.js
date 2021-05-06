@@ -46,11 +46,11 @@ screenForm = (screen_num) => {
                let nameConfig = /[^a-zà-ú]/gi
 
                if (!nameConfig.test(name) && name.length >= 3) {
-                  //document.querySelector("#nome").classList.remove("div-small")
+                  $('#nome').removeClass('div-small')
                   return true
                }
                else {
-                  //document.querySelector("#nome").classList.add("div-small")
+                  $('#nome').addClass('div-small')
                   return false
                }
             },
@@ -58,11 +58,11 @@ screenForm = (screen_num) => {
                let emailConfig = /\S+@\S+\.\S+/
 
                if (emailConfig.test(email)) {
-                  //document.querySelector("#email").classList.remove("div-small")
+                  $('#email').removeClass('div-small')
                   return true
                }
                else {
-                  //document.querySelector("#email").classList.add("div-small")
+                  $('#email').addClass('div-small')
                   return false
                }
             },
@@ -70,11 +70,11 @@ screenForm = (screen_num) => {
                let phoneConfig = /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/
 
                if (phoneConfig.test(phone)) {
-                  //document.querySelector("#tel").classList.remove("div-small")
+                  $('#tel').removeClass('div-small')
                   return true
                }
                else {
-                  //document.querySelector("#tel").classList.add("div-small")
+                  $('#tel').addClass('div-small')
                   return false
                }
             },
@@ -125,21 +125,17 @@ screenForm = (screen_num) => {
          },
          methods: {
             backScreen() {
-               // $('input[name="name"]').val() = email_body.name
-               // $('input[name="email"]').val() = email_body.email
-               // $('input[name="phone"]').val() = email_body.phone
-
                screenForm(1)
             },
             nextScreen() {
-               screenForm(3)
+               //screenForm(3)
                // console.log(this.producer_name);
                // console.log(this.movie_title);
                // console.log(this.rank);
                console.log(this.validate_movieTitle(this.movie_title));
                if (this.validate_movieTitle(this.movie_title)) {
                   console.log('passou');
-                  // screenForm(3)
+                  screenForm(3)
                }
                else {
                   console.log('nao passou');
@@ -149,11 +145,11 @@ screenForm = (screen_num) => {
                let movieConfig = /[^a-zà-ú]/gi
 
                if (!movieConfig.test(movie_title) && movie_title.length >= 3) {
-                  //document.querySelector("#titulo").classList.remove("div-small")
+                  $('#titulo').removeClass('div-small')
                   return true
                }
                else {
-                  //document.querySelector("#titulo").classList.add("div-small")
+                  $('#titulo').addClass('div-small')
                   return false
                }
             },
@@ -174,7 +170,7 @@ screenForm = (screen_num) => {
                      <input type="text" name="titulo" class="input-info" autocomplete="off" v-model="movie_title" />
                      <div class="underline"></div>
                      <label>Título do Filme<span> *</span></label>
-                     <small hidden id="titulo-oculto">Título Obrigatório</small>
+                     <small hidden id="titulo">Título Obrigatório</small>
                   </div>
                </div>
 
@@ -197,12 +193,30 @@ screenForm = (screen_num) => {
    else if (screen_num == 3) {
       new Vue({
          el: '.form',
+         data: {
+            type: '',
+            year: '',
+            url_movie: '',
+            description: '',
+         },
+         methods: {
+            backScreen() {
+               screenForm(2)
+            },
+            nextScreen() {
+               screenForm(4)
+            },
+            effectSelect() {
+
+            },
+
+         },
          template: `
             <div class="form">
-   
+
                <div class="wrapper">
                   <label id="data-label" for="filme-data">Genêro<span> *</span></label>
-                  <br />                        
+                  <br />
                   <select class="selecaofilme" onchange="doSomething()">
                      <option>Selecione</option>
                      <option value="Ação">Ação</option>
@@ -233,7 +247,7 @@ screenForm = (screen_num) => {
    
                <div class="wrapper div-oculta">
                   <div class="input-div">                            
-                     <input type="text" id="genero" name="genero" autocomplete="off">
+                     <input type="text" id="genero" name="genero" autocomplete="off" v-model="type" />
                      <div class="underline"></div>
                      <label>Digite o Gênero:</label>
                   </div>
@@ -241,7 +255,7 @@ screenForm = (screen_num) => {
    
                <div class="caixa-filmedata">
                   <label id="data-label" for="filme-data">Data de Lançamento<span> *</span></label>
-                  <input class="filme-data" type="date" id="filme-data" name="filme-data" autocomplete="off">
+                  <input class="filme-data" type="date" id="filme-data" name="filme-data" autocomplete="off" v-model="year" />
                   <small hidden id="data-oculto">Data de Lançamento Obrigatório</small>
                </div>
    
@@ -249,16 +263,16 @@ screenForm = (screen_num) => {
    
                <div class="wrapper">
                   <div class="input-div">
-                     <input type="text" name="url" class="input-info" autocomplete="off">
+                     <input type="text" name="url" class="input-info" autocomplete="off" v-model="url_movie" />
                      <div class="underline"></div>
-                     <label>URL do Vídeo<span> *</span></label>
+                     <label>URL do Filme<span> *</span></label>
                      <small hidden id="url-oculto">URL do Filme Obrigatório</small>
                   </div>
                </div>
    
                <div class="wrapper">
                   <textarea name="sinopse" id="sinopse" autocomplete="off" class="input-info"
-                     placeholder="Sinopse do Filme"></textarea>
+                     placeholder="Sinopse do Filme" v-model="description"></textarea>
                   <small hidden id="sinopse-oculto">Escreva no mínimo 100 caracteres</small>
                </div>
 
@@ -276,7 +290,7 @@ screenForm = (screen_num) => {
 
    animationLabel()
 }
-screenForm(1)
+screenForm(3)
 
 /* função para aparecer um input quando selecionado outro no select */
 function doSomething() {
