@@ -138,18 +138,19 @@ section.card .social i {
         margin-right: auto;
     }
 
-    .contact img {
-        filter: grayscale(100%);
-    }
-
     .contact .social a:last-child {
         margin-left: 36px;
+    }
+
+    section.card .contact .social a{
+        margin-top: 36px;
     }
 
     .contact .social img {
         border-radius: 3px;
         width: 68px;
         height: 68px;
+        filter: grayscale(90%);
     }
 
 }
@@ -160,8 +161,6 @@ section.card .social i {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-      /* ===== Sobre ===== */
-      /* ===== Contatos ===== */
     }
     
     section.card .sobre {
