@@ -81,6 +81,6 @@ function homeSearch() {
 
     Style autocomplete
     ficha em horizontal: 4min genero ano
-    implementar forms screen
+    nome na tela sobre errado
 
 */
