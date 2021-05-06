@@ -1,0 +1,203 @@
+section.card {
+    background-color: #1b1b1bd3;
+    min-width: 270px;
+    width: 95%;
+    height: max-content;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    cursor: default;
+}
+
+section.card .sobre {
+    max-width: 600px;
+}
+
+section.card .sobre h2 {
+    position: relative;
+    color: #a09e9e;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+section.card .sobre h2::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #632565;
+}
+
+section.card .sobre p {
+    text-align: justify;
+    word-break: keep-all;
+    color: #a09e9e;
+    margin: 5px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+section.card .contact {
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+
+section.card .contact h2 {
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    position: relative;
+    color: #a09e9e;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+section.card .contact h2::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #632565;
+}
+
+section.card .contact ul {
+    margin: 5px;
+    padding: 0;
+}
+
+section.card .contact li {
+    min-width: 230px;
+    color: #a09e9e;
+    display: flex;
+    font-size: clamp(1.1rem, 2vw, 1.2rem);
+    margin: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.card .contact li img {
+    position: relative;
+    border: 1px solid white;
+}
+
+section.card .social {
+    margin-left: 10px;
+    width: max-content;
+    display: flex;
+    margin: 0;
+}
+
+section.card .social a {
+    position: absolute;
+}
+
+section.card .social a:first-of-type {
+    background-color: #317ac288;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin-top: 30px;
+}
+
+section.card .social a:first-of-type:hover {
+    background-color: #317ac2;
+}
+
+section.card .social a:last-child {
+    background-color: #00000088;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin-top: 30px;
+}
+
+section.card .social a:last-child:hover {
+    background-color: black;
+}
+
+section.card .social i {
+    color: white;
+    padding: 6px;
+}
+
+@media only screen and (max-width: 990px) {
+    /* ===== Sobre ===== */
+    .sobre {
+        width: 100%;
+        padding: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+    .contact {
+        width: 100%;
+        padding: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact img {
+        filter: grayscale(100%);
+    }
+
+    .contact .social a:last-child {
+        margin-left: 36px;
+    }
+
+    .contact .social img {
+        border-radius: 3px;
+        width: 68px;
+        height: 68px;
+    }
+
+}
+  
+@media only screen and (min-width: 991px) {
+
+    section.card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      /* ===== Sobre ===== */
+      /* ===== Contatos ===== */
+    }
+    
+    section.card .sobre {
+      width: 40%;
+      height: 100%;
+      margin-top: 50px;
+    }
+
+    section.card .contact {
+        width: max-content;
+        margin-top: 50px;
+    }
+
+    section.card .contact .social a {
+        display: none;
+    }
+
+    section.card .contact .social img {
+        border-radius: 50%;
+        width: 62px;
+        height: 62px;
+    }
+
+    section.card .contact .social:hover img {
+        filter: grayscale(100%);
+        transition: filter 0.5s ease-in-out;        
+        border-radius: 3px;
+        transition: border-radius 0.1s;
+    }
+
+    section.card .contact .social:hover a {
+      display: block;
+      transition: display 0.5s ease-in-out;
+    }
+
+    section.card .contact .social a:last-child {
+      margin-left: 30px;
+    }
+}
