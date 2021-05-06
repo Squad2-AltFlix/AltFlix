@@ -23,21 +23,21 @@ screenForm = (screen_num) => {
          },
          methods: {
             nextScreen() {
-               screenForm(2)
-               // if(this.validate_name(this.name) && this.validate_email(this.email) && this.validate_phone(this.phone)) {
-               //    // console.log('passou');
-               //    email_body = Object.assign(email_body, {
-               //       'name': this.name,
-               //       'email': this.email,
-               //       'phone': this.phone,
-               //    })
-               //    // console.log(email_body);
-               //    screenForm(2)
-               // }
-               // else { 
-               //    console.log('nao passou');
-               //    console.log(email_body);
-               // }
+               // screenForm(2)
+               if(this.validate_name(this.name) && this.validate_email(this.email) && this.validate_phone(this.phone)) {
+                  // console.log('passou');
+                  email_body = Object.assign(email_body, {
+                     'name': this.name,
+                     'email': this.email,
+                     'phone': this.phone,
+                  })
+                  // console.log(email_body);
+                  screenForm(2)
+               }
+               else { 
+                  console.log('nao passou');
+                  console.log(email_body);
+               }
                console.log(this.name, this.validate_name(this.name))
                console.log(this.email, this.validate_email(this.email))
                console.log(this.phone, this.validate_phone(this.phone))
@@ -46,11 +46,11 @@ screenForm = (screen_num) => {
                let nameConfig = /[^a-zà-ú]/gi
 
                if (!nameConfig.test(name) && name.length >= 3) {
-                  document.querySelector("#nome").classList.remove("div-small")
+                  //document.querySelector("#nome").classList.remove("div-small")
                   return true
                }
                else {
-                  document.querySelector("#nome").classList.add("div-small")
+                  //document.querySelector("#nome").classList.add("div-small")
                   return false
                }
             },
@@ -58,11 +58,11 @@ screenForm = (screen_num) => {
                let emailConfig = /\S+@\S+\.\S+/
 
                if (emailConfig.test(email)) {
-                  document.querySelector("#email").classList.remove("div-small")
+                  //document.querySelector("#email").classList.remove("div-small")
                   return true
                }
                else {
-                  document.querySelector("#email").classList.add("div-small")
+                  //document.querySelector("#email").classList.add("div-small")
                   return false
                }
             },
@@ -70,11 +70,11 @@ screenForm = (screen_num) => {
                let phoneConfig = /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/
 
                if (phoneConfig.test(phone)) {
-                  document.querySelector("#tel").classList.remove("div-small")
+                  //document.querySelector("#tel").classList.remove("div-small")
                   return true
                }
                else {
-                  document.querySelector("#tel").classList.add("div-small")
+                  //document.querySelector("#tel").classList.add("div-small")
                   return false
                }
             },
@@ -149,11 +149,11 @@ screenForm = (screen_num) => {
                let movieConfig = /[^a-zà-ú]/gi
 
                if (!movieConfig.test(movie_title) && movie_title.length >= 3) {
-                  document.querySelector("#titulo").classList.remove("div-small")
+                  //document.querySelector("#titulo").classList.remove("div-small")
                   return true
                }
                else {
-                  document.querySelector("#titulo").classList.add("div-small")
+                  //document.querySelector("#titulo").classList.add("div-small")
                   return false
                }
             },
@@ -258,7 +258,7 @@ screenForm = (screen_num) => {
    
                <div class="wrapper">
                   <textarea name="sinopse" id="sinopse" autocomplete="off" class="input-info"
-                     placeholder="Sinópse do Filme"></textarea>
+                     placeholder="Sinopse do Filme"></textarea>
                   <small hidden id="sinopse-oculto">Escreva no mínimo 100 caracteres</small>
                </div>
 
