@@ -1,0 +1,16 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+@import 'template/header';
+@import 'template/homeScreen';
+@import 'template/movieScreen';
+@import 'template/formScreen';
+@import 'template/aboutScreen';
