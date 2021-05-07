@@ -352,6 +352,15 @@ screenForm = (screen_num) => {
 }
 screenForm(3)
 
+// animationLabel = () => {
+//    document.querySelectorAll(".input-div").forEach(item => {
+//       item.addEventListener('input', function () {
+//          let label = item.childNodes[4]
+//          label.classList.add("input-animacao")
+//       })
+//    })
+// }
+
 //       Email.send({
 //          Host: "smtp.gmail.com",
 //          Username: "altflix.squard2@gmail.com",
