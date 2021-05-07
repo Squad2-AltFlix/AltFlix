@@ -147,7 +147,8 @@ div.data label {
   margin: 50px auto;
   border-radius: 10px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.493); 
-  font-size: 1.7em;
+  font-size: 1.7em;  
+  min-width: 256px;
 }
 
 /* .wrapper-semtitulo {
@@ -433,7 +434,7 @@ textarea {
   }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 481px) { 
+@media only screen and (max-device-width: 481px) { 
   .container {
     width: 80%;
     font-size: 15px;
@@ -441,9 +442,19 @@ textarea {
   }
 
   .wrapper {
+    display: flex;
+    flex-direction: column;
     width: 93%;
+    align-items: center;
     background: none;
     padding: 10px 10px;
+  }
+  .wrapper .btn {
+    margin-bottom: 5px;
+    width: 170px;
+  }
+  .wrapper .btn.edit{
+    order: -1;
   }
 
   .titulo {
