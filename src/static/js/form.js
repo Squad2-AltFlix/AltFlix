@@ -1,84 +1,90 @@
 let email_body = new Object()
 
-email_body = {
-   'Nome': 'teste',
-   'Email': 'email@gmail.com',
-   'Telefone': '19 9999999999',
-   'Nome da Produtora': 'alguma ai',
-   'Título do Filme': 'um lugar',
-   'Classificação': '12',
-   'Genêro': 'Ação',
-   'Data de Lançamento': '15/09/2018',
-   'URL do Filme': 'filme.com',
-   'Sinopse': 'Sem Remorso é um filme americano de ação lançado em 2021, baseado na série publicada por Tom Clancy em 1993, um spin-off da série de filmes do Jack Ryan.',
-}
-
 //Teste
-animationLabel = () => {
-   document.querySelectorAll(".input-div").forEach(item => {
-      item.addEventListener('input', function () {
-         let label = item.childNodes[4]
-         label.classList.add("input-animacao")
-      })
-   })
-}
+// email_body = {
+//    'Nome': 'teste',
+//    'Email': 'email@gmail.com',
+//    'Telefone': '19 9999999999',
+//    'Nome da Produtora': 'alguma ai',
+//    'Título do Filme': 'um lugar',
+//    'Classificação': '12',
+//    'Genêro': 'Ação',
+//    'Data de Lançamento': '15/09/2018',
+//    'URL do Filme': 'filme.com',
+//    'Sinopse': 'Sem Remorso é um filme americano de ação lançado em 2021, baseado na série publicada por Tom Clancy em 1993, um spin-off da série de filmes do Jack Ryan.',
+// }
 
-screenForm = (screen_num) => {
+getScreenFormNum = (screen_num) => {
    window.scrollTo(0, 0)
 
    if (screen_num == 1) {
       new Vue({
          el: '.form',
          data: {
-            name: '',
-            email: '',
-            phone: '',
+            name: email_body['Nome'],
+            email: email_body['Email'],
+            phone: email_body['Telefone'],
          },
          methods: {
             nextScreen() {
                let is_next = this.validate_name(this.name) + this.validate_email(this.email) + this.validate_phone(this.phone)
 
-               if(is_next == 3) {
+               if (is_next == 3) {
                   email_body = Object.assign(email_body, {
-                     'name': this.name,
-                     'email': this.email,
-                     'phone': this.phone,
+                     'Nome': this.name,
+                     'Email': this.email,
+                     'Telefone': this.phone,
                   })
-                  screenForm(2)
+                  getScreenFormNum(2)
                }
             },
             validate_name(name) {
-               let nameConfig = /^[a-z ,.'-]+$/i
+               try {
+                  let nameConfig = /^[a-z ,.'-]+$/i
 
-               if (nameConfig.test(name) && name.length >= 3) {
-                  $('#nome').removeClass('div-small')
-                  return true
-               }
-               else {
+                  if (nameConfig.test(name) && name.length >= 3) {
+                     $('#nome').removeClass('div-small')
+                     return true
+                  }
+                  else {
+                     $('#nome').addClass('div-small')
+                     return false
+                  }
+               } catch (error) {
                   $('#nome').addClass('div-small')
                   return false
                }
             },
             validate_email(email) {
-               let emailConfig = /\S+@\S+\.\S+/
+               try {
+                  let emailConfig = /\S+@\S+\.\S+/
 
-               if (emailConfig.test(email)) {
-                  $('#email').removeClass('div-small')
-                  return true
-               }
-               else {
+                  if (emailConfig.test(email)) {
+                     $('#email').removeClass('div-small')
+                     return true
+                  }
+                  else {
+                     $('#email').addClass('div-small')
+                     return false
+                  }
+               } catch (error) {
                   $('#email').addClass('div-small')
                   return false
                }
             },
             validate_phone(phone) {
-               let phoneConfig = /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/
+               try {
+                  let phoneConfig = /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/
 
-               if (phoneConfig.test(phone)) {
-                  $('#tel').removeClass('div-small')
-                  return true
-               }
-               else {
+                  if (phoneConfig.test(phone)) {
+                     $('#tel').removeClass('div-small')
+                     return true
+                  }
+                  else {
+                     $('#tel').addClass('div-small')
+                     return false
+                  }
+               } catch (error) {
                   $('#tel').addClass('div-small')
                   return false
                }
@@ -127,34 +133,39 @@ screenForm = (screen_num) => {
       new Vue({
          el: '.form',
          data: {
-            producer_name: '',
-            movie_title: '',
-            rank: '',
+            producer_name: email_body['Nome da Produtora'],
+            movie_title: email_body['Título do Filme'],
+            rank: email_body['Classificação'],
          },
          methods: {
             backScreen() {
-               screenForm(1)
+               getScreenFormNum(1)
             },
             nextScreen() {
                let is_next = this.validate_movieTitle(this.movie_title)
 
                if (is_next == 1) {
                   email_body = Object.assign(email_body, {
-                     'producer_name': this.producer_name,
-                     'movie_title': this.movie_title,
-                     'rank': this.rank,
+                     'Nome da Produtora': this.producer_name,
+                     'Título do Filme': this.movie_title,
+                     'Classificação': this.rank,
                   })
-                  screenForm(3)
+                  getScreenFormNum(3)
                }
             },
             validate_movieTitle(movie_title) {
-               let movieConfig = /^[a-z ,.'-]+$/i
+               try {
+                  let movieConfig = /^[a-z ,.'-]+$/i
 
-               if (movieConfig.test(movie_title) && movie_title.length >= 3) {
-                  $('#titulo').removeClass('div-small')
-                  return true
-               }
-               else {
+                  if (movieConfig.test(movie_title) && movie_title.length >= 3) {
+                     $('#titulo').removeClass('div-small')
+                     return true
+                  }
+                  else {
+                     $('#titulo').addClass('div-small')
+                     return false
+                  }
+               } catch (error) {
                   $('#titulo').addClass('div-small')
                   return false
                }
@@ -203,30 +214,30 @@ screenForm = (screen_num) => {
       new Vue({
          el: '.form',
          data: {
-            type: '',
-            year: '',
-            url_movie: '',
-            description: '',
+            type: email_body['Genêro'],
+            year: email_body['Data de Lançamento'],
+            url_movie: email_body['URL do Filme'],
+            description: email_body['Sinopse'],
          },
          methods: {
             backScreen() {
-               screenForm(2)
+               getScreenFormNum(2)
             },
             nextScreen() {
                let is_next = this.validate_type(this.type) + this.validate_year(this.year) + this.validate_url(this.url_movie) + this.validate_description(this.description)
 
-               if(is_next == 4) {
+               if (is_next == 4) {
                   email_body = Object.assign(email_body, {
-                     'type': this.type,
-                     'year': this.year,
-                     'url_movie': this.url_movie,
-                     'description': this.description,
+                     'Genêro': this.type,
+                     'Data de Lançamento': this.year,
+                     'URL do Filme': this.url_movie,
+                     'Sinopse': this.description,
                   })
-                  screenForm(4)
+                  getScreenFormNum(4)
                }
             },
-            effectSelect() {               
-               if($(".selecaofilme option:selected").val() == 'outro') {
+            effectSelect() {
+               if ($(".selecaofilme option:selected").val() == 'outro') {
                   $('.div-oculta').addClass('div-no-oculta')
                   this.type = ''
                }
@@ -234,50 +245,70 @@ screenForm = (screen_num) => {
                else {
                   $('.div-oculta').removeClass('div-no-oculta')
 
-                  if(this.type != $(".selecaofilme option:selected").val()) {
+                  if (this.type != $(".selecaofilme option:selected").val()) {
                      this.type = $(".selecaofilme option:selected").val()
                   }
                }
             },
             validate_type(type) {
-               let typeConfig = /[a-z ,.'-]+$/i
+               try {
+                  let typeConfig = /[a-z ,.'-]+$/i
 
-               if (typeConfig.test(type) && type.length >= 3) {
-                  $('#selectOculto').removeClass('div-small')
-                  return true
-               }
-               else {
+                  if (typeConfig.test(type) && type.length >= 3) {
+                     $('#selectOculto').removeClass('div-small')
+                     return true
+                  }
+                  else {
+                     $('#selectOculto').addClass('div-small')
+                     return false
+                  }
+               } catch (error) {
                   $('#selectOculto').addClass('div-small')
                   return false
                }
             },
             validate_year(year) {
-               if(year != '') {
-                  $('#data-oculto').removeClass('div-small')
-                  return true
-               }
-               else {
+               try {
+                  if (year != '') {
+                     $('#data-oculto').removeClass('div-small')
+                     return true
+                  }
+                  else {
+                     $('#data-oculto').addClass('div-small')
+                     return false
+                  }
+               } catch (error) {
                   $('#data-oculto').addClass('div-small')
                   return false
                }
             },
             validate_url(url) {
-               let urlConfig = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/
+               try {
+                  let urlConfig = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/
 
-               if (urlConfig.test(url)) {
-                  $('#url-oculto').removeClass('div-small')
-                  return true
-               }
-               else {
+                  if (urlConfig.test(url)) {
+                     $('#url-oculto').removeClass('div-small')
+                     return true
+                  }
+                  else {
+                     $('#url-oculto').addClass('div-small')
+                     return false
+                  }
+               } catch (error) {
                   $('#url-oculto').addClass('div-small')
                   return false
                }
             },
             validate_description(description) {
-               if (description.length >= 100) {
-                  $('#sinopse-oculto').removeClass('div-small')
-                  return true
-               } else {
+               try {
+                  if (description.length >= 100) {
+                     $('#sinopse-oculto').removeClass('div-small')
+                     return true
+                  } else {
+                     $('#sinopse-oculto').addClass('div-small')
+                     return false
+                  }
+               } catch (error) {
                   $('#sinopse-oculto').addClass('div-small')
                   return false
                }
@@ -356,21 +387,23 @@ screenForm = (screen_num) => {
       })
    }
 
-   else if (screen_num == 4) {      
+   else if (screen_num == 4) {
       new Vue({
          el: '.form',
          methods: {
             cancelForm() {
-               console.log('cancelado');
-               //email_body = new Object()
-               //getScreenHome()
+               email_body = new Object()
+
+               $('#content').children().attr("id", 'home')
+
+               window.scrollTo(0, 0)
+
+               getScreenHome()
             },
-            editForm() {
-               console.log('editar');
-               //screenForm(1)
+            editForm() {               
+               getScreenFormNum(1)
             },
-            confirmForm() {
-               console.log('confirmado');
+            confirmForm() {               
                // Email.send({
                //    Host: "smtp.gmail.com",
                //    Username: "altflix.squard2@gmail.com",
@@ -380,15 +413,23 @@ screenForm = (screen_num) => {
                //    Subject: "This is the subject",
                //    Body: `${formString}`
                // }).then(
-               //    message => alert(message)
+               //    message => console.log(message)
                // );
             },
             loadInputs() {
                for (const key in email_body) {
-                  const element = email_body[key]                  
-                  if (element != "") {
-                     console.log('caiu no if');
-                     $('.form').append(`
+                  const element = email_body[key]
+
+                  if (key == 'Sinopse') {
+                     $('.form .content').append(`
+                        <div class="wrapper data">
+                           <label for="disabledTextInput" class="form-label">${key}:</label>
+                           <textarea for="disabledTextInput" class="form-label" disabled>${element}</textarea>                           
+                        </div>
+                  `)
+                  }
+                  else if (element != undefined) {
+                     $('.form .content').append(`
                         <div class="wrapper data">
                            <label for="disabledTextInput" class="form-label">${key}:</label>
                            <input type="text" id="disabledTextInput" class="form-control" placeholder="${element}" disabled />
@@ -396,35 +437,33 @@ screenForm = (screen_num) => {
                      `)
                   }
                }
-               
-               $('.titulo').html('Confirme seus Dados')
 
-               $('.form').append(`
-                  <div class="wrapper btn">
-                     <button type="button" class="btn cancel" v-on:click="cancelForm">Cancelar</button>
-                     <button type="button" class="btn edit" v-on:click="editForm">Editar</button>
-                     <button type="button" class="btn confirm" v-on:click="confirmForm">Confirmar</button>
-                  </div>
-               `)
+               $('.titulo').html('Confirme seus Dados')
             },
          },
-         mounted: function() {
+         mounted: function () {
             this.loadInputs()
          },
-         template: `<div class="form"></div>`,
+         template: `
+            <div class="form">
+
+               <div class="content"></div>
+
+               <div class="wrapper btn">
+                  <button type="button" class="btn cancel" v-on:click="cancelForm">Cancelar</button>
+                  <button type="button" class="btn edit" v-on:click="editForm">Editar</button>
+                  <button type="button" class="btn confirm" v-on:click="confirmForm">Confirmar</button>
+               </div>
+         
+            </div>
+         `,
       })
    }
 
-   animationLabel()
+   document.querySelectorAll(".input-div").forEach(item => {
+      item.addEventListener('input', () => {
+         let label = item.childNodes[4]
+         label.classList.add("input-animacao")
+      })
+   })
 }
-screenForm(4)
-
-//Final
-// animationLabel = () => {
-//    document.querySelectorAll(".input-div").forEach(item => {
-//       item.addEventListener('input', function () {
-//          let label = item.childNodes[4]
-//          label.classList.add("input-animacao")
-//       })
-//    })
-// }

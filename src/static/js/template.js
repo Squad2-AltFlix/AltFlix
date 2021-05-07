@@ -78,11 +78,20 @@ getScreenForm = () => {
     new Vue({
         el: "#form",
         template: `
-            <div id="form"></div>
+            <main class="effect-parallax">
+                <section class="container">
+                    <form class="formulario" type="submit" method="POST">
+                        <h1 class="titulo">Queremos seu filme no nosso site!</h1>
+                        <div class="wrapper-semtitulo">
+                            <div class="form"></div>
+                        </div>
+                    </form>
+                </section>
+            </main>
         `,
-    })   
+    })
+    getScreenFormNum(1)
 }
-
 
 // teste
 getScreenMovie = () => {
@@ -272,7 +281,7 @@ getScreenAbout = () => {
         `,
     })
 
-    document.body.style.backgroundImage = 'url("/src/static/images/bgteste2.jpeg")'
+    document.body.style.backgroundImage = 'url("/src/static/images/wallpaper.jpeg")'
     document.body.style.backgroundRepeat = 'repeat-y'
     document.body.style.backgroundSize = 'cover'
 }
