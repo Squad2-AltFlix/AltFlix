@@ -1,5 +1,15 @@
 /* Card Search */
 
+.ui-widget.ui-widget-content {
+    border-radius: 5px;
+}
+
+.ui-widget-content:hover {
+    div {
+        border-color: #632565;
+    }
+}
+
 .movie-card {
     width: 100%;
     height: 440px;

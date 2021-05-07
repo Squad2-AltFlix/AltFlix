@@ -1,5 +1,18 @@
 let email_body = new Object()
 
+email_body = {
+   'Nome': 'teste',
+   'Email': 'email@gmail.com',
+   'Telefone': '19 9999999999',
+   'Nome da Produtora': 'alguma ai',
+   'Título do Filme': 'um lugar',
+   'Classificação': '12',
+   'Genêro': 'Ação',
+   'Data de Lançamento': '15/09/2018',
+   'URL do Filme': 'filme.com',
+   'Sinopse': 'Sem Remorso é um filme americano de ação lançado em 2021, baseado na série publicada por Tom Clancy em 1993, um spin-off da série de filmes do Jack Ryan.',
+}
+
 //Teste
 animationLabel = () => {
    document.querySelectorAll(".input-div").forEach(item => {
@@ -102,7 +115,7 @@ screenForm = (screen_num) => {
                </div>
 
                <div class="wrapper">
-                  <button type="button" class="btn right" v-on:click="nextScreen">Próxima</button>
+                  <button type="button" class="btn btn-nav right" v-on:click="nextScreen">Próxima</button>
                </div>
 
             </div>
@@ -177,8 +190,8 @@ screenForm = (screen_num) => {
                </div>
                
                <div class="wrapper">
-                  <button type="button" class="btn left" v-on:click="backScreen">Anterior</button>
-                  <button type="button" class="btn right" v-on:click="nextScreen">Próxima</button>
+                  <button type="button" class="btn btn-nav left" v-on:click="backScreen">Anterior</button>
+                  <button type="button" class="btn btn-nav right" v-on:click="nextScreen">Próxima</button>
                </div>
 
             </div>
@@ -334,24 +347,79 @@ screenForm = (screen_num) => {
                </div>
 
                <div class="wrapper">
-                  <button type="button" class="btn left" v-on:click="backScreen">Anterior</button>
-                  <button type="button" class="btn right" v-on:click="nextScreen">Próxima</button>
+                  <button type="button" class="btn btn-nav left" v-on:click="backScreen">Anterior</button>
+                  <button type="button" class="btn btn-nav right" v-on:click="nextScreen">Próxima</button>
                </div>
 
             </div>
          `,
       })
    }
-   // <input type="submit" id="enviar" value="Enviar Formulário">
 
-   else if (screen_num == 4) {
-      console.log("Tela de confirmação dos dados");
+   else if (screen_num == 4) {      
+      new Vue({
+         el: '.form',
+         methods: {
+            cancelForm() {
+               console.log('cancelado');
+               //email_body = new Object()
+               //getScreenHome()
+            },
+            editForm() {
+               console.log('editar');
+               //screenForm(1)
+            },
+            confirmForm() {
+               console.log('confirmado');
+               // Email.send({
+               //    Host: "smtp.gmail.com",
+               //    Username: "altflix.squard2@gmail.com",
+               //    Password: "sbfx$2ud",
+               //    To: 'altflix.squard2@gmail.com',
+               //    From: "altflix.squard2@gmail.com",
+               //    Subject: "This is the subject",
+               //    Body: `${formString}`
+               // }).then(
+               //    message => alert(message)
+               // );
+            },
+            loadInputs() {
+               for (const key in email_body) {
+                  const element = email_body[key]                  
+                  if (element != "") {
+                     console.log('caiu no if');
+                     $('.form').append(`
+                        <div class="wrapper data">
+                           <label for="disabledTextInput" class="form-label">${key}:</label>
+                           <input type="text" id="disabledTextInput" class="form-control" placeholder="${element}" disabled />
+                        </div>
+                     `)
+                  }
+               }
+               
+               $('.titulo').html('Confirme seus Dados')
+
+               $('.form').append(`
+                  <div class="wrapper btn">
+                     <button type="button" class="btn cancel" v-on:click="cancelForm">Cancelar</button>
+                     <button type="button" class="btn edit" v-on:click="editForm">Editar</button>
+                     <button type="button" class="btn confirm" v-on:click="confirmForm">Confirmar</button>
+                  </div>
+               `)
+            },
+         },
+         mounted: function() {
+            this.loadInputs()
+         },
+         template: `<div class="form"></div>`,
+      })
    }
 
    animationLabel()
 }
-screenForm(3)
+screenForm(4)
 
+//Final
 // animationLabel = () => {
 //    document.querySelectorAll(".input-div").forEach(item => {
 //       item.addEventListener('input', function () {
@@ -360,15 +428,3 @@ screenForm(3)
 //       })
 //    })
 // }
-
-//       Email.send({
-//          Host: "smtp.gmail.com",
-//          Username: "altflix.squard2@gmail.com",
-//          Password: "sbfx$2ud",
-//          To: 'altflix.squard2@gmail.com',
-//          From: "altflix.squard2@gmail.com",
-//          Subject: "This is the subject",
-//          Body: `${formString}`
-//       }).then(
-//          message => alert(message)
-//       );

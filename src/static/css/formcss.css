@@ -53,23 +53,88 @@ form.formulario button.right {
   float: right;
 }
 
-form.formulario button.btn {
+form.formulario button.btn-nav {
   background-color: transparent;
   border: 1px solid #632565;
   color: #632565;
 }
 
-form.formulario button.btn:hover {
+form.formulario button.btn-nav:hover {
   background-color: #632565;
   color: #fff;
 }
 
-form.formulario button.btn:focus {
+form.formulario button.btn-nav:focus {
   box-shadow: 0px 0px 0px 4px rgb(99, 37, 101, .3);
+}
+
+form.formulario div.btn {
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: -40px;
+}
+
+form.formulario button.cancel {
+  float: left;
+  background-color: transparent;
+  border: 1px solid #dc3545;
+  color: #dc3545;
+}
+
+form.formulario button.cancel:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+form.formulario button.cancel:focus {
+  box-shadow: 0px 0px 0px 4px rgb(220, 53, 69, .3);
+}
+
+form.formulario button.edit {
+  background-color: transparent;
+  border: 1px solid #0d6efd;
+  color: #0d6efd;
+}
+
+form.formulario button.edit:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+form.formulario button.edit:focus {
+  box-shadow: 0px 0px 0px 4px rgb(13, 110, 253, .3);
+}
+
+form.formulario button.confirm {
+  float: right;
+  background-color: transparent;
+  border: 1px solid #198754;
+  color: #198754;
+}
+
+form.formulario button.confirm:hover {
+  background-color: #198754;
+  color: #fff;
+}
+
+form.formulario button.confirm:focus {
+  box-shadow: 0px 0px 0px 4px rgb(25, 135, 84, .3);
 }
 
 select {
   appearance: none;
+}
+
+div.data {
+  padding: 10px 30px !important;
+}
+
+div.data input {
+  margin-top: -10px;
+}
+
+div.data label {
+  color: #632565;
 }
 
 .fas.fa-chevron-down {
@@ -417,5 +482,4 @@ textarea {
   .filme-data {
     width: 180px;
   }
-
 }

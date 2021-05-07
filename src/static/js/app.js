@@ -76,10 +76,3 @@ function homeSearch() {
         source: autoSearch
     });
 }
-
-/*
-
-    Style autocomplete
-    background carrossel
-
-*/
