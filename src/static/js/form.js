@@ -1,21 +1,21 @@
 let email_body = new Object()
 
 //Teste
-// email_body = {
-//    'Nome': 'teste',
-//    'Email': 'email@gmail.com',
-//    'Telefone': '19 99999999',
-//    'Nome da Produtora': 'alguma ai',
-//    'Título do Filme': 'um lugar',
-//    'Classificação': '12',
-//    'Genêro': 'Ação',
-//    'Data de Lançamento': '15/09/2017',
-//    'URL do Filme': 'filme.com',
-//    'Sinopse': 'Sem Remorso é um filme americano de ação lançado em 2021, baseado na série publicada por Tom Clancy em 1993, um spin-off da série de filmes do Jack Ryan.',
-// }
+email_body = {
+   'Nome': 'teste',
+   'Email': 'email@gmail.com',
+   'Telefone': '19 99999999',
+   'Nome da Produtora': 'alguma ai',
+   'Título do Filme': 'um lugar',
+   'Classificação': '12',
+   'Genêro': 'Ação',
+   'Data de Lançamento': '15/09/2017',
+   'URL do Filme': 'filme.com',
+   'Sinopse': 'Sem Remorso é um filme americano de ação lançado em 2021, baseado na série publicada por Tom Clancy em 1993, um spin-off da série de filmes do Jack Ryan.',
+}
 
 getScreenFormNum = (screen_num) => {
-   window.scrollTo(0, 0)
+   window.scrollTo(0,0)
 
    animationInput = () => {
       document.querySelectorAll(".input-div").forEach(item => {
@@ -447,30 +447,36 @@ getScreenFormNum = (screen_num) => {
       new Vue({
          el: '.form',
          methods: {
+            callScreenHome() {
+               $('#content').children().attr("id", 'home')
+               window.scrollTo(0,0)
+               getScreenHome()
+            },
             cancelForm() {
                email_body = new Object()
-
-               $('#content').children().attr("id", 'home')
-
-               window.scrollTo(0, 0)
-
-               getScreenHome()
+               this.callScreenHome()
             },
             editForm() {
                getScreenFormNum(1)
             },
             confirmForm() {
-               // Email.send({
-               //    Host: "smtp.gmail.com",
-               //    Username: "altflix.squard2@gmail.com",
-               //    Password: "sbfx$2ud",
-               //    To: 'altflix.squard2@gmail.com',
-               //    From: "altflix.squard2@gmail.com",
-               //    Subject: "This is the subject",
-               //    Body: `${formString}`
-               // }).then(
-               //    message => console.log(message)
-               // );
+               let text = "<h2>Dados do Formulário - Altflix</h2><br />"
+
+               for (const key in email_body) {
+                  const element = email_body[key]
+
+                  if(element != undefined) {
+                     text += `
+                           <strong style="font-size: 14pt">${key}:</strong>
+                              <br />
+                           <span style="font-size: 11pt">${email_body[key]}</span>
+                           <br /><br />
+                        `
+                  }
+               }
+
+               sendEmail(text)
+               this.callScreenHome()
             },
             loadInputs() {
                for (const key in email_body) {
