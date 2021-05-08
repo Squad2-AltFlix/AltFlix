@@ -123,31 +123,31 @@ a {
     }
 
      /* Search Field */
-    #search-field {
-        display: block;
-        width: 241px;
-        height: 30px;
-        margin: 15px auto;
-        /* text-align: center; */
-        border: 1px solid #632565;
-        border-radius: 5px;
-        outline: none;
-        text-indent: 5px;
-    }
+    // #search-field {
+    //     display: block;
+    //     width: 241px;
+    //     height: 30px;
+    //     margin: 15px auto;
+    //     text-align: center;
+    //     border: 1px solid #632565;
+    //     border-radius: 5px;
+    //     outline: none;
+    //     text-indent: 5px;
+    // }
 
-    #search-field::placeholder {
-        color: #632565;
-        text-align: center;
-    }
+    // #search-field::placeholder {
+    //     color: #632565;
+    //     text-align: center;
+    // }
 
-    input[type="search"]::-webkit-search-cancel-button {
-        display: none; 
-    }
-    input[type=text]::-ms-clear {  
-        display: none; 
-        width : 0; 
-        height: 0; 
-    }
+    // input[type="search"]::-webkit-search-cancel-button {
+    //     display: none; 
+    // }
+    // input[type=text]::-ms-clear {  
+    //     display: none; 
+    //     width : 0; 
+    //     height: 0; 
+    // }
 
     /* Movies */
     .movies {
@@ -211,18 +211,18 @@ a {
     }
 
      /* Search Field */
-    #search-field {
-        margin: 25px auto;
-        width: 310px;
-    }
+    // #search-field {
+    //     margin: 25px auto;
+    //     width: 310px;
+    // }
 }
 
 /* Mobile L */
 @media only screen and (min-width: 375px) {
      /* Search Field */
-    #search-field {
-        margin: 35px auto;
-    }
+    // #search-field {
+    //     margin: 35px auto;
+    // }
 }
 
 /* Tablet */
@@ -253,10 +253,10 @@ a {
     }
 
      /* Search Field */
-    #search-field {
-        width: 518px;
-        height: 50px;
-    }
+    // #search-field {
+    //     width: 518px;
+    //     height: 50px;
+    // }
 }
 
 /* Desktop */
@@ -302,11 +302,11 @@ a {
     }
 
     /* Search Field */
-    #search-field {
-        width: 620px;
-        height: 55px;
-        font-size: 1.5rem;
-    }
+    // #search-field {
+    //     width: 620px;
+    //     height: 55px;
+    //     font-size: 1.5rem;
+    // }
 
     /* Swiper */
     .swiper-button-prev, .swiper-button-next {

@@ -67,7 +67,7 @@ form.formulario div.btn {
 }
 
 form.formulario button.cancel {
-  float: left;
+  float: right;
   background-color: transparent;
   border: 1px solid #dc3545;
   color: #dc3545;
@@ -98,7 +98,7 @@ form.formulario button.edit:focus {
 }
 
 form.formulario button.confirm {
-  float: right;
+  float: left;
   background-color: transparent;
   border: 1px solid #198754;
   color: #198754;
@@ -192,13 +192,13 @@ div.form .wrapper .input-div input {
 }
 
 .input-animacao {
-  transform: translateY(-20px);
+  transform: translateY(-15px);
   font-size: 15px;
   color: #632565 !important;
 }
 
 .input-div input:focus ~ label {
-  transform: translateY(-20px);
+  transform: translateY(-15px);
   font-size: 15px;
   color: #632565 !important;
 }
@@ -311,29 +311,6 @@ textarea {
   resize: none;
   overflow: hidden;
 }
-
-/* botão enviar e botão url */
-// #enviar {
-//   height: 50px;
-//   width: 160px;
-//   background: #333;
-//   color: white;
-//   border: none;
-//   display: block;
-//   margin: 0px auto;
-//   transition: 0.5s;
-// }
-
-// #enviar:hover {
-//   transform: scale(1.1);
-//   border-radius: 10px;
-// }
-
-// #checkbox-termos {
-//     padding-left: 20%;
-//     padding-bottom: 20px;
-//     padding-right: 20%;
-//   }
 
  /*********************** MEDIA QUERY ************************/
  @media only screen and (min-width: 1700px) {
@@ -448,7 +425,11 @@ textarea {
     width: 170px;
   }
 
-  div.form .wrapper .btn.edit{
+  div.form .wrapper .btn.cancel {
+    order: 1;
+  }
+
+  div.form .wrapper .btn.confirm {
     order: -1;
   }
 

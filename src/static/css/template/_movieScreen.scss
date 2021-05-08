@@ -3,18 +3,6 @@ h2, p, li {
     cursor: default;
 }
 
-/* ===== Minhas alterações do Header */
-.navbar.navbar-expand-lg.navbar-dark.bg-dark{
-    background-color: #1b1b1b !important;
-}
-header#navbar #navbarNav li:hover {
-    -webkit-transform: scale(1.3) !important;
-            transform: scale(1.3) !important;
-  }
-header#navbar #navbarNav li {
-    -webkit-transition-duration: .5s !important;
-    transition-duration: .5s !important;
-  }
 /* ===== Corpo ===== */
 .tela {
     height: max-content;

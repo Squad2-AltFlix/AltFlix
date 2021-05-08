@@ -50,12 +50,16 @@
                             <a class="nav-link" href="#home" onclick="screenNew(this)">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#form" onclick="screenNew(this)">Cadastro</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="#about" onclick="screenNew(this)">Sobre</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#form" onclick="screenNew(this)">Cadastre seu filme</a>
+                        </li>
                     </ul>
+                    <div class="input-group mb-3 d-flex search">
+                        <input type="text" name="search" class="form-control" placeholder="Procure um Filme" aria-label="Procure um Filme" aria-describedby="basic-addon1" onkeyup="movieSearch(event)" />
+                        <span class="input-group-text" id="basic-addon1" onclick="movieSearch(event)"><i class="fas fa-search"></i></span>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -102,6 +106,6 @@
 
 <!-- 
 
-    activate underline style in button editScreen
+    sinopse da home screen suporta 362 char
 
  -->
