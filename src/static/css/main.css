@@ -139,30 +139,12 @@ a:hover {
   color: #1b1b1b;
 }
 
-.movie-title p {
-  color: #1b1b1b;
-  cursor: pointer;
-}
-
-.fas {
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-.movie-title p:hover .fas {
-  color: #632565;
-}
-
 /* Mobile S */
 @media only screen and (min-width: 320px) {
-  /* Main Catálogo */
+  /* Main Container - Banner Section */
   .main-container {
     width: 100%;
     min-height: calc(100vh - 64px);
-    margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -177,8 +159,66 @@ a:hover {
     border-left: 5px solid #1b1b1b;
     border-right: 5px solid #1b1b1b;
     border-bottom: 5px solid #1b1b1b;
-    -webkit-box-shadow: 0px 0px 20px 10px #1b1b1b;
-            box-shadow: 0px 0px 20px 10px #1b1b1b;
+  }
+  .movies {
+    width: 100%;
+  }
+  .swiper-slide {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .movie-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 300px;
+    height: 160px;
+    -webkit-box-shadow: 0px 0px 30px 5px black;
+            box-shadow: 0px 0px 30px 5px black;
+  }
+  .swiper-span a {
+    display: block;
+    color: #632565;
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+  .swiper-span .synopsis {
+    display: none;
+  }
+  .movie-pic {
+    -webkit-clip-path: inset(13% 0 13% 0);
+            clip-path: inset(13% 0 13% 0);
+    width: 300px;
+  }
+  .swiper-container {
+    width: 100%;
+    background-color: #1b1b1b52;
+  }
+  .swiper-wrapper {
+    padding-top: 20px;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    color: #ffffff !important;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
   }
   /* Intro */
   .intro {
@@ -231,68 +271,6 @@ a:hover {
     display: none;
     width: 0;
     height: 0;
-  }
-  /* Movies */
-  .movies {
-    width: 100%;
-  }
-  .swiper-slide {
-    width: 100%;
-    height: 300px !important;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .movie-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: auto;
-    width: 300px;
-    height: 160px;
-    -webkit-box-shadow: 0px 0px 30px 5px black;
-            box-shadow: 0px 0px 30px 5px black;
-  }
-  .movie-pic {
-    -webkit-clip-path: inset(13% 0 13% 0);
-            clip-path: inset(13% 0 13% 0);
-    width: 300px;
-  }
-  .swiper-container {
-    width: 100%;
-    background-color: #1b1b1b52;
-  }
-  .swiper-wrapper {
-    padding: 20px 0;
-  }
-  .swiper-button-prev, .swiper-button-next {
-    color: #ffffff !important;
-    -webkit-transition: 0.8s;
-    transition: 0.8s;
-  }
-  /* Ficha Técnica */
-  .movie-title {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 30px;
-    color: #632565;
   }
 }
 
@@ -602,7 +580,6 @@ main {
 
 main::before {
   content: '';
-  position: absolute;
   top: -100px;
   left: 0;
   right: 0;
