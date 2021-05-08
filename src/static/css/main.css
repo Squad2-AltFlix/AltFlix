@@ -152,6 +152,7 @@ a:hover {
   /* Banner Section */
   .movies {
     width: 100%;
+    max-height: 500px;
     background-color: #fbfbfb;
   }
   .swiper-container.swiper1 {
@@ -224,6 +225,7 @@ a:hover {
   }
   /* Vitrine */
   .catalogue {
+    max-height: 300px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -290,13 +292,13 @@ a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   /* Banner Section */
   .movies {
     height: 60%;
-    margin-top: -200px;
   }
   .swiper-slide {
     -webkit-box-orient: horizontal;
@@ -343,7 +345,7 @@ a:hover {
   }
   .swiper-slide.movie-item {
     width: 450px;
-    height: 300px;
+    height: 250px;
   }
   .swiper-slide.movie-item img {
     width: 300px;
@@ -351,8 +353,31 @@ a:hover {
   }
 }
 
-/* Desktop */
-@media only screen and (min-width: 1025px) {
+/* Desktop S */
+@media only screen and (min-width: 1024px) {
+  /* Vitrine */
+  .swiper-container.swiper2 {
+    width: 86%;
+  }
+  .swiper-container.swiper2 .swiper-wrapper {
+    margin: auto;
+    padding: 0;
+  }
+  .swiper-slide.movie-item {
+    width: 450px;
+    height: 250px;
+    margin: 5px;
+  }
+  .swiper-slide.movie-item img {
+    width: 300px;
+    height: 250px;
+    -webkit-clip-path: inset(13% 0 13% 0);
+            clip-path: inset(13% 0 13% 0);
+  }
+}
+
+/* Desktop L */
+@media only screen and (min-width: 1440px) {
   div.container {
     padding-left: 0.75rem !important;
   }
@@ -414,7 +439,7 @@ a:hover {
     margin: 5px;
   }
   .swiper-slide.movie-item img {
-    width: 480px;
+    width: 450px;
     height: 300px;
     -webkit-clip-path: inset(13% 0 13% 0);
             clip-path: inset(13% 0 13% 0);
@@ -622,21 +647,6 @@ section.tela .titulo h2 {
 
 main {
   height: 100%;
-}
-
-main::before {
-  content: '';
-  top: -100px;
-  left: 0;
-  right: 0;
-  bottom: -110px;
-  background-image: url("/src/static/images/wallpaper.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  -webkit-filter: brightness(0.2);
-          filter: brightness(0.2);
-  z-index: -1;
 }
 
 .effect-parallax {

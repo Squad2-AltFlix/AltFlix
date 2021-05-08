@@ -2,20 +2,20 @@ main {
   height: 100%;
 }
 
-main::before {
-  content: '';
-  // position: absolute;
-  top: -100px;
-  left: 0;
-  right: 0;
-  bottom: -110px;
-  background-image: url('/src/static/images/wallpaper.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  filter: brightness(.2);
-  z-index: -1;
-}
+// main::before {
+//   content: '';
+//   // position: absolute;
+//   top: -100px;
+//   left: 0;
+//   right: 0;
+//   bottom: -110px;
+//   background-image: url('/src/static/images/wallpaper.jpeg');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: top center;
+//   filter: brightness(.2);
+//   z-index: -1;
+// }
 
 .effect-parallax {
   margin: 0 auto;

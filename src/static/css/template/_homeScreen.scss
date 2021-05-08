@@ -87,6 +87,7 @@ a {
     
     .movies {
         width: 100%;
+        max-height: 500px;
         background-color: #fbfbfb;
     }
 
@@ -155,6 +156,7 @@ a {
 
     /* Vitrine */
     .catalogue {
+        max-height: 300px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -215,14 +217,14 @@ a {
         min-height: calc(100vh - 71px);
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
     
     /* Banner Section */
 
     .movies {
         height: 60%;
-        margin-top: -200px;
+        // margin-top: -100px;
     }
     
     .swiper-slide {
@@ -274,7 +276,7 @@ a {
 
     .swiper-slide.movie-item {
         width: 450px;
-        height: 300px;
+        height: 250px;
 
         img {
             width: 300px;
@@ -283,8 +285,33 @@ a {
     }
 }
 
-/* Desktop */
-@media only screen and (min-width: 1025px) {
+/* Desktop S */
+@media only screen and (min-width: 1024px) {
+    /* Vitrine */
+    .swiper-container.swiper2 {
+        width: 86%;
+
+        .swiper-wrapper {
+            margin: auto;
+            padding: 0;
+        }
+    }
+
+    .swiper-slide.movie-item {
+        width: 450px;
+        height: 250px;
+        margin: 5px;
+
+        img {
+            width: 300px;
+            height: 250px;
+            clip-path: inset(13% 0 13% 0);
+        }
+    }
+}
+
+/* Desktop L */
+@media only screen and (min-width: 1440px) {
     div.container {
         padding-left: 0.75rem !important;
     }
@@ -351,7 +378,7 @@ a {
         margin: 5px;
 
         img {
-            width: 480px;
+            width: 450px;
             height: 300px;
             clip-path: inset(13% 0 13% 0);
         }
