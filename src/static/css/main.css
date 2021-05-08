@@ -225,7 +225,7 @@ a:hover {
   }
   /* Vitrine */
   .catalogue {
-    max-height: 300px;
+    max-height: 500px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -237,7 +237,7 @@ a:hover {
         -ms-flex-align: center;
             align-items: center;
     margin-top: 0px;
-    background-color: #fbfbfb;
+    background-color: #e5e5e5 !important;
   }
   .catalogue h1 {
     display: block;

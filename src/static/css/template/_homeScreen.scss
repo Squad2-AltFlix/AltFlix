@@ -156,12 +156,12 @@ a {
 
     /* Vitrine */
     .catalogue {
-        max-height: 300px;
+        max-height: 500px;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 0px;
-        background-color: #fbfbfb;
+        background-color: #e5e5e5 !important;
 
         h1 {
             display: block;
