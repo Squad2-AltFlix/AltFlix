@@ -144,7 +144,17 @@ a:hover {
   .main-container {
     width: 100%;
     min-height: calc(100vh - 64px);
-    background-color: #fbfbfb;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #e5e5e5;
     border-left: 5px solid #1b1b1b;
     border-right: 5px solid #1b1b1b;
     border-bottom: 5px solid #1b1b1b;
@@ -153,7 +163,7 @@ a:hover {
   .movies {
     width: 100%;
     max-height: 500px;
-    background-color: #fbfbfb;
+    background-color: #e5e5e5;
   }
   .swiper-container.swiper1 {
     width: 100%;
@@ -236,13 +246,16 @@ a:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 15px 0;
     margin-top: 0px;
-    background-color: #e5e5e5 !important;
+    background-color: #1b1b1b !important;
   }
   .catalogue h1 {
     display: block;
     margin: 0px 0 -20px 0px;
-    color: #632565;
+    color: #b1b1b1 !important;
+    font-weight: 200;
+    text-transform: uppercase;
   }
   .swiper-container.swiper2 {
     width: 100%;
@@ -292,9 +305,8 @@ a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   /* Banner Section */
   .movies {
@@ -380,6 +392,9 @@ a:hover {
     margin-bottom: 25px;
   }
   /* Vitrine */
+  .catalogue {
+    padding: 0;
+  }
   .catalogue h1 {
     margin-top: 60px;
     margin-left: 60px;
@@ -395,6 +410,13 @@ a:hover {
     width: 450px;
     height: 250px;
     margin: 5px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    cursor: pointer;
+  }
+  .swiper-slide.movie-item:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   .swiper-slide.movie-item img {
     width: 300px;

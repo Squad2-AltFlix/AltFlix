@@ -77,7 +77,10 @@ a {
     .main-container {
         width: 100%;
         min-height: calc(100vh - 64px);
-        background-color: #fbfbfb;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #e5e5e5;
         border-left: 5px solid #1b1b1b;
         border-right: 5px solid #1b1b1b;
         border-bottom: 5px solid #1b1b1b;
@@ -88,7 +91,7 @@ a {
     .movies {
         width: 100%;
         max-height: 500px;
-        background-color: #fbfbfb;
+        background-color: #e5e5e5;
     }
 
     .swiper-container.swiper1 {
@@ -160,13 +163,16 @@ a {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 15px 0;
         margin-top: 0px;
-        background-color: #e5e5e5 !important;
+        background-color: #1b1b1b !important;
 
         h1 {
             display: block;
             margin: 0px 0 -20px 0px;
-            color: #632565;
+            color: #b1b1b1 !important;
+            font-weight: 200;
+            text-transform: uppercase;
         }
     }
 
@@ -217,7 +223,7 @@ a {
         min-height: calc(100vh - 71px);
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
     
     /* Banner Section */
@@ -320,6 +326,8 @@ a {
 
     /* Vitrine */
     .catalogue {
+        padding: 0;
+
         h1 {
             margin-top: 60px;
             margin-left: 60px;
@@ -339,6 +347,12 @@ a {
         width: 450px;
         height: 250px;
         margin: 5px;
+        transition: .3s;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+        }
 
         img {
             width: 300px;
