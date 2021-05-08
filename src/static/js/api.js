@@ -83,7 +83,7 @@ function sendEmail(body) {
        Password: "sbfx$2ud",
        To: 'altflix.squard2@gmail.com',
        From: "altflix.squard2@gmail.com",
-       Subject: "This is the subject",
+       Subject: "Pedido de Filme!",
        Body: body,
     }).then(
        message => console.log(message)
