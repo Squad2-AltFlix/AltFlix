@@ -260,7 +260,22 @@ a:hover {
 }
 
 /* Mobile M */
+@media only screen and (min-width: 360px) {
+  .catalogue {
+    margin-top: 20px;
+  }
+}
+
 /* Mobile L */
+@media only screen and (min-width: 375px) {
+  .catalogue {
+    margin-top: 10px;
+  }
+  .movie-container {
+    height: 280px;
+  }
+}
+
 /* Tablet */
 @media only screen and (min-width: 630px) {
   div.container {
@@ -268,8 +283,21 @@ a:hover {
   }
   .main-container {
     min-height: calc(100vh - 71px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   /* Banner Section */
+  .movies {
+    height: 60%;
+    margin-top: -200px;
+  }
   .swiper-slide {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -279,8 +307,22 @@ a:hover {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .movie-container {
+    margin-left: 40px;
+  }
+  .movie-pic {
+    display: block;
+    width: 300px;
+    height: 250px;
+    margin-bottom: 25px;
+    -webkit-clip-path: inset(13% 0 13% 0);
+            clip-path: inset(13% 0 13% 0);
+  }
   .swiper-span {
     text-align: center;
+  }
+  .swiper-span a {
+    display: block;
   }
   .swiper-span .synopsis {
     display: block;
@@ -290,22 +332,10 @@ a:hover {
     text-align: justify;
     font-size: 0.8em;
   }
-  .movie-container {
-    margin-left: 40px;
-  }
   /* Vitrine */
   .catalogue {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     background-color: #fbfbfb;
+    margin-top: -100px;
   }
   .catalogue h1 {
     display: block;
@@ -325,8 +355,8 @@ a:hover {
     margin: 5px;
   }
   .swiper-slide.movie-item img {
-    width: 480px;
-    height: 300px;
+    width: 300px;
+    height: 250px;
     -webkit-clip-path: inset(13% 0 13% 0);
             clip-path: inset(13% 0 13% 0);
   }
