@@ -141,17 +141,17 @@ a:hover {
 
 /* Mobile S */
 @media only screen and (min-width: 320px) {
-  /* Main Container - Banner Section */
   .main-container {
     width: 100%;
     min-height: calc(100vh - 64px);
-    background-color: white;
     border-left: 5px solid #1b1b1b;
     border-right: 5px solid #1b1b1b;
     border-bottom: 5px solid #1b1b1b;
   }
+  /* Banner Section */
   .movies {
     width: 100%;
+    background-color: #fbfbfb;
   }
   .swiper-slide {
     width: 100%;
@@ -198,7 +198,6 @@ a:hover {
   }
   .swiper-container {
     width: 100%;
-    background-color: #1b1b1b52;
   }
   .swiper-wrapper {
     padding-top: 20px;
@@ -207,50 +206,6 @@ a:hover {
     color: #ffffff !important;
     -webkit-transition: 0.8s;
     transition: 0.8s;
-  }
-  /* Intro */
-  .intro {
-    width: 100%;
-    height: 211px;
-  }
-  .intro .span {
-    display: block;
-    color: #632565;
-    padding-top: 20px;
-    padding-bottom: 5px;
-  }
-  .intro h1 {
-    font-size: 1.5rem;
-    color: #1b1b1b;
-    text-align: center;
-  }
-  /* Search Field */
-  #search-field {
-    display: block;
-    width: 241px;
-    height: 30px;
-    margin: 15px auto;
-    /* text-align: center; */
-    border: 1px solid #632565;
-    border-radius: 5px;
-    outline: none;
-    text-indent: 5px;
-  }
-  #search-field::-webkit-input-placeholder {
-    color: #632565;
-    text-align: center;
-  }
-  #search-field:-ms-input-placeholder {
-    color: #632565;
-    text-align: center;
-  }
-  #search-field::-ms-input-placeholder {
-    color: #632565;
-    text-align: center;
-  }
-  #search-field::placeholder {
-    color: #632565;
-    text-align: center;
   }
   input[type="search"]::-webkit-search-cancel-button {
     display: none;
@@ -263,60 +218,27 @@ a:hover {
 }
 
 /* Mobile M */
-@media only screen and (min-width: 360px) {
-  /* Intro */
-  .intro .span {
-    padding-top: 30px;
-    padding-bottom: 5px;
-  }
-  /* Search Field */
-  #search-field {
-    margin: 25px auto;
-    width: 310px;
-  }
-}
-
 /* Mobile L */
-@media only screen and (min-width: 375px) {
-  /* Search Field */
-  #search-field {
-    margin: 35px auto;
-  }
-}
-
 /* Tablet */
 @media only screen and (min-width: 630px) {
   div.container {
     padding-left: 0 !important;
   }
-  /* Main Container - Banner Section */
   .main-container {
     min-height: calc(100vh - 71px);
   }
+  /* Banner Section */
   .swiper-slide {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
   .swiper-span {
     text-align: center;
-  }
-  .swiper-span a {
-    display: block;
-    color: #632565;
-    font-size: 1.5em;
-    margin-top: 20px;
   }
   .swiper-span .synopsis {
     display: block;
@@ -327,37 +249,7 @@ a:hover {
     font-size: 0.8em;
   }
   .movie-container {
-    width: 300px;
-    height: 160px;
     margin-left: 40px;
-  }
-  /* Intro */
-  .intro {
-    height: 350px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .intro .span {
-    font-size: 3.5rem;
-  }
-  .intro h1 {
-    font-size: 2.5rem;
-  }
-  /* Search Field */
-  #search-field {
-    width: 518px;
-    height: 50px;
   }
 }
 
@@ -366,40 +258,31 @@ a:hover {
   div.container {
     padding-left: 0.75rem !important;
   }
-  /* Main Catálogo */
   .main-container {
     width: 100%;
     min-height: calc(100vh - 64px);
   }
-  /* Intro */
-  .intro {
-    width: 100%;
+  /* Banner Section */
+  .swiper-span {
+    width: 50%;
   }
-  .intro .span {
-    display: inline-block;
-    font-size: 3.0rem;
-    color: #632565;
-    text-transform: uppercase;
+  .swiper-span a {
+    margin: 0;
+    font-size: 4em;
   }
-  .intro h1 {
-    font-size: 3.0rem;
-    color: #1b1b1b;
+  .swiper-span .synopsis {
+    font-size: 1.2em;
   }
   .movie-container {
-    width: 480px;
-    height: 260px;
-  }
-  .swiper-slide {
-    height: 400px !important;
+    width: 550px;
+    height: 400px;
+    margin: 0;
   }
   .movie-pic {
-    width: 480px;
-  }
-  /* Search Field */
-  #search-field {
-    width: 620px;
-    height: 55px;
-    font-size: 1.5rem;
+    display: block;
+    width: 550px;
+    height: 400px;
+    margin-bottom: 25px;
   }
   /* Swiper */
   .swiper-button-prev, .swiper-button-next {
