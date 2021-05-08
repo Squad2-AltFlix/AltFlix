@@ -315,8 +315,6 @@ a:hover {
     width: 300px;
     height: 250px;
     margin-bottom: 25px;
-    -webkit-clip-path: inset(13% 0 13% 0);
-            clip-path: inset(13% 0 13% 0);
   }
   .swiper-span {
     text-align: center;
@@ -334,31 +332,22 @@ a:hover {
   }
   /* Vitrine */
   .catalogue {
-    background-color: #fbfbfb;
     margin-top: -100px;
   }
   .catalogue h1 {
-    display: block;
     width: 86%;
     margin-top: 20px;
-    color: #632565;
   }
   .swiper-container.swiper2 {
     width: 86%;
   }
-  .swiper-container.swiper2 .swiper-wrapper {
-    padding: 0;
-  }
   .swiper-slide.movie-item {
     width: 450px;
     height: 300px;
-    margin: 5px;
   }
   .swiper-slide.movie-item img {
     width: 300px;
     height: 250px;
-    -webkit-clip-path: inset(13% 0 13% 0);
-            clip-path: inset(13% 0 13% 0);
   }
 }
 
@@ -368,7 +357,6 @@ a:hover {
     padding-left: 0.75rem !important;
   }
   .main-container {
-    width: 100%;
     min-height: calc(100vh - 64px);
   }
   /* Banner Section */
@@ -392,15 +380,6 @@ a:hover {
     width: 550px;
     height: 400px;
     margin-bottom: 25px;
-  }
-  /* Swiper */
-  .swiper-button-prev, .swiper-button-next {
-    color: #1b1b1b6e !important;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-  }
-  .swiper-button-prev:hover, .swiper-button-next:hover {
-    color: #1b1b1b !important;
   }
   /* Vitrine */
   .catalogue {
@@ -426,6 +405,7 @@ a:hover {
     width: 86%;
   }
   .swiper-container.swiper2 .swiper-wrapper {
+    margin: auto;
     padding: 0;
   }
   .swiper-slide.movie-item {
@@ -438,6 +418,16 @@ a:hover {
     height: 300px;
     -webkit-clip-path: inset(13% 0 13% 0);
             clip-path: inset(13% 0 13% 0);
+  }
+  /* Swiper */
+  .swiper-button-prev, .swiper-button-next {
+    display: inline-block;
+    color: #ffffff !important;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .swiper-button-prev:hover, .swiper-button-next:hover {
+    color: #dbdbdbb9 !important;
   }
 }
 
