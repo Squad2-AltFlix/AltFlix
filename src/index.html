@@ -65,7 +65,7 @@
         <div id="home">
             <main class="main-container">
                 <section class="movies">
-                    <div class="swiper-container">
+                    <div class="swiper-container swiper1">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="movie-container">
@@ -94,7 +94,17 @@
                 </section>
 
                 <section class="catalogue">
-                    
+                    <h1>Nossos filmes</h1>
+                    <div class="swiper-container swiper2">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide movie-item"><img src="https://i.ytimg.com/vi/F3QuLTth6tY/hqdefault.jpg" alt=""></div>
+                          <div class="swiper-slide movie-item"><img src="https://i.ytimg.com/vi/ke8X3SE0XE8/hqdefault.jpg" alt=""></div>
+                          <div class="swiper-slide movie-item"><img src="https://i.ytimg.com/vi/DrzWKWeg_PI/hqdefault.jpg" alt=""></div>
+                          <div class="swiper-slide movie-item"><img src="https://i.ytimg.com/vi/rlZs5K6cDfI/hqdefault.jpg" alt=""></div>
+                          <div class="swiper-slide movie-item"><img src="https://i.ytimg.com/vi/rlZs5K6cDfI/hqdefault.jpg" alt=""></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
                 </section>
             </main>
         </div>
@@ -111,7 +121,7 @@
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        new Swiper('.swiper-container', {
+        new Swiper('.swiper1', {
             direction: 'horizontal',
             loop: true,
             pagination: {
@@ -129,6 +139,30 @@
                 el: '.swiper-scrollbar',
             },
         });
+
+        var swiper = new Swiper(".swiper2", {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                freeMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                }
+            }
+        })
     </script>
 
     <!-- Jquery -->
@@ -136,6 +170,7 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
 
     <!-- Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

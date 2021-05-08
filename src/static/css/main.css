@@ -144,6 +144,7 @@ a:hover {
   .main-container {
     width: 100%;
     min-height: calc(100vh - 64px);
+    background-color: #fbfbfb;
     border-left: 5px solid #1b1b1b;
     border-right: 5px solid #1b1b1b;
     border-bottom: 5px solid #1b1b1b;
@@ -152,6 +153,10 @@ a:hover {
   .movies {
     width: 100%;
     background-color: #fbfbfb;
+  }
+  .swiper-container.swiper1 {
+    width: 100%;
+    height: auto;
   }
   .swiper-slide {
     width: 100%;
@@ -179,22 +184,23 @@ a:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 300px;
-    height: 160px;
+    width: 100%;
+    height: 225px;
+  }
+  .movie-pic {
+    width: 100%;
+    height: auto;
+    -webkit-clip-path: inset(13% 0 13% 0);
+            clip-path: inset(13% 0 13% 0);
   }
   .swiper-span a {
-    display: block;
+    display: none;
     color: #632565;
     font-size: 1.5em;
     margin-top: 20px;
   }
   .swiper-span .synopsis {
     display: none;
-  }
-  .movie-pic {
-    -webkit-clip-path: inset(13% 0 13% 0);
-            clip-path: inset(13% 0 13% 0);
-    width: 300px;
   }
   .swiper-container {
     width: 100%;
@@ -203,6 +209,7 @@ a:hover {
     padding-top: 20px;
   }
   .swiper-button-prev, .swiper-button-next {
+    display: none;
     color: #ffffff !important;
     -webkit-transition: 0.8s;
     transition: 0.8s;
@@ -214,6 +221,41 @@ a:hover {
     display: none;
     width: 0;
     height: 0;
+  }
+  /* Vitrine */
+  .catalogue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 0px;
+    background-color: #fbfbfb;
+  }
+  .catalogue h1 {
+    display: block;
+    margin: 0px 0 -20px 0px;
+    color: #632565;
+  }
+  .swiper-container.swiper2 {
+    width: 100%;
+  }
+  .swiper-container.swiper2 .swiper-wrapper {
+    padding: 0;
+  }
+  .swiper-slide.movie-item {
+    width: 310px;
+    margin: 5px;
+  }
+  .swiper-slide.movie-item img {
+    width: 90%;
+    -webkit-clip-path: inset(13% 0 13% 0);
+            clip-path: inset(13% 0 13% 0);
   }
 }
 
@@ -250,6 +292,43 @@ a:hover {
   }
   .movie-container {
     margin-left: 40px;
+  }
+  /* Vitrine */
+  .catalogue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #fbfbfb;
+  }
+  .catalogue h1 {
+    display: block;
+    width: 86%;
+    margin-top: 20px;
+    color: #632565;
+  }
+  .swiper-container.swiper2 {
+    width: 86%;
+  }
+  .swiper-container.swiper2 .swiper-wrapper {
+    padding: 0;
+  }
+  .swiper-slide.movie-item {
+    width: 450px;
+    height: 300px;
+    margin: 5px;
+  }
+  .swiper-slide.movie-item img {
+    width: 480px;
+    height: 300px;
+    -webkit-clip-path: inset(13% 0 13% 0);
+            clip-path: inset(13% 0 13% 0);
   }
 }
 
@@ -292,6 +371,43 @@ a:hover {
   }
   .swiper-button-prev:hover, .swiper-button-next:hover {
     color: #1b1b1b !important;
+  }
+  /* Vitrine */
+  .catalogue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #fbfbfb;
+  }
+  .catalogue h1 {
+    display: block;
+    width: 86%;
+    margin-top: 20px;
+    color: #632565;
+  }
+  .swiper-container.swiper2 {
+    width: 86%;
+  }
+  .swiper-container.swiper2 .swiper-wrapper {
+    padding: 0;
+  }
+  .swiper-slide.movie-item {
+    width: 450px;
+    height: 300px;
+    margin: 5px;
+  }
+  .swiper-slide.movie-item img {
+    width: 480px;
+    height: 300px;
+    -webkit-clip-path: inset(13% 0 13% 0);
+            clip-path: inset(13% 0 13% 0);
   }
 }
 
