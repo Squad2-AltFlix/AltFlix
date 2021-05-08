@@ -142,7 +142,7 @@ getScreenFormNum = (screen_num) => {
                   </div>                  
                </div>
 
-               <div class="wrapper">
+               <div class="wrapper wrapper-btn">
                   <button type="button" class="btn btn-nav right" v-on:click="nextScreen">Próxima</button>
                </div>
 
@@ -231,7 +231,7 @@ getScreenFormNum = (screen_num) => {
                   </div>
                </div>
                
-               <div class="wrapper">
+               <div class="wrapper wrapper-btn">
                   <button type="button" class="btn btn-nav left" v-on:click="backScreen">Anterior</button>
                   <button type="button" class="btn btn-nav right" v-on:click="nextScreen">Próxima</button>
                </div>
@@ -287,9 +287,10 @@ getScreenFormNum = (screen_num) => {
                else {
                   $('.div-oculta').removeClass('div-no-oculta')
 
-                  if (this.type != $(".selecaofilme option:selected").val()) {
+                  if (this.type != $(".selecaofilme option:selected").val() && this.type != 'Selecione') {
                      this.type = $(".selecaofilme option:selected").val()
                   }
+                  
                }
             },
             validate_type(type) {
@@ -432,7 +433,7 @@ getScreenFormNum = (screen_num) => {
                   <small hidden id="sinopse-oculto">Escreva no mínimo 100 caracteres</small>
                </div>
 
-               <div class="wrapper">
+               <div class="wrapper wrapper-btn">
                   <button type="button" class="btn btn-nav left" v-on:click="backScreen">Anterior</button>
                   <button type="button" class="btn btn-nav right" v-on:click="nextScreen">Próxima</button>
                </div>
@@ -511,7 +512,7 @@ getScreenFormNum = (screen_num) => {
 
                <div class="content"></div>
 
-               <div class="wrapper btn">
+               <div class="wrapper wrapper-btn btn">
                   <button type="button" class="btn cancel" v-on:click="cancelForm">Cancelar</button>
                   <button type="button" class="btn edit" v-on:click="editForm">Editar</button>
                   <button type="button" class="btn confirm" v-on:click="confirmForm">Confirmar</button>

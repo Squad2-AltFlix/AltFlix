@@ -33,8 +33,9 @@ form {
   cursor: default !important;
 }
 
-form.formulario {
-  padding: 40px 0px;
+.formulario {
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
 
 form.formulario button.left {
@@ -62,7 +63,6 @@ form.formulario button.btn-nav:focus {
 
 form.formulario div.btn {
   justify-content: space-between;
-  margin-top: 10px;
   margin-bottom: -40px;
 }
 
@@ -316,6 +316,7 @@ textarea {
  @media only screen and (min-width: 1700px) {
   section.container {
     width: 32%;
+    max-width: 900px;
   }
 }
 
@@ -338,7 +339,9 @@ textarea {
     width: 60%;
     max-width: 500px;
   }
-
+  .formulario {
+    padding-top: 10px;
+  }
   form .titulo {
     padding: 30px;
   }
@@ -361,8 +364,12 @@ textarea {
 @media screen and (min-device-width: 481px) and (max-device-width: 767px) { 
   section.container {
     width: 70%;
-    max-width: 450px;
+    max-width: 400px;
     font-size: 15px;
+  }
+  .formulario {
+    padding-top: 10px;
+    padding-bottom: 50px  ;
   }
 
   div.form .wrapper {
@@ -407,21 +414,28 @@ textarea {
 @media only screen and (max-device-width: 481px) { 
   section.container {
     width: 80%;
+    max-width: 350px;
     font-size: 15px;
-    padding: 0px;
+    padding-bottom: 30px;
+      
+  }
+   .formulario {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
-  div.form .wrapper {
+  div.form .wrapper-btn {
     display: flex;
     flex-direction: column;
-    width: 93%;
+    width: 100%;
     align-items: center;
     background: none;
     padding: 10px 10px;
+  
   }
 
   div.form .wrapper .btn {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     width: 170px;
   }
 
@@ -434,8 +448,8 @@ textarea {
   }
 
   form .titulo {
-    font-size: 22px;
-    padding: 25px 20px;
+    font-size: 20px;
+    padding: 15px 20px;
   }
 
   .sobrefilme {
