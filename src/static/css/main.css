@@ -145,16 +145,6 @@ a:hover {
   .main-container {
     width: 100%;
     min-height: calc(100vh - 64px);
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
     background-color: white;
     border-left: 5px solid #1b1b1b;
     border-right: 5px solid #1b1b1b;
@@ -191,8 +181,6 @@ a:hover {
             justify-content: center;
     width: 300px;
     height: 160px;
-    -webkit-box-shadow: 0px 0px 30px 5px black;
-            box-shadow: 0px 0px 30px 5px black;
   }
   .swiper-span a {
     display: block;
@@ -301,8 +289,47 @@ a:hover {
   div.container {
     padding-left: 0 !important;
   }
+  /* Main Container - Banner Section */
   .main-container {
     min-height: calc(100vh - 71px);
+  }
+  .swiper-slide {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .swiper-span {
+    text-align: center;
+  }
+  .swiper-span a {
+    display: block;
+    color: #632565;
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+  .swiper-span .synopsis {
+    display: block;
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    text-align: justify;
+    font-size: 0.8em;
+  }
+  .movie-container {
+    width: 300px;
+    height: 160px;
+    margin-left: 40px;
   }
   /* Intro */
   .intro {
