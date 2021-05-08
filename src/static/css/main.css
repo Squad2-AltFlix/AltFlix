@@ -354,10 +354,38 @@ a:hover {
 }
 
 /* Desktop S */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1366px) {
+  .main-container {
+    min-height: 100vh;
+  }
+  /* Banner Section */
+  .swiper-span {
+    width: 45%;
+  }
+  .swiper-span a {
+    margin: 0;
+    font-size: 3em;
+  }
+  .swiper-span .synopsis {
+    font-size: 1.0em;
+  }
+  .movie-container {
+    width: 350px;
+    height: 300px;
+    margin: 0;
+  }
+  .movie-pic {
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+  }
   /* Vitrine */
+  .catalogue h1 {
+    margin-top: 60px;
+    margin-left: 60px;
+  }
   .swiper-container.swiper2 {
-    width: 86%;
+    width: 81%;
   }
   .swiper-container.swiper2 .swiper-wrapper {
     margin: auto;
@@ -421,9 +449,7 @@ a:hover {
     background-color: #fbfbfb;
   }
   .catalogue h1 {
-    display: block;
-    width: 86%;
-    margin-top: 20px;
+    margin: 20px 0 0 0px;
     color: #632565;
   }
   .swiper-container.swiper2 {
@@ -434,15 +460,12 @@ a:hover {
     padding: 0;
   }
   .swiper-slide.movie-item {
-    width: 450px;
-    height: 300px;
-    margin: 5px;
+    width: 350px;
+    height: 250px;
   }
   .swiper-slide.movie-item img {
-    width: 450px;
-    height: 300px;
-    -webkit-clip-path: inset(13% 0 13% 0);
-            clip-path: inset(13% 0 13% 0);
+    width: 350px;
+    height: 250px;
   }
   /* Swiper */
   .swiper-button-prev, .swiper-button-next {
