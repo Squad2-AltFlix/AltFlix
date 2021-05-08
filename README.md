@@ -65,6 +65,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   **[SASS](https://sass-lang.com/documentation)**
 -   **[SmtpJS](https://smtpjs.com/v3/smtp.js)**
 -   **[Font Awesome](https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use)**
+-   **[Slick](http://kenwheeler.github.io/slick/)**
      
 
 ---
