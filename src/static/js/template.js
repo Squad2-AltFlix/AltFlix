@@ -2,7 +2,7 @@ getScreenHome = () => {
     new Vue({
         el: "#home",
         template: `
-            <main class="main-container">
+            <main id="home" class="main-container">
                 <section class="movies">
                     <div class="swiper-container swiper1">
                         <div class="swiper-wrapper"></div>
@@ -156,11 +156,11 @@ getScreenMovie = (id, moviePlay) => {
         <section class="tela">
             <h2 class="titulo">${moviePlay.title}</h2>
             <div class="playersinopse">
-            <div class="player">
-                <div class="wrapper">
-                    <iframe src="https://www.youtube.com/embed/${id}" class="embed" title="Filme" allowfullscreen="true"></iframe>
+                <div class="player">
+                    <div class="wrapper">
+                        <iframe src="https://www.youtube.com/embed/${id}" class="embed" title="Filme" allowfullscreen="true"></iframe>
+                    </div>
                 </div>
-            </div>        
                 <div class="sinopse">
                     <h2>&nbsp;&nbsp;&nbsp;${moviePlay.description}</h2>
                 </div>
@@ -188,7 +188,7 @@ getScreenAbout = () => {
     new Vue({
         el: "#about",
         template: `
-            <section class="card">
+            <section id="about" class="card">
                 <div class="sobre">
                 <h2>Sobre</h2>
                 <p>
