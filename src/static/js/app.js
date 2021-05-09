@@ -24,15 +24,17 @@ async function moviePlay(call) {
     
     const id = call.classList.value
 
-    // const moviePlay = await videoSearch(id)
+    const moviePlay = await videoSearch(id)
 
-    getScreenMovie()
-    // getScreenMovie(id, moviePlay)
+    getScreenMovie(id, moviePlay)
 
     window.scrollTo(0,0)
 }
 
 function movieSearch(event) {
+    $('#content').children().attr("id", 'home')
+    getScreenHome()
+
     const search = $('input[name="search"]').val()
 
     if (event.key == "Enter" || event.type == 'click') {

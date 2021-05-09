@@ -1,19 +1,5 @@
 let email_body = new Object()
 
-//Teste
-email_body = {
-   'Nome': 'teste',
-   'Email': 'email@gmail.com',
-   'Telefone': '19 99999999',
-   'Nome da Produtora': 'alguma ai',
-   'Título do Filme': 'um lugar',
-   'Classificação': '12',
-   'Genêro': 'Ação',
-   'Data de Lançamento': '15/09/2017',
-   'URL do Filme': 'filme.com',
-   'Sinopse': 'Sem Remorso é um filme americano de ação lançado em 2021, baseado na série publicada por Tom Clancy em 1993, um spin-off da série de filmes do Jack Ryan.',
-}
-
 getScreenFormNum = (screen_num) => {
    window.scrollTo(0,0)
 
@@ -254,7 +240,7 @@ getScreenFormNum = (screen_num) => {
       new Vue({
          el: '.form',
          data: {
-            type: email_body['Genêro'],
+            type: email_body['Gênero'],
             year: data,
             url_movie: email_body['URL do Filme'],
             description: email_body['Sinopse'],
@@ -270,7 +256,7 @@ getScreenFormNum = (screen_num) => {
 
                if (is_next == 4) {
                   email_body = Object.assign(email_body, {
-                     'Genêro': this.type,
+                     'Gênero': this.type,
                      'Data de Lançamento': `${data[2]}/${data[1]}/${data[0]}`,
                      'URL do Filme': this.url_movie,
                      'Sinopse': this.description,
@@ -374,7 +360,7 @@ getScreenFormNum = (screen_num) => {
             <div class="form">
 
                <div class="wrapper">
-                  <label id="data-label" for="filme-data">Genêro<span> *</span></label>
+                  <label id="data-label" for="filme-data">Gênero<span> *</span></label>
                   <br />
                   <select class="selecaofilme" v-on:click="effectSelect">
                      <option>Selecione</option>
@@ -401,7 +387,7 @@ getScreenFormNum = (screen_num) => {
                      <option value="Thriller">Thriller</option>
                      <option value="outro" id="outro">Outro</option>
                   </select>
-                  <small hidden id="selectOculto">Genêro Obrigatório</small>
+                  <small hidden id="selectOculto">Gênero Obrigatório</small>
                </div>
    
                <div class="wrapper div-oculta">
