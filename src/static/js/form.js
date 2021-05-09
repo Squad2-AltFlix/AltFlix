@@ -1,21 +1,34 @@
 let email_body = new Object()
 
 //Teste
-// email_body = {
-//    'Nome': 'teste',
-//    'Email': 'email@gmail.com',
-//    'Telefone': '19 9999999999',
-//    'Nome da Produtora': 'alguma ai',
-//    'Título do Filme': 'um lugar',
-//    'Classificação': '12',
-//    'Genêro': 'Ação',
-//    'Data de Lançamento': '15/09/2018',
-//    'URL do Filme': 'filme.com',
-//    'Sinopse': 'Sem Remorso é um filme americano de ação lançado em 2021, baseado na série publicada por Tom Clancy em 1993, um spin-off da série de filmes do Jack Ryan.',
-// }
+email_body = {
+   'Nome': 'teste',
+   'Email': 'email@gmail.com',
+   'Telefone': '19 99999999',
+   'Nome da Produtora': 'alguma ai',
+   'Título do Filme': 'um lugar',
+   'Classificação': '12',
+   'Genêro': 'Ação',
+   'Data de Lançamento': '15/09/2017',
+   'URL do Filme': 'filme.com',
+   'Sinopse': 'Sem Remorso é um filme americano de ação lançado em 2021, baseado na série publicada por Tom Clancy em 1993, um spin-off da série de filmes do Jack Ryan.',
+}
 
 getScreenFormNum = (screen_num) => {
-   window.scrollTo(0, 0)
+   window.scrollTo(0,0)
+
+   animationInput = () => {
+      document.querySelectorAll(".input-div").forEach(item => {
+         item.addEventListener('input', () => {
+            let label = item.childNodes[4]
+            label.classList.add("input-animacao")
+         })
+      })
+   }
+
+   loadInputAnimation = () => {
+      $('.input-div > label').addClass('input-animacao')
+   }
 
    if (screen_num == 1) {
       new Vue({
@@ -90,6 +103,15 @@ getScreenFormNum = (screen_num) => {
                }
             },
          },
+         mounted: function () {
+            try {
+               if (this.name.length >= 3) {
+                  loadInputAnimation()
+               }
+            } catch (error) {
+               animationInput()
+            }
+         },
          template: `
             <div class="form">
 
@@ -120,7 +142,7 @@ getScreenFormNum = (screen_num) => {
                   </div>                  
                </div>
 
-               <div class="wrapper">
+               <div class="wrapper wrapper-btn">
                   <button type="button" class="btn btn-nav right" v-on:click="nextScreen">Próxima</button>
                </div>
 
@@ -170,6 +192,15 @@ getScreenFormNum = (screen_num) => {
                   return false
                }
             },
+         },        
+         mounted: function () {
+            try {
+               if (this.movie_title.length >= 3) {
+                  loadInputAnimation()
+               }
+            } catch (error) {
+               animationInput()
+            }
          },
          template: `
             <div class="form">
@@ -200,7 +231,7 @@ getScreenFormNum = (screen_num) => {
                   </div>
                </div>
                
-               <div class="wrapper">
+               <div class="wrapper wrapper-btn">
                   <button type="button" class="btn btn-nav left" v-on:click="backScreen">Anterior</button>
                   <button type="button" class="btn btn-nav right" v-on:click="nextScreen">Próxima</button>
                </div>
@@ -211,11 +242,20 @@ getScreenFormNum = (screen_num) => {
    }
 
    else if (screen_num == 3) {
+      let data
+
+      try {
+         data = email_body['Data de Lançamento'].split('/')
+         data = `${data[2]}-${data[1]}-${data[0]}`
+      } catch (error) {
+         data = ""
+      }
+
       new Vue({
          el: '.form',
          data: {
             type: email_body['Genêro'],
-            year: email_body['Data de Lançamento'],
+            year: data,
             url_movie: email_body['URL do Filme'],
             description: email_body['Sinopse'],
          },
@@ -226,10 +266,12 @@ getScreenFormNum = (screen_num) => {
             nextScreen() {
                let is_next = this.validate_type(this.type) + this.validate_year(this.year) + this.validate_url(this.url_movie) + this.validate_description(this.description)
 
+               data = this.year.split('-')
+
                if (is_next == 4) {
                   email_body = Object.assign(email_body, {
                      'Genêro': this.type,
-                     'Data de Lançamento': this.year,
+                     'Data de Lançamento': `${data[2]}/${data[1]}/${data[0]}`,
                      'URL do Filme': this.url_movie,
                      'Sinopse': this.description,
                   })
@@ -245,9 +287,10 @@ getScreenFormNum = (screen_num) => {
                else {
                   $('.div-oculta').removeClass('div-no-oculta')
 
-                  if (this.type != $(".selecaofilme option:selected").val()) {
+                  if (this.type != $(".selecaofilme option:selected").val() && this.type != 'Selecione') {
                      this.type = $(".selecaofilme option:selected").val()
                   }
+                  
                }
             },
             validate_type(type) {
@@ -313,6 +356,19 @@ getScreenFormNum = (screen_num) => {
                   return false
                }
             },
+            loadSelect(value) {
+               $(".selecaofilme").find("option[value=" + value + "]").attr("selected", true);
+            },
+         },
+         mounted: function () {
+            try {
+               if (this.type.length >= 3 && this.type != '') {
+                  this.loadSelect(this.type)
+                  loadInputAnimation()
+               }
+            } catch (error) {
+               animationInput()
+            }
          },
          template: `
             <div class="form">
@@ -377,7 +433,7 @@ getScreenFormNum = (screen_num) => {
                   <small hidden id="sinopse-oculto">Escreva no mínimo 100 caracteres</small>
                </div>
 
-               <div class="wrapper">
+               <div class="wrapper wrapper-btn">
                   <button type="button" class="btn btn-nav left" v-on:click="backScreen">Anterior</button>
                   <button type="button" class="btn btn-nav right" v-on:click="nextScreen">Próxima</button>
                </div>
@@ -391,30 +447,36 @@ getScreenFormNum = (screen_num) => {
       new Vue({
          el: '.form',
          methods: {
-            cancelForm() {
-               email_body = new Object()
-
+            callScreenHome() {
                $('#content').children().attr("id", 'home')
-
-               window.scrollTo(0, 0)
-
+               window.scrollTo(0,0)
                getScreenHome()
             },
-            editForm() {               
+            cancelForm() {
+               email_body = new Object()
+               this.callScreenHome()
+            },
+            editForm() {
                getScreenFormNum(1)
             },
-            confirmForm() {               
-               // Email.send({
-               //    Host: "smtp.gmail.com",
-               //    Username: "altflix.squard2@gmail.com",
-               //    Password: "sbfx$2ud",
-               //    To: 'altflix.squard2@gmail.com',
-               //    From: "altflix.squard2@gmail.com",
-               //    Subject: "This is the subject",
-               //    Body: `${formString}`
-               // }).then(
-               //    message => console.log(message)
-               // );
+            confirmForm() {
+               let text = "<h2>Dados do Formulário - Altflix</h2><br />"
+
+               for (const key in email_body) {
+                  const element = email_body[key]
+
+                  if(element != undefined) {
+                     text += `
+                           <strong style="font-size: 14pt">${key}:</strong>
+                              <br />
+                           <span style="font-size: 11pt">${email_body[key]}</span>
+                           <br /><br />
+                        `
+                  }
+               }
+
+               sendEmail(text)
+               this.callScreenHome()
             },
             loadInputs() {
                for (const key in email_body) {
@@ -426,7 +488,7 @@ getScreenFormNum = (screen_num) => {
                            <label for="disabledTextInput" class="form-label">${key}:</label>
                            <textarea for="disabledTextInput" class="form-label" disabled>${element}</textarea>                           
                         </div>
-                  `)
+                     `)
                   }
                   else if (element != undefined) {
                      $('.form .content').append(`
@@ -441,29 +503,29 @@ getScreenFormNum = (screen_num) => {
                $('.titulo').html('Confirme seus Dados')
             },
          },
-         mounted: function () {
-            this.loadInputs()
+         mounted: function () {            
+            try {
+               this.loadInputs()
+               if (this.url.length >= 3) {
+                  loadInputAnimation()
+               }
+            } catch (error) {
+               animationInput()
+            }
          },
          template: `
             <div class="form">
 
                <div class="content"></div>
 
-               <div class="wrapper btn">
+               <div class="wrapper wrapper-btn btn">
                   <button type="button" class="btn cancel" v-on:click="cancelForm">Cancelar</button>
                   <button type="button" class="btn edit" v-on:click="editForm">Editar</button>
                   <button type="button" class="btn confirm" v-on:click="confirmForm">Confirmar</button>
                </div>
-         
+
             </div>
          `,
       })
    }
-
-   document.querySelectorAll(".input-div").forEach(item => {
-      item.addEventListener('input', () => {
-         let label = item.childNodes[4]
-         label.classList.add("input-animacao")
-      })
-   })
 }
