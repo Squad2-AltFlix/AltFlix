@@ -66,7 +66,52 @@
     </header>
 
     <div id="content">
-        <div id="home"></div>
+        <div id="home">
+            <main class="main-container">
+                <section class="movies">
+                    <div class="swiper-container swiper1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="movie-container">
+                                    <img src="https://i.ytimg.com/vi/F3QuLTth6tY/hqdefault.jpg"
+                                    alt="${movie[index].title}" class="movie-pic">
+                                </div>
+                                <span class="swiper-span">
+                                    <p><a href="#movie=${movie[index].videoId}" onclick="moviePlay(this)">Olhos de Boneca</a></p>
+                                    <p class="synopsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit alias ut ullam blanditiis ab illo numquam esse suscipit, autem, perferendis officiis nihil corrupti similique hic sunt commodi natus. Temporibus dolor inventore non. Ipsam laudantium, sunt veniam minima voluptatem numquam, ipsa culpa beatae nostrum placeat cupiditate! Optio totam assumenda ex quae.</p>
+                                </span>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="movie-container">
+                                    <img src="https://i.ytimg.com/vi/F3QuLTth6tY/hqdefault.jpg"
+                                    alt="${movie[index].title}" class="movie-pic">
+                                </div>
+                                <span class="swiper-span">
+                                    <p><a href="#movie=${movie[index].videoId}" onclick="moviePlay(this)">Olhos de Boneca</a></p>
+                                    <p class="synopsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas explicabo expedita optio architecto eveniet quam, sapiente suscipit earum aliquid odio neque deleniti culpa perspiciatis libero totam! Maiores ullam sed sequi, nihil quos ipsam, qui est neque et quas asperiores! Assumenda mollitia cumque accusamus facere dicta reiciendis praesentium vero at expedita?</p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="catalogue">
+                    <h1>Nossos Filmes</h1>
+                    <div class="swiper-container swiper2">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide movie-item"><img src="https://i.ytimg.com/vi/F3QuLTth6tY/hqdefault.jpg" alt=""></div>
+                          <div class="swiper-slide movie-item"><img src="https://i.ytimg.com/vi/ke8X3SE0XE8/hqdefault.jpg" alt=""></div>
+                          <div class="swiper-slide movie-item"><img src="https://i.ytimg.com/vi/DrzWKWeg_PI/hqdefault.jpg" alt=""></div>
+                          <div class="swiper-slide movie-item"><img src="https://i.ytimg.com/vi/rlZs5K6cDfI/hqdefault.jpg" alt=""></div>
+                          <div class="swiper-slide movie-item"><img src="https://i.ytimg.com/vi/rlZs5K6cDfI/hqdefault.jpg" alt=""></div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </section>
+            </main>
+        </div>
     </div>
 
     <!-- Vue.js -->
@@ -79,12 +124,61 @@
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        new Swiper('.swiper1', {
+            direction: 'horizontal',
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: true,
+            },
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+
+        var swiper = new Swiper(".swiper2", {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                freeMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+                1440: {
+                    slidersPerView: 5,
+                    spaceBetween: 10,
+                }
+            }
+        })
+    </script>
 
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
 
     <!-- Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -110,3 +204,9 @@
     #e5e5e5
 
  -->
+
+
+ <!-- Cadastre seu filme header -->
+ <!-- Inversão das sections -->
+ <!-- alteraçao header desktop e mobile -->
+ <!-- form trocar ordem dos botoes e alinhar informaçoes dos campos a direita -->

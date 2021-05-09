@@ -1,10 +1,10 @@
-window.onload = () => {
-    async function movieCall() {
-        await videoAll()
-        await getScreenHome()
-    }
-    movieCall()
-}
+// window.onload = () => {
+//     async function movieCall() {
+//         await videoAll()
+//         await getScreenHome()
+//     }
+//     movieCall()
+// }
 
 function screenNew(call) {
     const screen = call.href.substring(call.href.indexOf("#") + 1)
