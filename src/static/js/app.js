@@ -11,7 +11,7 @@ function screenNew(call) {
 
     $('#content').children().attr("id", screen)
 
-    window.scrollTo(0, 0)
+    window.scrollTo(0,0)
 
     if (screen == "home") { getScreenHome() }
     else if (screen == "form") { getScreenForm() }
@@ -29,17 +29,19 @@ async function moviePlay(call) {
     getScreenMovie()
     //getScreenMovie(id, moviePlay)
 
-    window.scrollTo(0, 0)
+    window.scrollTo(0,0)
 }
 
-function movieSearch(search, key) {
-    if (key.key == "Enter") {
+function movieSearch(event) {
+    const search = $('input[name="search"]').val()
+
+    if (event.key == "Enter" || event.type == 'click') {
         let result = ""
 
         for (let index = 0; index < movie.length; index++) {
-            if (!(movie[index].title.search(search.value))) {
-                result = search.value
-
+            if (!(movie[index].title.search(search))) {
+                result = search
+                
                 const videoId = movie[index].videoId
                 const thumbnails = movie[index].thumbnails
                 const title = movie[index].title
@@ -51,7 +53,7 @@ function movieSearch(search, key) {
         }
 
         if (result == "") {
-            $('#search-field').val('Filme Não Encontrado!').blur()
+            $('input[name="search"]').val('Filme Não Encontrado!').blur()
             setTimeout(() => {
                 $('#search-field').val('').focus()
             }, 1400)
@@ -59,7 +61,7 @@ function movieSearch(search, key) {
 
     }
     
-    else if (search.value == "") {
+    else if (search == "") {
         $('#content').children().attr("id", 'home')
         getScreenHome()
     }
@@ -72,7 +74,7 @@ function homeSearch() {
         autoSearch.push(movie[index].title)
     }
 
-    $("#search-field").autocomplete({
+    $('input[name="search"').autocomplete({
         source: autoSearch
     });
 }

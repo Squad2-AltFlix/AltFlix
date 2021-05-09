@@ -33,8 +33,9 @@ form {
   cursor: default !important;
 }
 
-form.formulario {
-  padding: 40px 0px;
+.formulario {
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
 
 form.formulario button.left {
@@ -62,12 +63,11 @@ form.formulario button.btn-nav:focus {
 
 form.formulario div.btn {
   justify-content: space-between;
-  margin-top: 10px;
   margin-bottom: -40px;
 }
 
 form.formulario button.cancel {
-  float: left;
+  float: right;
   background-color: transparent;
   border: 1px solid #dc3545;
   color: #dc3545;
@@ -98,7 +98,7 @@ form.formulario button.edit:focus {
 }
 
 form.formulario button.confirm {
-  float: right;
+  float: left;
   background-color: transparent;
   border: 1px solid #198754;
   color: #198754;
@@ -192,13 +192,13 @@ div.form .wrapper .input-div input {
 }
 
 .input-animacao {
-  transform: translateY(-20px);
+  transform: translateY(-15px);
   font-size: 15px;
   color: #632565 !important;
 }
 
 .input-div input:focus ~ label {
-  transform: translateY(-20px);
+  transform: translateY(-15px);
   font-size: 15px;
   color: #632565 !important;
 }
@@ -312,33 +312,11 @@ textarea {
   overflow: hidden;
 }
 
-/* botão enviar e botão url */
-// #enviar {
-//   height: 50px;
-//   width: 160px;
-//   background: #333;
-//   color: white;
-//   border: none;
-//   display: block;
-//   margin: 0px auto;
-//   transition: 0.5s;
-// }
-
-// #enviar:hover {
-//   transform: scale(1.1);
-//   border-radius: 10px;
-// }
-
-// #checkbox-termos {
-//     padding-left: 20%;
-//     padding-bottom: 20px;
-//     padding-right: 20%;
-//   }
-
  /*********************** MEDIA QUERY ************************/
  @media only screen and (min-width: 1700px) {
   section.container {
     width: 32%;
+    max-width: 900px;
   }
 }
 
@@ -361,7 +339,9 @@ textarea {
     width: 60%;
     max-width: 500px;
   }
-
+  .formulario {
+    padding-top: 10px;
+  }
   form .titulo {
     padding: 30px;
   }
@@ -384,8 +364,12 @@ textarea {
 @media screen and (min-device-width: 481px) and (max-device-width: 767px) { 
   section.container {
     width: 70%;
-    max-width: 450px;
+    max-width: 400px;
     font-size: 15px;
+  }
+  .formulario {
+    padding-top: 10px;
+    padding-bottom: 50px  ;
   }
 
   div.form .wrapper {
@@ -430,31 +414,42 @@ textarea {
 @media only screen and (max-device-width: 481px) { 
   section.container {
     width: 80%;
+    max-width: 350px;
     font-size: 15px;
-    padding: 0px;
+    padding-bottom: 30px;
+      
+  }
+   .formulario {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
-  div.form .wrapper {
+  div.form .wrapper-btn {
     display: flex;
     flex-direction: column;
-    width: 93%;
+    width: 100%;
     align-items: center;
     background: none;
     padding: 10px 10px;
+  
   }
 
   div.form .wrapper .btn {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     width: 170px;
   }
 
-  div.form .wrapper .btn.edit{
+  div.form .wrapper .btn.cancel {
+    order: 1;
+  }
+
+  div.form .wrapper .btn.confirm {
     order: -1;
   }
 
   form .titulo {
-    font-size: 22px;
-    padding: 25px 20px;
+    font-size: 20px;
+    padding: 15px 20px;
   }
 
   .sobrefilme {

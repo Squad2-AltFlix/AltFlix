@@ -50,12 +50,16 @@
                             <a class="nav-link" href="#home" onclick="screenNew(this)">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#form" onclick="screenNew(this)">Cadastro</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="#about" onclick="screenNew(this)">Sobre</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#form" onclick="screenNew(this)">Cadastre seu filme</a>
+                        </li>
                     </ul>
+                    <div class="input-group mb-3 d-flex search">
+                        <input type="text" name="search" class="form-control" placeholder="Procure um Filme" aria-label="Procure um Filme" aria-describedby="basic-addon1" onkeyup="movieSearch(event)" />
+                        <span class="input-group-text" id="basic-addon1" onclick="movieSearch(event)"><i class="fas fa-search"></i></span>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -186,7 +190,7 @@
     <script src="https://kit.fontawesome.com/0dd55cd624.js" crossorigin="anonymous"></script>
 
     <!-- Scripts JS -->
-    <script src="static/js/api.js"></script>    
+    <script src="static/js/api.js"></script>
     <script src="static/js/form.js"></script>
     <script src="static/js/template.js"></script>
     <script src="static/js/app.js"></script>
@@ -196,7 +200,8 @@
 
 <!-- 
 
-    activate underline style in button editScreen
+    #141414
+    #e5e5e5
 
  -->
 

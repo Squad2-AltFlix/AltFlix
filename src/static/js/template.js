@@ -5,7 +5,6 @@ getScreenHome = () => {
             <main class="main-container">
                 <section class="intro">
                     <h1><span class="span">Olá!</span> Qual será o filme de hoje?</h1>
-                    <input type="search" name="search" placeholder="Procure um filme" id="search-field" onkeyup="movieSearch(this, event)">
                 </section>
                 <section class="movies">
                     <div class="swiper-container">
