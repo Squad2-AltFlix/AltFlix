@@ -21,13 +21,13 @@ function screenNew(call) {
 
 async function moviePlay(call) {
     $('#content').children().attr("id", 'movie')
+    
+    const id = call.classList.value
 
-    const id = call.href.substring(call.href.indexOf("=") + 1)
-
-    const moviePlay = await videoSearch(id)
+    // const moviePlay = await videoSearch(id)
 
     getScreenMovie()
-    //getScreenMovie(id, moviePlay)
+    // getScreenMovie(id, moviePlay)
 
     window.scrollTo(0,0)
 }

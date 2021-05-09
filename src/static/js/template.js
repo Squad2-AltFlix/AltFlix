@@ -3,35 +3,51 @@ getScreenHome = () => {
         el: "#home",
         template: `
             <main class="main-container">
-                <section class="intro">
-                    <h1><span class="span">Olá!</span> Qual será o filme de hoje?</h1>
-                </section>
                 <section class="movies">
-                    <div class="swiper-container">
+                    <div class="swiper-container swiper1">
+                        <div class="swiper-wrapper"></div>
+                    </div>
+                </section>
+
+                <section class="catalogue">
+                    <h1>Nossos Filmes</h1>
+                    <div class="swiper-container swiper2">
                         <div class="swiper-wrapper"></div>
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </section>
             </main>
         `,
     })
 
-    for (let index = 0; index < movie.length; index++) {
-        $('.swiper-wrapper').prepend(`
+    let maxResultBanner = 3, bannerTop = 0, numRandom = 0
+    for (let index = 0; index < maxResultBanner; index++) {
+        
+        while (true) {
+            numRandom = parseInt(Math.random() * (movie.length - 0) + 0)
+            if(numRandom != bannerTop) {
+                bannerTop = numRandom
+                break
+            }
+        }
+
+        $('.movies .swiper-wrapper').prepend(`
             <div class="swiper-slide">
                 <div class="movie-container">
-                    <img src="${movie[index].thumbnails}"
-                    alt="${movie[index].title}" class="movie-pic">
+                    <img src="${movie[bannerTop].thumbnails}"
+                    alt="${movie[bannerTop].title}" class="movie-pic" />
                 </div>
-                <span class="movie-title">
-                    <p><a href="#movie=${movie[index].videoId}" onclick="moviePlay(this)">${movie[index].title} <i class="fas fa-caret-square-right"></i></a></p>                    
-                 </span>
+                <span class="swiper-span">
+                    <p><a class="${movie[bannerTop].videoId}" onclick="moviePlay(this)">${movie[bannerTop].title}</a></p>
+                    <p class="synopsis">${movie[bannerTop].description}</p>
+                </span>
             </div>
         `)
 
-        if (index == movie.length - 1) {
-            new Swiper('.swiper-container', {
+        if (index >= maxResultBanner - 1) {
+            new Swiper('.swiper1', {
                 direction: 'horizontal',
                 loop: true,
                 pagination: {
@@ -39,11 +55,7 @@ getScreenHome = () => {
                 },
                 autoplay: {
                     delay: 3000,
-                    disableOnInteraction: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                    disableOnInteraction: true, //false
                 },
                 scrollbar: {
                     el: '.swiper-scrollbar',
@@ -52,23 +64,64 @@ getScreenHome = () => {
         }
     }
 
+    for (let index = 0; index < movie.length; index++) {
+        $('.catalogue .swiper-wrapper').prepend(`
+            <div class="swiper-slide movie-item"><img src="${movie[index].thumbnails}" alt="${movie[index].title}" class="${movie[index].videoId}" onclick="moviePlay(this)" /></div>
+        `)
+        
+        if(index == movie.length - 1) {
+            new Swiper(".swiper2", {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                freeMode: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 10,
+                    },
+                    1440: {
+                        slidersPerView: 5,
+                        spaceBetween: 10,
+                    }
+                }
+            });
+        }
+    }
+
     homeSearch()
-    // document.body.style.background = '#632565'
 }
 
 getScreenHomeSearch = (id, img, title) => {
     new Vue({
-        el: ".swiper-container",
+        el: ".catalogue",
         template: `
-            <div class="movie-card">
-                <div class="card" style="width: 22rem;">
-                    <img class="card-img-top" src="${img}" alt="${title}">
-                    <div class="card-body">
-                        <h2 class="card-title">${title}</h2>
-                        <a href="#movie=${id}" class="button" onclick="moviePlay(this)">Assistir</a>
+            <section class="catalogue">
+                <div class="movie-card">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="${img}" alt="${title}">
+                        <div class="card-body">
+                            <h2 class="card-title">${title}</h2>
+                            <a class="${id}" onclick="moviePlay(this)">Assistir</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
         `,
     })
 }
@@ -77,7 +130,7 @@ getScreenForm = () => {
     new Vue({
         el: "#form",
         template: `
-            <main class="effect-parallax">
+            <main>
                 <section class="container">
                     <form class="formulario" type="submit" method="POST">
                         <h1 class="titulo">Queremos seu filme no nosso site!</h1>
@@ -90,6 +143,10 @@ getScreenForm = () => {
         `,
     })
     getScreenFormNum(1)
+
+    document.body.style.backgroundImage = 'url("/src/static/images/wallpaper.jpg")'
+    // document.body.style.backgroundRepeat = 'repeat-y'
+    document.body.style.backgroundSize = 'cover'
 }
 
 // teste
@@ -185,7 +242,7 @@ getScreenMovie = () => {
 getScreenAbout = () => {
     new Vue({
         el: "#about",
-            template: `
+        template: `
             <section class="card">
                 <div class="sobre">
                 <h2>Sobre</h2>
@@ -280,7 +337,7 @@ getScreenAbout = () => {
         `,
     })
 
-    document.body.style.backgroundImage = 'url("/src/static/images/wallpaper.jpeg")'
-    document.body.style.backgroundRepeat = 'repeat-y'
+    document.body.style.backgroundImage = 'url("/src/static/images/wallpaper.jpg")'
+    // document.body.style.backgroundRepeat = 'repeat-y'
     document.body.style.backgroundSize = 'cover'
 }
