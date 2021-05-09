@@ -22,13 +22,13 @@ getScreenHome = () => {
         `,
     })
 
-    let maxResultBanner = 3, bannerTop = 0, numRandom = 0
+    let maxResultBanner = 3, bannerTop = [], numRandom = 0
     for (let index = 0; index < maxResultBanner; index++) {
-        
+
         while (true) {
-            numRandom = parseInt(Math.random() * (movie.length - 0) + 0)
-            if(numRandom != bannerTop) {
-                bannerTop = numRandom
+            numRandom = parseInt(Math.random() * movie.length)
+            if(!bannerTop.includes(numRandom)) {
+                bannerTop.push(numRandom)
                 break
             }
         }
@@ -36,12 +36,12 @@ getScreenHome = () => {
         $('.movies .swiper-wrapper').prepend(`
             <div class="swiper-slide">
                 <div class="movie-container">
-                    <img src="${movie[bannerTop].thumbnails}"
-                    alt="${movie[bannerTop].title}" class="movie-pic" />
+                    <img src="${movie[bannerTop[index]].thumbnails}"
+                    alt="${movie[bannerTop[index]].title}" class="movie-pic" />
                 </div>
                 <span class="swiper-span">
-                    <p><a class="${movie[bannerTop].videoId}" onclick="moviePlay(this)">${movie[bannerTop].title}</a></p>
-                    <p class="synopsis">${movie[bannerTop].description}</p>
+                    <p><a class="${movie[bannerTop[index]].videoId}" onclick="moviePlay(this)">${movie[bannerTop[index]].title}</a></p>
+                    <p class="synopsis">${movie[bannerTop[index]].description}</p>
                 </span>
             </div>
         `)
@@ -55,7 +55,7 @@ getScreenHome = () => {
                 },
                 autoplay: {
                     delay: 3000,
-                    disableOnInteraction: true, //false
+                    disableOnInteraction: false,
                 },
                 scrollbar: {
                     el: '.swiper-scrollbar',
@@ -130,7 +130,7 @@ getScreenForm = () => {
     new Vue({
         el: "#form",
         template: `
-            <main>
+            <main id="form">
                 <section class="container">
                     <form class="formulario" type="submit" method="POST">
                         <h1 class="titulo">Queremos seu filme no nosso site!</h1>
@@ -145,7 +145,7 @@ getScreenForm = () => {
     getScreenFormNum(1)
 
     document.body.style.backgroundImage = 'url("/src/static/images/wallpaper.jpg")'
-    // document.body.style.backgroundRepeat = 'repeat-y'
+    document.body.style.backgroundRepeat = 'repeat-y'
     document.body.style.backgroundSize = 'cover'
 }
 
@@ -200,7 +200,6 @@ getScreenMovie = () => {
         </section>
         `,
     })
-
     document.body.style.background = 'rgb(36, 35, 35)'
 }
 
@@ -338,6 +337,6 @@ getScreenAbout = () => {
     })
 
     document.body.style.backgroundImage = 'url("/src/static/images/wallpaper.jpg")'
-    // document.body.style.backgroundRepeat = 'repeat-y'
+    document.body.style.backgroundRepeat = 'repeat-y'
     document.body.style.backgroundSize = 'cover'
 }

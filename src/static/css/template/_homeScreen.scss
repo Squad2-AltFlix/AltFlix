@@ -22,6 +22,7 @@
     position: relative;
     height: max-content;
     background-color: #1b1b1b;
+    border-color: #e5e5e5;
 }
 
 .card-body {
@@ -31,6 +32,7 @@
     justify-content: center;
     border-top: 2px solid #632565;
     border-radius: 0 0 .25rem .25rem;
+    background-color: #e5e5e5;
 }
 
 .card-img-top {
@@ -38,7 +40,8 @@
 }
 
 .card-title {
-    color: #fff;
+    // color: #fff;
+    color: #1b1b1b;
     text-align: justify;
 }
 
@@ -47,22 +50,22 @@
     height: 35px;
     margin-bottom: 5px;
     line-height: 35px;
-    text-align: center;
-    border-radius: 5px;
+    text-align: center;    
     text-decoration: none;
     cursor: pointer;
-    color: #632565;
-    background-color: #fff;
     transition: 0.3s ease-in-out;
-}
+    background-color: transparent;
+    border: 1px solid #632565;
+    border-radius: 5px;
+    color: #632565;
 
-.card-body a:hover {
-    color: #fff;
-    background-color: #632565;
+    &:hover {
+        color: #fff;
+        background-color: #632565;
+    }
 }
 
 /* Button Link */
-
 a {
     color: #1b1b1b;
     text-decoration: none;
