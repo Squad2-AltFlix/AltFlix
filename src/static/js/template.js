@@ -144,7 +144,7 @@ getScreenForm = () => {
     })
     getScreenFormNum(1)
 
-    document.body.style.backgroundImage = 'url("/src/static/images/wallpaper.jpg")'
+    document.body.style.backgroundImage = 'url("static/images/wallpaper.jpg")'
     document.body.style.backgroundRepeat = 'repeat-y'
     document.body.style.backgroundSize = 'cover'
 }
@@ -282,7 +282,7 @@ getScreenAbout = () => {
         `,
     })
 
-    document.body.style.backgroundImage = 'url("/src/static/images/wallpaper.jpg")'
+    document.body.style.backgroundImage = 'url("static/images/wallpaper.jpg")'
     document.body.style.backgroundRepeat = 'repeat-y'
     document.body.style.backgroundSize = 'cover'
 }
