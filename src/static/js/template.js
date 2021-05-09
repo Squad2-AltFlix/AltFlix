@@ -243,7 +243,7 @@ getScreenAbout = () => {
     new Vue({
         el: "#about",
         template: `
-            <section id="about" class="card">
+            <section id="about" class="cartao">
                 <div class="sobre">
                 <h2>Sobre</h2>
                 <p>
