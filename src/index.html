@@ -1,16 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+
     <title>AltFlix</title>
-    <link rel="stylesheet" href="static/css/reset.css">
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="static/images/logo-small.png" type="image/x-icon">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Jquery -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" />
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet" />
+
+    <!-- Style Personalized -->
+    <link rel="stylesheet" href="static/css/main.css" />
 </head>
+
 <body>
+
+    <header id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand">
+                    <img src="static/images/logo.png" alt="Logo AltFlix" id="logo-img" />
+                </a>
+            </div>
+            <div class="container-fluid justify-content-end">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav d-flex justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home" onclick="screenNew(this)">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about" onclick="screenNew(this)">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#form" onclick="screenNew(this)">Cadastre seu filme</a>
+                        </li>
+                    </ul>
+                    <div class="input-group mb-3 d-flex search">
+                        <input type="text" name="search" class="form-control" placeholder="Procure um Filme" aria-label="Procure um Filme" aria-describedby="basic-addon1" onkeyup="movieSearch(event)" />
+                        <span class="input-group-text" id="basic-addon1" onclick="movieSearch(event)"><i class="fas fa-search"></i></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="content">
+        <div id="home"></div>
+    </div>
+
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+    <!-- Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- SMTP JS -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/0dd55cd624.js" crossorigin="anonymous"></script>
+
+    <!-- Scripts JS -->
+    <script src="static/js/api_key.js"></script>
     <script src="static/js/api.js"></script>
+    <script src="static/js/form.js"></script>
+    <script src="static/js/template.js"></script>
+    <script src="static/js/app.js"></script>
 </body>
+
 </html>
