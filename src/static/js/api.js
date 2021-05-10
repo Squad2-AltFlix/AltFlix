@@ -21,7 +21,7 @@ async function videoAll() {
 }
 
 async function videoSearch(id) {
-    let resp = await axios.get('https://www.googleapis.com/youtube/v3/videos?key=' + apiKeyYoutube + '&part=snippet&id=' + id).catch(err => console.log(err))
+    let resp = await axios.get('https://www.googleapis.com/youtube/v3/videos?key=' + apiKeyYoutube + '&part=snippet&id=' + id)
 
     let description = resp.data.items[0].snippet.description.split("\n")
     let moreInformations = description[3].split('|')
@@ -46,7 +46,5 @@ function sendEmail(body) {
         From : emailToFrom,
         Subject : "Pedido de Filme!",
         Body : body,
-    }).then(
-        message => console.log(message)
-    );
+    }).then();
 }
