@@ -1,7 +1,22 @@
 let email_body = new Object()
 
+//Teste
+email_body = {
+   'Nome': 'teste',
+   'Email': 'email@gmail.com',
+   'Telefone': '19 99999999',
+   'Nome da Produtora': 'alguma ai',
+   'Título do Filme': 'um lugar',
+   'Classificação': '12',
+   'Gênero': 'Ação',
+   'Data de Lançamento': '15/09/2017',
+   'URL do Filme': 'filme.com',
+   'Sinopse': 'Sem Remorso é um filme americano de ação lançado em 2021, baseado na série publicada por Tom Clancy em 1993, um spin-off da série de filmes do Jack Ryan.',
+}
+
 getScreenFormNum = (screen_num) => {
    window.scrollTo(0,0)
+   getHeader()
 
    animationInput = () => {
       document.querySelectorAll(".input-div").forEach(item => {
@@ -163,9 +178,7 @@ getScreenFormNum = (screen_num) => {
             },
             validate_movieTitle(movie_title) {
                try {
-                  let movieConfig = /^[a-z ,.'-]+$/i
-
-                  if (movieConfig.test(movie_title) && movie_title.length >= 3) {
+                  if (movie_title.length >= 2) {
                      $('#titulo').removeClass('div-small')
                      return true
                   }
@@ -269,21 +282,16 @@ getScreenFormNum = (screen_num) => {
                   $('.div-oculta').addClass('div-no-oculta')
                   this.type = ''
                }
-
                else {
                   $('.div-oculta').removeClass('div-no-oculta')
-
-                  if (this.type != $(".selecaofilme option:selected").val() && this.type != 'Selecione') {
-                     this.type = $(".selecaofilme option:selected").val()
-                  }
-                  
+                  this.type = $(".selecaofilme option:selected").val()
                }
             },
             validate_type(type) {
                try {
                   let typeConfig = /[a-z ,.'-]+$/i
 
-                  if (typeConfig.test(type) && type.length >= 3) {
+                  if (typeConfig.test(type) && type.length >= 3 && type != 'Selecione') {
                      $('#selectOculto').removeClass('div-small')
                      return true
                   }
@@ -298,7 +306,9 @@ getScreenFormNum = (screen_num) => {
             },
             validate_year(year) {
                try {
-                  if (year != '') {
+                  var selectedDate = new Date(year)
+                  var today = new Date()
+                  if (year != '' && selectedDate <= today) {
                      $('#data-oculto').removeClass('div-small')
                      return true
                   }
@@ -342,8 +352,12 @@ getScreenFormNum = (screen_num) => {
                   return false
                }
             },
-            loadSelect(value) {
-               $(".selecaofilme").find("option[value=" + value + "]").attr("selected", true);
+            loadSelect(value) {   
+               if($(".selecaofilme").find("option[value=" + value + "]").length != 0) {
+                  $(".selecaofilme").find("option[value=" + value + "]").attr("selected", true)
+               } else {
+                  $(".selecaofilme").find("option[name=general]").attr("selected", true).text(value)
+               }
             },
          },
          mounted: function () {
@@ -363,7 +377,7 @@ getScreenFormNum = (screen_num) => {
                   <label id="data-label" for="filme-data">Gênero<span> *</span></label>
                   <br />
                   <select class="selecaofilme" v-on:click="effectSelect">
-                     <option>Selecione</option>
+                     <option name="general">Selecione</option>
                      <option value="Ação">Ação</option>
                      <option value="Aventura">Aventura</option>
                      <option value="Cinema de Arte">Cinema de arte</option>
@@ -461,7 +475,8 @@ getScreenFormNum = (screen_num) => {
                   }
                }
 
-               sendEmail(text)
+               // sendEmail(text)
+               console.log(text);
                this.callScreenHome()
             },
             loadInputs() {
@@ -480,7 +495,7 @@ getScreenFormNum = (screen_num) => {
                      $('.form .content').append(`
                         <div class="wrapper data">
                            <label for="disabledTextInput" class="form-label">${key}:</label>
-                           <input type="text" id="disabledTextInput" class="form-control" placeholder="${element}" disabled />
+                           <input type="text" class="form-control" placeholder="${element}" disabled />
                         </div>
                      `)
                   }
@@ -507,7 +522,20 @@ getScreenFormNum = (screen_num) => {
                <div class="wrapper wrapper-btn btn">
                   <button type="button" class="btn cancel" v-on:click="cancelForm">Cancelar</button>
                   <button type="button" class="btn edit" v-on:click="editForm">Editar</button>
-                  <button type="button" class="btn confirm" v-on:click="confirmForm">Confirmar</button>
+                  <button type="button" class="btn confirm" data-bs-toggle="modal" data-bs-target="#modalForm">Confirmar</button>
+               </div>
+
+               <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="modalForm" aria-hidden="true">
+                  <div class="modal-dialog">
+                     <div class="modal-content">
+                        <div class="modal-body">
+                              <p>Obrigado por enviar seu filme! Seus dados foram enviados e serão analisados.</p>
+                        </div>
+                        <div class="modal-footer">
+                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" v-on:click="confirmForm">OK</button>
+                        </div>
+                     </div>
+                  </div>
                </div>
 
             </div>
