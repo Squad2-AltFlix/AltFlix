@@ -460,7 +460,8 @@ getScreenFormNum = (screen_num) => {
                         `
                   }
                }
-
+               email_body = new Object()
+               
                sendEmail(text)
                this.callScreenHome()
             },
