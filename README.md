@@ -49,9 +49,12 @@ O projeto foi desenvolvido para o Hackathon organizado pela empresa FCamara em p
 
 ## 🎨 Layout
 
-![Home Desktop](https://github.com/Squad2-AltFlix/AltFlix/blob/develop/teste/src/static/images/prints/home-desktop.png?raw=true)
-![Sobre Desktop](https://github.com/Squad2-AltFlix/AltFlix/blob/develop/teste/src/static/images/prints/about-desktop.png?raw=true)
-![Form Desktop](https://github.com/Squad2-AltFlix/AltFlix/blob/develop/teste/src/static/images/prints/form-desktop.png?raw=true)
+#### Desktop
+<img width="460" height="300" src="https://github.com/Squad2-AltFlix/AltFlix/blob/develop/teste/src/static/images/prints/home-desktop.png">
+<img width="460" height="300" src="https://github.com/Squad2-AltFlix/AltFlix/blob/develop/teste/src/static/images/prints/about-desktop.png">
+<img width="460" height="300" src="https://github.com/Squad2-AltFlix/AltFlix/blob/develop/teste/src/static/images/prints/form-desktop.png">
+
+#### Mobile
 ![Home Mobile](https://github.com/Squad2-AltFlix/AltFlix/blob/develop/teste/src/static/images/prints/home-mobile.png?raw=true)
 ![Sobre Mobile](https://github.com/Squad2-AltFlix/AltFlix/blob/develop/teste/src/static/images/prints/about-mobile.png?raw=true)
 ![Form Mobile](https://github.com/Squad2-AltFlix/AltFlix/blob/develop/teste/src/static/images/prints/form-mobile.png?raw=true)
