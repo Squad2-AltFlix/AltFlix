@@ -1,3 +1,43 @@
+getHeader = () => {
+    new Vue({
+        el: "#navbar",
+        template: `
+            <header id="navbar">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container">
+                        <a href="#home" onclick="screenNew(this)" class="navbar-brand">
+                            <img src="static/images/logo.png" alt="Logo AltFlix" id="logo-img" />
+                        </a>
+                    </div>
+                    <div class="container-fluid justify-content-end">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <ul class="navbar-nav d-flex justify-content-end">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#home" onclick="screenNew(this)">Início</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about" onclick="screenNew(this)">Sobre</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#form" onclick="screenNew(this)">Cadastre seu filme</a>
+                                </li>
+                            </ul>
+                            <div class="input-group mb-3 d-flex search">
+                                <input type="text" name="search" class="form-control" placeholder="Procure um Filme" aria-label="Procure um Filme" aria-describedby="basic-addon1" onkeyup="movieSearch(event)" />
+                                <span class="input-group-text" id="basic-addon1" onclick="movieSearch(event)"><i class="fas fa-search"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        `,
+    })
+}
+
 getScreenHome = () => {
     new Vue({
         el: "#home",
@@ -8,15 +48,17 @@ getScreenHome = () => {
                         <div class="swiper-wrapper"></div>
                     </div>
                 </section>
+                <section class="banner-img"></section>
 
                 <section class="catalogue">
                     <h1>Nossos Filmes</h1>
                     <div class="swiper-container swiper2">
                         <div class="swiper-wrapper"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
+
                         <div class="swiper-pagination"></div>
                     </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </section>
             </main>
         `,
@@ -37,11 +79,13 @@ getScreenHome = () => {
             <div class="swiper-slide">
                 <div class="movie-container">
                     <img src="${movie[bannerTop[index]].thumbnails}"
-                    alt="${movie[bannerTop[index]].title}" class="movie-pic" />
+                    alt="${movie[bannerTop[index]].title}" class="movie-pic"  
+                    id="${movie[bannerTop[index]].videoId}" onclick="moviePlay(this)"
+                    />
                 </div>
                 <span class="swiper-span">
-                    <p><a class="${movie[bannerTop[index]].videoId}" onclick="moviePlay(this)">${movie[bannerTop[index]].title}</a></p>
-                    <p class="synopsis">${movie[bannerTop[index]].description}</p>
+                    <p><a id="${movie[bannerTop[index]].videoId}" onclick="moviePlay(this)">${movie[bannerTop[index]].title}</a></p>
+                    <p class="synopsis">${movie[bannerTop[index]].description()}</p>
                 </span>
             </div>
         `)
@@ -66,7 +110,7 @@ getScreenHome = () => {
 
     for (let index = 0; index < movie.length; index++) {
         $('.catalogue .swiper-wrapper').prepend(`
-            <div class="swiper-slide movie-item"><img src="${movie[index].thumbnails}" alt="${movie[index].title}" class="${movie[index].videoId}" onclick="moviePlay(this)" /></div>
+            <div class="swiper-slide movie-item"><img src="${movie[index].thumbnails}" alt="${movie[index].title}" id="${movie[index].videoId}" onclick="moviePlay(this)" /></div>
         `)
         
         if(index == movie.length - 1) {
@@ -109,19 +153,19 @@ getScreenHome = () => {
 
 getScreenHomeSearch = (id, img, title) => {
     new Vue({
-        el: ".catalogue",
+        el: "#home",
         template: `
-            <section class="catalogue">
+        <main id="home" class="main-container" style="background-color: #1b1b1b;">
                 <div class="movie-card">
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" src="${img}" alt="${title}">
                         <div class="card-body">
                             <h2 class="card-title">${title}</h2>
-                            <a class="${id}" onclick="moviePlay(this)">Assistir</a>
+                            <a id="${id}" onclick="moviePlay(this)">Assistir</a>
                         </div>
                     </div>
                 </div>
-            </section>
+            </main>
         `,
     })
 }
@@ -130,7 +174,7 @@ getScreenForm = () => {
     new Vue({
         el: "#form",
         template: `
-            <main id="form">
+            <main id="form-screen">
                 <section class="container">
                     <form class="formulario" type="submit" method="POST">
                         <h1 class="titulo">Queremos seu filme no nosso site!</h1>
@@ -188,11 +232,11 @@ getScreenAbout = () => {
     new Vue({
         el: "#about",
         template: `
-            <section id="about" class="card">
+            <section class="cartao">
                 <div class="sobre">
                 <h2>Sobre</h2>
                 <p>
-                    &nbsp;&nbsp;&nbsp; ALTFLIX é um projeto voltado para pessoas que amam
+                    ALTFLIX é um projeto voltado para pessoas que amam
                     Cinema, tantos os que amam assistir, quanto os produtores
                     independentes que amam fazer acontecer. A idealizadora do projeto
                     Milena Maganin compartilhou esse sonho com 5 pessoas, Edson Primo,
@@ -237,7 +281,7 @@ getScreenAbout = () => {
                     <li class="Gustavo">
                     Gustavo de Vito&nbsp;&nbsp;&nbsp;
                     <div class="social">
-                        <img src="https://unavatar.now.sh/github/GustavoDeVito" />
+                        <img src="https://media-exp1.licdn.com/dms/image/C4E03AQGef4UZy_fWiQ/profile-displayphoto-shrink_200_200/0/1613365943785?e=1626307200&v=beta&t=5T2Q31RHi2BgApumZhO3YfrVcHL6DJkQWBJ62A6r2zw" />
                         <a
                         target="_blank"
                         href="https://www.linkedin.com/in/gustavo-de-vito-70aa99206/"

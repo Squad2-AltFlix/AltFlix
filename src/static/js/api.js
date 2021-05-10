@@ -1,4 +1,5 @@
 let movie = new Array()
+
 async function videoAll() {
     let resp = await axios.get('https://www.googleapis.com/youtube/v3/search?key=' + apiKeyYoutube + '&part=snippet,id&channelId=' + apiIdChannelYoutube + '&maxResults=50')
 
@@ -8,8 +9,13 @@ async function videoAll() {
                 'thumbnails': element.snippet.thumbnails.high.url,
                 'title': element.snippet.title,
                 'videoId': element.id.videoId,
-                'description': element.snippet.description.replace('SINOPSE', ''),
-            })
+                description () {
+                        let desc = element.snippet.description.replace('SINOPSE', '')
+                        if(desc.includes("Duração")) desc = desc.substring(0, desc.indexOf("Duração"))
+                        return desc
+                    }
+                },
+            )
         }
     })
 }
@@ -35,14 +41,12 @@ async function videoSearch(id) {
 
 function sendEmail(body) {
     Email.send({
-       Host: emailHost,
-       Username: emailUsername,
-       Password: emailPassword,
-       To: emailToFrom,
-       From: emailToFrom,
-       Subject: "Pedido de Filme!",
-       Body: body,
+        SecureToken : emailToken,
+        To : emailToFrom,
+        From : emailToFrom,
+        Subject : "Pedido de Filme!",
+        Body : body,
     }).then(
-       message => console.log(message)
+        message => console.log(message)
     );
 }
