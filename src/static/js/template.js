@@ -291,7 +291,7 @@ getScreenAbout = () => {
                 <div class="sobre">
                 <h2>Sobre</h2>
                 <p>
-                    &nbsp;&nbsp;&nbsp; ALTFLIX é um projeto voltado para pessoas que amam
+                    ALTFLIX é um projeto voltado para pessoas que amam
                     Cinema, tantos os que amam assistir, quanto os produtores
                     independentes que amam fazer acontecer. A idealizadora do projeto
                     Milena Maganin compartilhou esse sonho com 5 pessoas, Edson Primo,
