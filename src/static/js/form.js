@@ -522,7 +522,20 @@ getScreenFormNum = (screen_num) => {
                <div class="wrapper wrapper-btn btn">
                   <button type="button" class="btn cancel" v-on:click="cancelForm">Cancelar</button>
                   <button type="button" class="btn edit" v-on:click="editForm">Editar</button>
-                  <button type="button" class="btn confirm" v-on:click="confirmForm">Confirmar</button>
+                  <button type="button" class="btn confirm" data-bs-toggle="modal" data-bs-target="#modalForm">Confirmar</button>
+               </div>
+
+               <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="modalForm" aria-hidden="true">
+                  <div class="modal-dialog">
+                     <div class="modal-content">
+                        <div class="modal-body">
+                              <p>Obrigado por enviar seu filme! Seus dados foram enviados e serão analisados.</p>
+                        </div>
+                        <div class="modal-footer">
+                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" v-on:click="confirmForm">OK</button>
+                        </div>
+                     </div>
+                  </div>
                </div>
 
             </div>
