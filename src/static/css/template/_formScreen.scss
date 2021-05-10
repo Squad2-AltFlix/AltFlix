@@ -126,7 +126,7 @@ textarea::-webkit-scrollbar-thumb {
 section.container {
   width: 50%;
   background: rgba(255, 255, 255, 0.767);
-  margin: 50px auto;
+  margin: 120px auto;
   border-radius: 10px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.493); 
   font-size: 1.7em;  
@@ -390,6 +390,7 @@ textarea {
 @media only screen and (max-device-width: 481px) { 
   section.container {
     width: 80%;
+    margin: 50px auto;
     max-width: 350px;
     font-size: 15px;
     padding-bottom: 30px;
