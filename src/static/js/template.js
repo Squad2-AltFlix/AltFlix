@@ -48,6 +48,7 @@ getScreenHome = () => {
                         <div class="swiper-wrapper"></div>
                     </div>
                 </section>
+                <section class="banner-img"></section>
 
                 <section class="catalogue">
                     <h1>Nossos Filmes</h1>
