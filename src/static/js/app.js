@@ -26,10 +26,10 @@ async function moviePlay(call) {
 
     const id = call.id
 
-    const moviePlay = await videoSearch(id)
-    getScreenMovie(id, moviePlay)
+    // const moviePlay = await videoSearch(id)
+    // getScreenMovie(id, moviePlay)
 
-    //getScreenMovie()
+    getScreenMovie()
 
     window.scrollTo(0,0)
 }
