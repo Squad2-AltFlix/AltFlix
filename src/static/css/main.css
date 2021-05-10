@@ -198,11 +198,11 @@ header#navbar div.search span {
   background-color: transparent;
   border: 1px solid #632565;
   border-radius: 5px;
-  color: #632565;
+  color: #632565 !important;
 }
 
 .card-body a:hover {
-  color: #fff;
+  color: #fff !important;
   background-color: #632565;
 }
 
@@ -214,6 +214,16 @@ a {
 
 a:hover {
   color: #1b1b1b;
+}
+
+/* Banner Pointer */
+.movie-pic {
+  cursor: pointer !important;
+}
+
+/* Bullet */
+.swiper-pagination-bullet {
+  background-color: #fff !important;
 }
 
 /* Mobile S */
@@ -283,9 +293,10 @@ a:hover {
   }
   .swiper-span a {
     display: none;
-    color: #632565;
     font-size: 1.5em;
     margin-top: 20px;
+    color: #632565 !important;
+    cursor: pointer !important;
   }
   .swiper-span .synopsis {
     display: none;
@@ -1212,7 +1223,7 @@ textarea {
   }
 }
 
-section.card {
+section.cartao {
   background-color: #1b1b1bd3;
   min-width: 330px;
   width: 95%;
@@ -1226,11 +1237,11 @@ section.card {
   cursor: default;
 }
 
-section.card .sobre {
+section.cartao .sobre {
   max-width: 600px;
 }
 
-section.card .sobre h2 {
+section.cartao .sobre h2 {
   position: relative;
   color: #a09e9e;
   font-weight: 700;
@@ -1238,7 +1249,7 @@ section.card .sobre h2 {
   font-size: clamp(1.4rem, 2vw, 2rem);
 }
 
-section.card .sobre h2::before {
+section.cartao .sobre h2::before {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -1248,7 +1259,7 @@ section.card .sobre h2::before {
   background: #632565;
 }
 
-section.card .sobre p {
+section.cartao .sobre p {
   text-align: justify;
   word-break: keep-all;
   color: #a09e9e;
@@ -1256,12 +1267,12 @@ section.card .sobre p {
   font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
-section.card .contact {
+section.cartao .contact {
   max-width: 600px;
   margin-bottom: 50px;
 }
 
-section.card .contact h2 {
+section.cartao .contact h2 {
   font-size: clamp(1.4rem, 2vw, 2rem);
   position: relative;
   color: #a09e9e;
@@ -1269,7 +1280,7 @@ section.card .contact h2 {
   margin-bottom: 15px;
 }
 
-section.card .contact h2::before {
+section.cartao .contact h2::before {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -1279,12 +1290,12 @@ section.card .contact h2::before {
   background: #632565;
 }
 
-section.card .contact ul {
+section.cartao .contact ul {
   margin: 5px;
   padding: 0;
 }
 
-section.card .contact li {
+section.cartao .contact li {
   width: 300px;
   color: #a09e9e;
   display: -webkit-box;
@@ -1300,12 +1311,12 @@ section.card .contact li {
           align-items: center;
 }
 
-section.card .contact li img {
+section.cartao .contact li img {
   position: relative;
   border: 1px solid white;
 }
 
-section.card .social {
+section.cartao .social {
   margin-left: 10px;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -1316,33 +1327,33 @@ section.card .social {
   margin: 0;
 }
 
-section.card .social a {
+section.cartao .social a {
   position: absolute;
 }
 
-section.card .social a:first-of-type {
+section.cartao .social a:first-of-type {
   background-color: #317ac288;
   border: 1px solid white;
   border-radius: 3px;
   margin-top: 30px;
 }
 
-section.card .social a:first-of-type:hover {
+section.cartao .social a:first-of-type:hover {
   background-color: #317ac2;
 }
 
-section.card .social a:last-child {
+section.cartao .social a:last-child {
   background-color: #00000088;
   border: 1px solid white;
   border-radius: 3px;
   margin-top: 30px;
 }
 
-section.card .social a:last-child:hover {
+section.cartao .social a:last-child:hover {
   background-color: black;
 }
 
-section.card .social i {
+section.cartao .social i {
   color: white;
   padding: 6px;
 }
@@ -1389,7 +1400,7 @@ section.card .social i {
   .contact ul li .social a:first-of-type {
     margin-top: 0;
   }
-  section.card .contact .social a {
+  section.cartao .contact .social a {
     margin-top: 36px;
   }
   .contact .social img {
@@ -1402,7 +1413,7 @@ section.card .social i {
 }
 
 @media only screen and (min-width: 991px) {
-  section.card {
+  section.cartao {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1413,26 +1424,26 @@ section.card .social i {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  section.card .sobre {
+  section.cartao .sobre {
     width: 40%;
     height: 100%;
     margin-top: 50px;
   }
-  section.card .contact {
+  section.cartao .contact {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     margin-top: 50px;
   }
-  section.card .contact .social a {
+  section.cartao .contact .social a {
     display: none;
   }
-  section.card .contact .social img {
+  section.cartao .contact .social img {
     border-radius: 50%;
     width: 62px;
     height: 62px;
   }
-  section.card .contact .social:hover img {
+  section.cartao .contact .social:hover img {
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
     -webkit-transition: -webkit-filter 0.5s ease-in-out;
@@ -1443,12 +1454,12 @@ section.card .social i {
     -webkit-transition: border-radius 0.1s;
     transition: border-radius 0.1s;
   }
-  section.card .contact .social:hover a {
+  section.cartao .contact .social:hover a {
     display: block;
     -webkit-transition: display 0.5s ease-in-out;
     transition: display 0.5s ease-in-out;
   }
-  section.card .contact .social a:last-child {
+  section.cartao .contact .social a:last-child {
     margin-left: 30px;
   }
 }

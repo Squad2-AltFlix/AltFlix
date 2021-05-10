@@ -1,11 +1,8 @@
-const apiKeyYoutube = 'AIzaSyDrmGIJgrDOZMT-USZOHhM2IdxkUWNwGGM'
-const apiIdChannelYoutube = 'UCfhJhcy7L2FwCGiXfXLuq2w'
-
 let movie = new Array()
 async function videoAll() {
-    //let resp = await axios.get('https://www.googleapis.com/youtube/v3/search?key=' + apiKeyYoutube + '&part=snippet,id&channelId=' + apiIdChannelYoutube)
+    // let resp = await axios.get('https://www.googleapis.com/youtube/v3/search?key=' + apiKeyYoutube + '&part=snippet,id&channelId=' + apiIdChannelYoutube + '&maxResults=50')
 
-    //Teste
+    // Teste
     movie = [
         {
             'thumbnails': 'https://i.ytimg.com/vi/F3QuLTth6tY/hqdefault.jpg',
@@ -51,8 +48,13 @@ async function videoAll() {
     //             'thumbnails': element.snippet.thumbnails.high.url,
     //             'title': element.snippet.title,
     //             'videoId': element.id.videoId,
-    //             'description': element.snippet.description.replace('SINOPSE', ''),
-    //         })
+    //             description () {
+    //                     let desc = element.snippet.description.replace('SINOPSE', '')
+    //                     if(desc.includes("Duração")) desc = desc.substring(0, desc.indexOf("Duração"))
+    //                     return desc
+    //                 }
+    //             },
+    //         )
     //     }
     // })
 }
@@ -78,14 +80,14 @@ async function videoSearch(id) {
 
 function sendEmail(body) {
     Email.send({
-       Host: "smtp.gmail.com",
-       Username: "altflix.squard2@gmail.com",
-       Password: "sbfx$2ud",
-       To: 'altflix.squard2@gmail.com',
-       From: "altflix.squard2@gmail.com",
-       Subject: "Pedido de Filme!",
-       Body: body,
+        Host: emailHost,
+        Username: emailUsername,
+        Password: emailPassword,
+        To: emailToFrom,
+        From: emailToFrom,
+        Subject: "Pedido de Filme!",
+        Body: body,
     }).then(
-       message => console.log(message)
+        message => console.log(message)
     );
 }

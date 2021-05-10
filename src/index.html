@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- Jquery -->
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" />
 
     <!-- Font Poppins -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -32,38 +32,7 @@
 
 <body>
 
-    <header id="navbar">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand">
-                    <img src="static/images/logo.png" alt="Logo AltFlix" id="logo-img" />
-                </a>
-            </div>
-            <div class="container-fluid justify-content-end">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav d-flex justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#home" onclick="screenNew(this)">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about" onclick="screenNew(this)">Sobre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#form" onclick="screenNew(this)">Cadastre seu filme</a>
-                        </li>
-                    </ul>
-                    <div class="input-group mb-3 d-flex search">
-                        <input type="text" name="search" class="form-control" placeholder="Procure um Filme" aria-label="Procure um Filme" aria-describedby="basic-addon1" onkeyup="movieSearch(event)" />
-                        <span class="input-group-text" id="basic-addon1" onclick="movieSearch(event)"><i class="fas fa-search"></i></span>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div id="navbar"></div>
 
     <div id="content">
         <div id="home"></div>
@@ -79,54 +48,6 @@
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- <script>
-        new Swiper('.swiper1', {
-            direction: 'horizontal',
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: true,
-            },
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-        });
-
-        new Swiper(".swiper2", {
-                slidesPerView: 4,
-                spaceBetween: 30,
-                freeMode: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                },
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 30,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 10,
-                },
-                1440: {
-                    slidersPerView: 5,
-                    spaceBetween: 10,
-                }
-            }
-        })
-    </script> -->
 
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -144,6 +65,7 @@
     <script src="https://kit.fontawesome.com/0dd55cd624.js" crossorigin="anonymous"></script>
 
     <!-- Scripts JS -->
+    <!-- <script src="static/js/api_key.js"></script> -->
     <script src="static/js/api.js"></script>
     <script src="static/js/form.js"></script>
     <script src="static/js/template.js"></script>
@@ -154,7 +76,7 @@
 
 <!-- 
 
-    #141414
-    #e5e5e5
+    - colocar msg de envio form
+    seta para fora do vitrine
 
  -->

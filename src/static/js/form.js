@@ -8,7 +8,7 @@ email_body = {
    'Nome da Produtora': 'alguma ai',
    'Título do Filme': 'um lugar',
    'Classificação': '12',
-   'Genêro': 'Ação',
+   'Gênero': 'Ação',
    'Data de Lançamento': '15/09/2017',
    'URL do Filme': 'filme.com',
    'Sinopse': 'Sem Remorso é um filme americano de ação lançado em 2021, baseado na série publicada por Tom Clancy em 1993, um spin-off da série de filmes do Jack Ryan.',
@@ -16,6 +16,7 @@ email_body = {
 
 getScreenFormNum = (screen_num) => {
    window.scrollTo(0,0)
+   getHeader()
 
    animationInput = () => {
       document.querySelectorAll(".input-div").forEach(item => {
@@ -254,7 +255,7 @@ getScreenFormNum = (screen_num) => {
       new Vue({
          el: '.form',
          data: {
-            type: email_body['Genêro'],
+            type: email_body['Gênero'],
             year: data,
             url_movie: email_body['URL do Filme'],
             description: email_body['Sinopse'],
@@ -270,7 +271,7 @@ getScreenFormNum = (screen_num) => {
 
                if (is_next == 4) {
                   email_body = Object.assign(email_body, {
-                     'Genêro': this.type,
+                     'Gênero': this.type,
                      'Data de Lançamento': `${data[2]}/${data[1]}/${data[0]}`,
                      'URL do Filme': this.url_movie,
                      'Sinopse': this.description,
@@ -283,21 +284,16 @@ getScreenFormNum = (screen_num) => {
                   $('.div-oculta').addClass('div-no-oculta')
                   this.type = ''
                }
-
                else {
                   $('.div-oculta').removeClass('div-no-oculta')
-
-                  if (this.type != $(".selecaofilme option:selected").val() && this.type != 'Selecione') {
-                     this.type = $(".selecaofilme option:selected").val()
-                  }
-                  
+                  this.type = $(".selecaofilme option:selected").val()
                }
             },
             validate_type(type) {
                try {
                   let typeConfig = /[a-z ,.'-]+$/i
 
-                  if (typeConfig.test(type) && type.length >= 3) {
+                  if (typeConfig.test(type) && type.length >= 3 && type != 'Selecione') {
                      $('#selectOculto').removeClass('div-small')
                      return true
                   }
@@ -312,7 +308,9 @@ getScreenFormNum = (screen_num) => {
             },
             validate_year(year) {
                try {
-                  if (year != '') {
+                  var selectedDate = new Date(year)
+                  var today = new Date()
+                  if (year != '' && selectedDate <= today) {
                      $('#data-oculto').removeClass('div-small')
                      return true
                   }
@@ -356,8 +354,12 @@ getScreenFormNum = (screen_num) => {
                   return false
                }
             },
-            loadSelect(value) {
-               $(".selecaofilme").find("option[value=" + value + "]").attr("selected", true);
+            loadSelect(value) {   
+               if($(".selecaofilme").find("option[value=" + value + "]").length != 0) {
+                  $(".selecaofilme").find("option[value=" + value + "]").attr("selected", true)
+               } else {
+                  $(".selecaofilme").find("option[name=general]").attr("selected", true).text(value)
+               }
             },
          },
          mounted: function () {
@@ -374,10 +376,10 @@ getScreenFormNum = (screen_num) => {
             <div class="form">
 
                <div class="wrapper">
-                  <label id="data-label" for="filme-data">Genêro<span> *</span></label>
+                  <label id="data-label" for="filme-data">Gênero<span> *</span></label>
                   <br />
                   <select class="selecaofilme" v-on:click="effectSelect">
-                     <option>Selecione</option>
+                     <option name="general">Selecione</option>
                      <option value="Ação">Ação</option>
                      <option value="Aventura">Aventura</option>
                      <option value="Cinema de Arte">Cinema de arte</option>
@@ -401,7 +403,7 @@ getScreenFormNum = (screen_num) => {
                      <option value="Thriller">Thriller</option>
                      <option value="outro" id="outro">Outro</option>
                   </select>
-                  <small hidden id="selectOculto">Genêro Obrigatório</small>
+                  <small hidden id="selectOculto">Gênero Obrigatório</small>
                </div>
    
                <div class="wrapper div-oculta">
@@ -475,7 +477,8 @@ getScreenFormNum = (screen_num) => {
                   }
                }
 
-               sendEmail(text)
+               // sendEmail(text)
+               console.log(text);
                this.callScreenHome()
             },
             loadInputs() {
@@ -494,7 +497,7 @@ getScreenFormNum = (screen_num) => {
                      $('.form .content').append(`
                         <div class="wrapper data">
                            <label for="disabledTextInput" class="form-label">${key}:</label>
-                           <input type="text" id="disabledTextInput" class="form-control" placeholder="${element}" disabled />
+                           <input type="text" class="form-control" placeholder="${element}" disabled />
                         </div>
                      `)
                   }

@@ -1,6 +1,7 @@
 window.onload = () => {
     async function movieCall() {
         await videoAll()
+        await getHeader()
         await getScreenHome()
     }
     movieCall()
@@ -12,6 +13,7 @@ function screenNew(call) {
     $('#content').children().attr("id", screen)
 
     window.scrollTo(0,0)
+    getHeader()
 
     if (screen == "home") { getScreenHome() }
     else if (screen == "form") { getScreenForm() }
@@ -21,18 +23,21 @@ function screenNew(call) {
 
 async function moviePlay(call) {
     $('#content').children().attr("id", 'movie')
-    
-    const id = call.classList.value
+
+    const id = call.id
 
     // const moviePlay = await videoSearch(id)
+    // getScreenMovie(id, moviePlay)
 
     getScreenMovie()
-    // getScreenMovie(id, moviePlay)
 
     window.scrollTo(0,0)
 }
 
 function movieSearch(event) {
+    $('#content').children().attr("id", 'home')
+    getScreenHome()
+
     const search = $('input[name="search"]').val()
 
     if (event.key == "Enter" || event.type == 'click') {

@@ -57,10 +57,10 @@
     background-color: transparent;
     border: 1px solid #632565;
     border-radius: 5px;
-    color: #632565;
+    color: #632565 !important;
 
     &:hover {
-        color: #fff;
+        color: #fff !important;
         background-color: #632565;
     }
 }
@@ -74,6 +74,17 @@ a {
         color: #1b1b1b;
     }
 }
+
+/* Banner Pointer */
+.movie-pic {
+    cursor: pointer !important;
+}
+
+/* Bullet */
+.swiper-pagination-bullet {
+    background-color: #fff !important;
+}
+
 
 /* Mobile S */
 @media only screen and (min-width: 320px) {
@@ -126,10 +137,11 @@ a {
 
     .swiper-span {
         a {
-            display: none;
-            color: #632565;
+            display: none;            
             font-size: 1.5em;
             margin-top: 20px;
+            color: #632565 !important;
+            cursor: pointer !important;
         }
 
         .synopsis {
@@ -324,7 +336,7 @@ a {
     .movie-pic {
         width: 100%;
         height: auto;
-        margin-bottom: 25px;
+        margin-bottom: 25px;        
     }
 
     /* Vitrine */
