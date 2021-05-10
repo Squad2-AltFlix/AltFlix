@@ -1,21 +1,22 @@
 let email_body = new Object()
 
 //Teste
-// email_body = {
-//    'Nome': 'teste',
-//    'Email': 'email@gmail.com',
-//    'Telefone': '19 99999999',
-//    'Nome da Produtora': 'alguma ai',
-//    'Título do Filme': 'um lugar',
-//    'Classificação': '12',
-//    'Gênero': 'Ação',
-//    'Data de Lançamento': '15/09/2017',
-//    'URL do Filme': 'filme.com',
-//    'Sinopse': 'Sem Remorso é um filme americano de ação lançado em 2021, baseado na série publicada por Tom Clancy em 1993, um spin-off da série de filmes do Jack Ryan.',
-// }
+email_body = {
+   'Nome': 'teste',
+   'Email': 'email@gmail.com',
+   'Telefone': '19 99999999',
+   'Nome da Produtora': 'alguma ai',
+   'Título do Filme': 'um lugar',
+   'Classificação': '12',
+   'Gênero': 'Ação',
+   'Data de Lançamento': '15/09/2017',
+   'URL do Filme': 'filme.com',
+   'Sinopse': 'Sem Remorso é um filme americano de ação lançado em 2021, baseado na série publicada por Tom Clancy em 1993, um spin-off da série de filmes do Jack Ryan.',
+}
 
 getScreenFormNum = (screen_num) => {
    window.scrollTo(0,0)
+   getHeader()
 
    animationInput = () => {
       document.querySelectorAll(".input-div").forEach(item => {
@@ -307,8 +308,9 @@ getScreenFormNum = (screen_num) => {
             },
             validate_year(year) {
                try {
-                  console.log(year);
-                  if (year != '') {
+                  var selectedDate = new Date(year)
+                  var today = new Date()
+                  if (year != '' && selectedDate <= today) {
                      $('#data-oculto').removeClass('div-small')
                      return true
                   }

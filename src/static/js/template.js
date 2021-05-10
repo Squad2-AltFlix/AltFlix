@@ -1,3 +1,43 @@
+getHeader = () => {
+    new Vue({
+        el: "#navbar",
+        template: `
+            <header id="navbar">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container">
+                        <a class="navbar-brand">
+                            <img src="static/images/logo.png" alt="Logo AltFlix" id="logo-img" />
+                        </a>
+                    </div>
+                    <div class="container-fluid justify-content-end">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <ul class="navbar-nav d-flex justify-content-end">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#home" onclick="screenNew(this)">Início</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about" onclick="screenNew(this)">Sobre</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#form" onclick="screenNew(this)">Cadastre seu filme</a>
+                                </li>
+                            </ul>
+                            <div class="input-group mb-3 d-flex search">
+                                <input type="text" name="search" class="form-control" placeholder="Procure um Filme" aria-label="Procure um Filme" aria-describedby="basic-addon1" onkeyup="movieSearch(event)" />
+                                <span class="input-group-text" id="basic-addon1" onclick="movieSearch(event)"><i class="fas fa-search"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        `,
+    })
+}
+
 getScreenHome = () => {
     new Vue({
         el: "#home",
@@ -37,14 +77,17 @@ getScreenHome = () => {
             <div class="swiper-slide">
                 <div class="movie-container">
                     <img src="${movie[bannerTop[index]].thumbnails}"
-                    alt="${movie[bannerTop[index]].title}" class="movie-pic" />
+                    alt="${movie[bannerTop[index]].title}" class="movie-pic"  
+                    id="${movie[bannerTop[index]].videoId}" onclick="moviePlay(this)"
+                    />
                 </div>
                 <span class="swiper-span">
-                    <p><a class="${movie[bannerTop[index]].videoId}" onclick="moviePlay(this)">${movie[bannerTop[index]].title}</a></p>
+                    <p><a id="${movie[bannerTop[index]].videoId}" onclick="moviePlay(this)">${movie[bannerTop[index]].title}</a></p>
                     <p class="synopsis">${movie[bannerTop[index]].description}</p>
                 </span>
             </div>
         `)
+        // <p class="synopsis">${movie[bannerTop[index]].description()}</p> Oficial
 
         if (index >= maxResultBanner - 1) {
             new Swiper('.swiper1', {
@@ -66,7 +109,7 @@ getScreenHome = () => {
 
     for (let index = 0; index < movie.length; index++) {
         $('.catalogue .swiper-wrapper').prepend(`
-            <div class="swiper-slide movie-item"><img src="${movie[index].thumbnails}" alt="${movie[index].title}" class="${movie[index].videoId}" onclick="moviePlay(this)" /></div>
+            <div class="swiper-slide movie-item"><img src="${movie[index].thumbnails}" alt="${movie[index].title}" id="${movie[index].videoId}" onclick="moviePlay(this)" /></div>
         `)
         
         if(index == movie.length - 1) {
@@ -109,19 +152,19 @@ getScreenHome = () => {
 
 getScreenHomeSearch = (id, img, title) => {
     new Vue({
-        el: ".catalogue",
+        el: "#home",
         template: `
-            <section class="catalogue">
+        <main id="home" class="main-container" style="background-color: #1b1b1b;">
                 <div class="movie-card">
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" src="${img}" alt="${title}">
                         <div class="card-body">
                             <h2 class="card-title">${title}</h2>
-                            <a class="${id}" onclick="moviePlay(this)">Assistir</a>
+                            <a id="${id}" onclick="moviePlay(this)">Assistir</a>
                         </div>
                     </div>
                 </div>
-            </section>
+            </main>
         `,
     })
 }

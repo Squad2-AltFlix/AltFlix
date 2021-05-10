@@ -198,11 +198,11 @@ header#navbar div.search span {
   background-color: transparent;
   border: 1px solid #632565;
   border-radius: 5px;
-  color: #632565;
+  color: #632565 !important;
 }
 
 .card-body a:hover {
-  color: #fff;
+  color: #fff !important;
   background-color: #632565;
 }
 
@@ -214,6 +214,16 @@ a {
 
 a:hover {
   color: #1b1b1b;
+}
+
+/* Banner Pointer */
+.movie-pic {
+  cursor: pointer !important;
+}
+
+/* Bullet */
+.swiper-pagination-bullet {
+  background-color: #fff !important;
 }
 
 /* Mobile S */
@@ -283,9 +293,10 @@ a:hover {
   }
   .swiper-span a {
     display: none;
-    color: #632565;
     font-size: 1.5em;
     margin-top: 20px;
+    color: #632565 !important;
+    cursor: pointer !important;
   }
   .swiper-span .synopsis {
     display: none;
