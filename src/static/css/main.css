@@ -509,6 +509,16 @@ a:hover {
     -webkit-clip-path: inset(13% 0 13% 0);
             clip-path: inset(13% 0 13% 0);
   }
+  .swiper-button-prev, .swiper-button-next {
+    display: inline-block;
+    top: 85%;
+  }
+  .swiper-button-prev {
+    left: 5%;
+  }
+  .swiper-button-next {
+    right: 5%;
+  }
 }
 
 /* Desktop L */
@@ -574,9 +584,16 @@ a:hover {
   /* Swiper */
   .swiper-button-prev, .swiper-button-next {
     display: inline-block;
+    top: 80%;
     color: #ffffff !important;
     -webkit-transition: 0.3s;
     transition: 0.3s;
+  }
+  .swiper-button-prev {
+    left: 5%;
+  }
+  .swiper-button-next {
+    right: 5%;
   }
   .swiper-button-prev:hover, .swiper-button-next:hover {
     color: #dbdbdbb9 !important;

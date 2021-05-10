@@ -53,10 +53,11 @@ getScreenHome = () => {
                     <h1>Nossos Filmes</h1>
                     <div class="swiper-container swiper2">
                         <div class="swiper-wrapper"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
+
                         <div class="swiper-pagination"></div>
                     </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </section>
             </main>
         `,
