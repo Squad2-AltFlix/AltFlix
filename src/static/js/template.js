@@ -5,7 +5,7 @@ getHeader = () => {
             <header id="navbar">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div class="container">
-                        <a class="navbar-brand">
+                        <a href="#home" onclick="screenNew(this)" class="navbar-brand">
                             <img src="static/images/logo.png" alt="Logo AltFlix" id="logo-img" />
                         </a>
                     </div>

@@ -22,7 +22,6 @@ input[type=text]::-ms-clear {
 }
 
 header#navbar a.navbar-brand {
-  cursor: default;
   margin-top: -5px;
 }
 

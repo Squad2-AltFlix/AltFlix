@@ -178,9 +178,7 @@ getScreenFormNum = (screen_num) => {
             },
             validate_movieTitle(movie_title) {
                try {
-                  let movieConfig = /^[a-z ,.'-]+$/i
-
-                  if (movieConfig.test(movie_title) && movie_title.length >= 3) {
+                  if (movie_title.length >= 2) {
                      $('#titulo').removeClass('div-small')
                      return true
                   }
