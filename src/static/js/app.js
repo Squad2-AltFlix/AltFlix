@@ -60,7 +60,7 @@ function movieSearch(event) {
         if (result == "") {
             $('input[name="search"]').val('Filme Não Encontrado!').blur()
             setTimeout(() => {
-                $('#search-field').val('').focus()
+                $('input[name="search"]').val('').focus()
             }, 1400)
         }
 

@@ -175,7 +175,7 @@ getScreenForm = () => {
     new Vue({
         el: "#form",
         template: `
-            <main id="form">
+            <main id="form-screen">
                 <section class="container">
                     <form class="formulario" type="submit" method="POST">
                         <h1 class="titulo">Queremos seu filme no nosso site!</h1>
@@ -184,18 +184,6 @@ getScreenForm = () => {
                         </div>
                     </form>
                 </section>
-                <div class="modal" tabindex="-1">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <p>Obrigado por enviar seu filme! Seus dados foram enviados e serão analisados.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary">OK</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </main>
         `,
     })
@@ -300,7 +288,7 @@ getScreenAbout = () => {
     new Vue({
         el: "#about",
         template: `
-            <section id="about" class="cartao">
+            <section class="cartao">
                 <div class="sobre">
                 <h2>Sobre</h2>
                 <p>
@@ -349,7 +337,7 @@ getScreenAbout = () => {
                     <li class="Gustavo">
                     Gustavo de Vito&nbsp;&nbsp;&nbsp;
                     <div class="social">
-                        <img src="https://unavatar.now.sh/github/GustavoDeVito" />
+                        <img src="https://media-exp1.licdn.com/dms/image/C4E03AQGef4UZy_fWiQ/profile-displayphoto-shrink_200_200/0/1613365943785?e=1626307200&v=beta&t=5T2Q31RHi2BgApumZhO3YfrVcHL6DJkQWBJ62A6r2zw" />
                         <a
                         target="_blank"
                         href="https://www.linkedin.com/in/gustavo-de-vito-70aa99206/"
