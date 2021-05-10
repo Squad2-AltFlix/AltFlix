@@ -85,11 +85,10 @@ getScreenHome = () => {
                 </div>
                 <span class="swiper-span">
                     <p><a id="${movie[bannerTop[index]].videoId}" onclick="moviePlay(this)">${movie[bannerTop[index]].title}</a></p>
-                    <p class="synopsis">${movie[bannerTop[index]].description}</p>
+                    <p class="synopsis">${movie[bannerTop[index]].description()}</p>
                 </span>
             </div>
         `)
-        // <p class="synopsis">${movie[bannerTop[index]].description()}</p> Oficial
 
         if (index >= maxResultBanner - 1) {
             new Swiper('.swiper1', {
@@ -194,95 +193,40 @@ getScreenForm = () => {
     document.body.style.backgroundSize = 'cover'
 }
 
-// teste
-getScreenMovie = () => {
+getScreenMovie = (id, moviePlay) => {
     new Vue({
         el: "#movie",
         template: `
         <section class="tela">
-            <h2 class="titulo">Mulheres Rio Acima</h2>
+            <h2 class="titulo">${moviePlay.title}</h2>
             <div class="playersinopse">
-            <div class="player">
-                <div class="wrapper">
-                <iframe
-                    src="https://www.youtube.com/embed/ke8X3SE0XE8"
-                    class="embed"
-                    title="Filme"
-                    allowfullscreen="true"
-                ></iframe>
+                <div class="player">
+                    <div class="wrapper">
+                        <iframe src="https://www.youtube.com/embed/${id}" class="embed" title="Filme" allowfullscreen="true"></iframe>
+                    </div>
                 </div>
-            </div>        
                 <div class="sinopse">
-                    <h2>
-                    &nbsp;&nbsp;&nbsp;O documentário que traz para a tela histórias de
-                    mulheres militantes de Ribeirão Preto, como a da enfermeira e uma
-                    das líderes das Forças Armadas de Libertação Nacional, Áurea
-                    Moretti, que foi perseguida e torturada durante a ditadura militar;
-                    Dilma Bicalho, outra militante da época da ditadura; Sílvia Diogo,
-                    da ONG Casa da Mulher e Regina Brito, da ONG Vitória Régia.
-                    Produzido durante o encontro de artes “Mulheres Rio Acima”,
-                    realizado em maio pelo coletivo, o filme também mostra a cobertura
-                    do evento, que tem como objetivo reunir e divulgar a arte feminista
-                    da cidade, com imagens das apresentações e entrevistas com as
-                    artistas e organizadoras do encontro.
-                    </h2>
+                    <h2>&nbsp;&nbsp;&nbsp;${moviePlay.description}</h2>
                 </div>
             </div>
             <div class="dygproducao">
                 <div class="dyg">
-                    <h2 class="duration">4min43s</h2>
-                    <h2 class="year">2020</h2>
-                    <h2 class="genre">Terror</h2>
+                    <h2 class="duration">${moviePlay.duration}</h2>
+                    <h2 class="year">${moviePlay.year}</h2>
+                    <h2 class="genre">${moviePlay.type}</h2>
                 </div>
-                <div class="producao">
-                    <h2>EQUIPE TÉCNICA</h2>
-                    <h2>Roteiro e Direção: Milena Maganin, Raíza Ferreira</h2>
-                    <h2>Direção de Fotografia, Montagem: Raíza Ferreira</h2>
-                    <h2>Câmera, still e making of: Renata Prado</h2>
-                    <h2>Produção: Coletivo Mulheres Rio Acima</h2>
-                </div>
+                <div class="producao"></div>
             </div>
         </section>
         `,
     })
 
+    moviePlay.technicalTeam.forEach(element => {
+        $('.producao').append(`<h2>${element}</h2>`)
+    });
+
     document.body.style.background = 'rgb(36, 35, 35)'
 }
-
-// getScreenMovie = (id, moviePlay) => {
-//     new Vue({
-//         el: "#movie",
-//         template: `
-//         <section class="tela">
-//             <h2 class="titulo">${moviePlay.title}</h2>
-//             <div class="playersinopse">
-//                 <div class="player">
-//                     <div class="wrapper">
-//                         <iframe src="https://www.youtube.com/embed/${id}" class="embed" title="Filme" allowfullscreen="true"></iframe>
-//                     </div>
-//                 </div>
-//                 <div class="sinopse">
-//                     <h2>&nbsp;&nbsp;&nbsp;${moviePlay.description}</h2>
-//                 </div>
-//             </div>
-//             <div class="dygproducao">
-//                 <div class="dyg">
-//                     <h2 class="duration">${moviePlay.duration}</h2>
-//                     <h2 class="year">${moviePlay.year}</h2>
-//                     <h2 class="genre">${moviePlay.type}</h2>
-//                 </div>
-//                 <div class="producao"></div>
-//             </div>
-//         </section>
-//         `,
-//     })
-
-//     moviePlay.technicalTeam.forEach(element => {
-//         $('.producao').append(`<h2>${element}</h2>`)
-//     });
-
-//     document.body.style.background = 'rgb(36, 35, 35)'
-// }
 
 getScreenAbout = () => {
     new Vue({

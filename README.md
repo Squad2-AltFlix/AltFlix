@@ -49,6 +49,22 @@ O projeto foi desenvolvido para o Hackathon organizado pela empresa FCamara em p
 
 ## 🎨 Layout
 
+### Mobile
+
+<p align="center">
+     <img src="https://github.com/Squad2-AltFlix/AltFlix/blob/develop/teste/src/static/images/prints/home-mobile.png" width="200px">
+     <img src="https://github.com/Squad2-AltFlix/AltFlix/blob/develop/teste/src/static/images/prints/about-mobile.png" width="200px">
+     <img src="https://github.com/Squad2-AltFlix/AltFlix/blob/develop/teste/src/static/images/prints/form-mobile.png" width="200px">
+</p>
+
+### Web
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+     <img src="https://github.com/Squad2-AltFlix/AltFlix/blob/develop/teste/src/static/images/prints/home-desktop.png" width="400px">
+     <img src="https://github.com/Squad2-AltFlix/AltFlix/blob/develop/teste/src/static/images/prints/about-desktop.png" width="400px">
+     <img src="https://github.com/Squad2-AltFlix/AltFlix/blob/develop/teste/src/static/images/prints/form-desktop.png" width="400px">
+</p>
+
 ---
 
 ## 🛠 Tecnologias
