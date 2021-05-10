@@ -16,7 +16,6 @@
 - [AltFlix](https://altflix.netlify.app)
 
 ## Tabela de conteúdos
-=================
 <!--ts-->
    * [Sobre o projeto](#-sobre-o-projeto)
    * [Funcionalidades](#-funcionalidades)
